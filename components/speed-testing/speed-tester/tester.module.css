@@ -1,0 +1,262 @@
+.section {
+  background-color: #cdcecf;
+  min-height: 100vh;
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_text {
+  position: relative;
+  z-index: 0;
+  text-align: center;
+}
+.main_text h1 {
+  margin-bottom: 5.229vw;
+  font-size: 4vw;
+}
+.main_text h3 {
+  font-size: 3vw;
+  color: #0f3782;
+  font-weight: 400;
+}
+.main_text .btn_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.main_text .ring {
+  width: 15.104vw;
+  height: 15.104vw;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 55, 130, 1) 25%,
+    rgba(205, 206, 207, 1) 50%,
+    rgba(15, 55, 130, 1) 75%
+  );
+  border-radius: 100%;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  top: -0.391vw;
+}
+.main_text .btn_wrapper button {
+  font-size: 3.906vw;
+  line-height: 1.146vw;
+  font-weight: 400;
+  color: #0f3782;
+  text-transform: uppercase;
+  width: 14.323vw;
+  height: 14.323vw;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background-color: #cdcecf;
+  margin-bottom: 5vw;
+}
+.main_text .download div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5vw;
+  column-gap: 6px;
+  color: #0f3782;
+}
+.main_text .download h3 {
+  font-size: 1.5vw;
+  text-transform: uppercase;
+}
+.main_text .download div span {
+  font-size: 1.5vw;
+}
+.main_text .download img {
+  width: 1.3vw;
+}
+.main_text .download .speed {
+  color: #0f3782;
+  font-size: 3vw;
+  margin-right: 2.8vw;
+}
+.start_btn {
+  border: 2px solid #0f3782;
+  color: #0f3782;
+
+  width: 60px;
+  height: 60px;
+  font-size: 1.2vw;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  margin-top: 5vw;
+  border-radius: 71px;
+  background: transparent;
+}
+
+/* Meter */
+.meter_wrapper {
+  height: 13.2vw;
+  overflow: hidden;
+  padding-top: 1.146vw;
+}
+
+.meter {
+  width: 25.833vw;
+  height: 25.833vw;
+  border-radius: 100%;
+  background: radial-gradient(
+    48.64% 54.4% at 50% 51.23%,
+    #0d0d17 69.89%,
+    #0f3782 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
+  outline: 0.104vw dashed #0f3782;
+  outline-offset: 1.042vw;
+}
+.meter .overlay {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 100%;
+  background: linear-gradient(
+    2deg,
+    rgba(255, 255, 255, 0.2242752100840336) 50%,
+    rgba(255, 255, 255, 0.425945378151261) 50%
+  );
+}
+.meter .niddle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -10px;
+  rotate: -90deg;
+}
+.meter .niddle img {
+  rotate: -23deg;
+  width: 42px;
+}
+.meter .unit {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 0.885vw;
+}
+.unit_left {
+  transform-origin: 100% 0%;
+  right: 50%;
+  text-align: left;
+}
+.unit_left p {
+  padding-left: 0.521vw;
+}
+.unit_right {
+  left: 50%;
+  text-align: right;
+  transform-origin: 0% 0%;
+}
+.unit_right p {
+  padding-right: 0.521vw;
+}
+.unit_neutral {
+  transform-origin: 100% 0%;
+  text-align: left;
+  right: 50%;
+}
+.unit_neutral p {
+  padding-top: 0.521vw;
+}
+.meter .circle {
+  width: 65%;
+  height: 65%;
+  border-radius: 100%;
+  background-color: #cdcecf;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0.104vw dashed #d9d9d9;
+  outline-offset: 1.042vw;
+  padding-bottom: 2.546vw;
+  box-sizing: border-box;
+}
+
+.meter .circle span {
+  font-size: 1.27vw;
+  margin-top: 0.9vw;
+  margin-left: 0.417vw;
+  color: #0f3782;
+}
+
+@media screen and (max-width:600px){
+  .section{
+    min-height: 60vh;
+    padding-top: 200px;
+  }
+  .main_text h1 {
+    margin-bottom: 5.229vw;
+    font-size: 8vw;
+  }
+  .main_text .ring {
+    width: 25.104vw;
+    height: 25.104vw;
+    
+  }
+  .main_text .btn_wrapper button {
+    width: 24.104vw;
+    font-size: 6vw;
+    height: 24.2vw;
+  }
+  .main_text .download h3 {
+    font-size: 4.5vw;
+  }
+  .main_text .download div span {
+    font-size: 3.5vw;
+  }
+  .main_text .download img {
+    width: 3.3vw;
+  }
+  .main_text .download .speed {
+    font-size: 5vw;
+  }
+  .meter_wrapper{
+    height: 25vw;
+  }
+  .meter{
+    width:50vw;
+    height: 50vw;
+  }
+  .meter .unit{
+    font-size: 1.885vw;
+  }
+  .unit_left p{
+    padding-left:1.5vw;
+  }
+  .unit_right p{
+    padding-right: 1.5vw;
+  }
+  .unit_neutral p {
+    padding-top: 1.521vw;
+  }
+  .meter .circle span{
+    font-size: 3vw;
+  }
+  .meter h3{
+    font-size: 6vw;
+  }
+  .meter .circle{
+    padding-bottom: 7.5vw;
+  }
+}

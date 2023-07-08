@@ -1,0 +1,461 @@
+/*****************style banner component  *********************************/
+.main {
+  width: 100%;
+  background: #cdcecf;
+}
+.main_banner {
+  width: 100%;
+  padding-top: 2.083vw;
+  padding-bottom: 2.083vw;
+}
+.banner_text {
+  color: #000000;
+  max-width: 72.396vw;
+  margin: auto;
+  padding: 2.604vw 0.521vw;
+}
+.banner_text h1 {
+  width: 41.667vw;
+  margin: 0 auto;
+  padding: 0vw 10.417vw;
+  margin-bottom: 1.563vw;
+  line-height: 1.6;
+  text-align: center;
+  font-size: 2.865vw;
+  font-weight: 26.042vw;
+}
+.banner_text strong {
+  color: #0f3782;
+}
+.banner_text p {
+  color: #5e5f5f;
+  font-size: 1.302vw;
+  margin-left: 2.604vw;
+}
+.banner_text input {
+  background-color: #cdcecf;
+  outline: none;
+  border: 0.052vw solid #8c8d8f;
+  margin-top: 3.125vw;
+  width: 20.833vw;
+  padding: 0.521vw 1.042vw;
+  margin-left: 23.438vw;
+  font-size: 0.938vw;
+}
+
+@media screen and (max-width: 425px) {
+  .banner_text {
+    color: #000000;
+    max-width: 90.396vw;
+    margin: 0 auto;
+    padding: 5.604vw 0.521vw;
+  }
+  .banner_text h1 {
+    width: 95.667vw;
+    margin: 0 auto;
+    padding: 3vw 0vw;
+    margin-bottom: 1.563vw;
+    line-height: 1.8;
+    text-align: start;
+    font-size: 6.865vw;
+    font-weight: 56.042vw;
+  }
+  .banner_text strong {
+    color: #0f3782;
+  }
+  .banner_text p {
+    color: #5e5f5f;
+    font-size: 4.302vw;
+    margin-left: 0.004vw;
+    line-height: 1.4;
+  }
+  .banner_text input {
+    background-color: #cdcecf;
+    outline: none;
+    border: 0.052vw solid #8c8d8f;
+    margin-top: 4.125vw;
+    width: 50.833vw;
+    padding: 1.921vw 1.442vw;
+    margin-left: 17.438vw;
+    font-size: 1.938vw;
+  }
+  
+}
+
+/******************* Style section Blue Heading *************************************/
+.main_section {
+  margin-left: 1.302vw;
+  margin-right: 1.302vw;
+  width: 96.146vw;
+  background-color: #ffff;
+}
+.heading {
+  width: 96.146vw;
+  background: #0f3782;
+  height: 5.146vw;
+  display: flex;
+  align-items: center;
+}
+.heading h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.083vw;
+  line-height: 2.292vw;
+  color: #ffffff;
+  padding-left: 4.083vw;
+}
+@media(max-width:600px){
+  .heading{
+    width: 100%;
+     height: 65px;
+  }
+  .heading h2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: auto;
+  }
+  .main_section{
+    width: 362px;
+    margin: auto;
+  }
+}
+/************* Style california component content **********************/
+.text_area h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.563vw;
+  line-height: 2.292vw;
+  color: #0d0d17;
+}
+.text_area p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.302vw;
+  line-height: 1.875vw;
+  color: #515151;
+}
+.image_part {
+  width: 7vw;
+}
+.image_part img{
+  filter: inherit;
+}
+
+.content_section {
+  display: flex;
+  justify-content: center;
+  border-bottom: 0.052vw solid black;
+  width: 54.844vw;
+  margin: auto;
+  margin-top: 4.125vw;
+}
+
+.text_area {
+  width: 54.844vw;
+  margin-left: 1vw;
+  padding-bottom: 3vw;
+}
+.text_area span {
+  color: #0f3782;
+  padding-left: 1.042vw;
+}
+
+@media (max-width: 600px) {
+  .content_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 0.052vw solid black;
+    width: 54.844vw;
+    margin: auto;
+    align-items: center;
+    margin-top: 4.125vw;
+  }
+  .text_area h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 44px;
+    text-align: center;
+    color: #0d0d17;
+    width: 321px;
+  }
+  .text_area {
+    width: 299px;
+    text-align: center;
+  }
+  .text_area p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    width: 297px;
+
+    color: rgba(81, 81, 81, 0.9);
+  }
+
+}
+
+/******************** Yip section style *********************************/
+.yip_section {
+  margin-top: 3.125vw;
+  margin-left: 5.604vw;
+}
+.yip_section h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.083vw;
+  line-height: 2.292vw;
+  color: #0f3782;
+}
+.yip_section p{
+  font-style: normal;
+  width: 72.188vw;
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #515151;
+  padding-top: 1.042vw;
+  padding-bottom: 1.042vw;
+}
+.yip_section span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.302vw;
+  line-height: 1.667vw;
+  color: #0d0d17;
+}
+
+
+
+.unorder_list li {
+  list-style: square;
+  color: #0f3782;
+}
+.unorder_list {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.302vw;
+  line-height: 2.667vw;
+  color: #0d0d17;
+}
+@media(max-width:600px){
+  .yip_section {
+    margin-top: 6.125vw;
+    margin-left: 5.604vw;
+    max-width: 93.240vw;
+  }
+  .yip_section p{
+    font-style: normal;
+font-weight: 400;
+font-size: 4.196vw;
+line-height:5.828vw;
+color:#515151;
+padding-top: 4.662vw;
+width:72.727vw;
+
+
+  }
+  .yip_section h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 5.361vw;
+    color: #0f3782;
+  }
+  .unorder_mobile {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top:3.497vw;
+
+  }
+  .unorder_mobile span{
+    font-size: 4.196vw;
+    font-weight: 300;
+  }
+  .unorder_mobile label{
+    font-size: 4.196vw;
+    font-weight: 600;
+    color: #0f3782;
+  }
+  .unorder_mobile li{
+    font-size: 4.196vw;
+    line-height: 5.828vw;
+    padding: 2.331vw 0vw;
+    width: 72.960vw;
+  }
+}
+
+
+/*************** California Network Section style *************************/
+.main_sectionone{
+  background-color: #ffff;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-left: 1.302vw;
+  margin-right: 1.302vw;
+  width: 96.146vw;
+}
+.main_sectionone h4{
+  color: #0f3782;
+  padding-left: 7%;
+  letter-spacing: 0.156vw;
+  font-size: 2.510vw;
+  padding-top: 3vw;
+}
+.card{
+  background-color: #cdcecf;
+  width: 29vw;
+  height: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card p{
+  text-align: center;
+  padding: 0 2vw;
+}
+
+.network_card{
+  background-color: #ffff;
+  height: 13.021vw; 
+  width: 22.625vw;
+  overflow: hidden;
+   position: relative;
+     margin-bottom: 3.333vw;
+     margin-top: 1.042vw;
+   box-shadow: rgb(246, 246, 253) 0px 7px 29px 0px;;
+}
+.network_card h5{
+  text-align: center;
+  padding: 0.521vw 0;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+.span_one{
+  position: absolute;
+   bottom: 0vw;
+   left:8%;
+}
+.span_two{
+  position: absolute;
+   bottom: 0px;
+   right:8%; 
+}
+.network_circle1{
+  height: 8.813vw;
+  overflow: hidden;
+}
+.network_circle6{
+  width: 22.625vw;
+    height: 23.625vw;
+border-radius:100%;
+display: flex;
+justify-content: center;
+align-Items: center;
+background: rgb(199,218,21);
+background: linear-gradient(135deg, rgba(199,218,21,1) 30%, rgba(168,168,164,1) 20%);
+}
+.network_circle5{
+  width: 22.625vw;
+  height: 23.625vw;
+border-radius:100%;
+display: flex;
+justify-content: center;
+align-Items: center;
+background:linear-gradient(135deg, rgba(62,185,62,255) 100%,rgba(205,206,207,1)   52%);
+}
+.network_circle7{
+  width: 22.625vw;
+    height: 23.625vw;
+border-radius:100%;
+display: flex;
+justify-content: center;
+align-Items: center;
+background: rgb(138,203,39);
+background: linear-gradient(135deg, rgba(138,203,39,1) 40%, rgba(168,168,164,1) 30%);
+}
+.network_circle3{
+  background-color: yellow;
+  width: 62%;
+  height: 70%;
+border-radius: 100%;
+ display: flex;
+ justify-Content: center;
+ align-Items: flex-start;
+ background: white;
+ padding-Top: 1.667vw;
+ box-sizing: border-box;
+}
+.cards{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.823vw;
+  align-items: center;
+}
+.network_card h2{
+margin-top: 1.719vw;
+}
+
+@media(max-width:600px){
+  .main_sectionone h4{
+    font-size: 4.196vw;
+    font-weight: 600;
+    padding-top: 5vw;
+  }
+    .cards{
+      display: flex;
+      flex-direction: column;
+    }
+  .network_circle6{
+    display: flex;
+    flex-direction:column ;
+    width: 57.625vw;
+    height: 57.625vw;
+  }
+  .network_circle3{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .network_circle3 h2{
+    font-size: 3vw;
+  }
+  .network_circle5{
+    display: flex;
+    flex-direction: column;
+    width: 57.625vw;
+    height: 57.625vw;
+  }
+  .network_circle7{
+    display: flex;
+    flex-direction: column;
+    width: 57.625vw;
+    height: 57.625vw;
+  }
+  .network_card{
+    width: 220px;
+    height: 37vw;
+  }
+  .network_card h5{
+    font-size: 3vw;
+  }
+  .card{
+    width: 84vw;
+    height: 57vw;
+  }
+  .card p{
+    font-size: 3vw;
+  }
+  .network_circle1{
+    height: 25.813vw;
+  }
+}

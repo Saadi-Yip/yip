@@ -1,0 +1,43 @@
+.container {
+  padding: 10px 0px;
+  background-color: rgba(15, 55, 130, 1);
+  color: rgba(255, 255, 255, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.container p{
+    font-size: 1.383vw;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container strong {
+    font-size: 2.346vw;
+    font-weight: 600;
+    padding: 0px 10px;
+}
+@media screen and (max-width: 450px) {
+    .container {
+        padding: 6px 0px;
+      background-color: rgba(15, 55, 130, 1);
+      color: rgba(255, 255, 255, 1);
+    }
+    .container p{
+        font-size:4.435vw;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 28px;
+    }
+    .container strong {
+        font-size: 5.235vw;
+        font-weight: 600;
+        padding: 10px 5px;
+    }
+}

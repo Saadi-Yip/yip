@@ -1,0 +1,86 @@
+.main_nav{
+    background: rgb(187,208,153);
+    background: linear-gradient(90deg, rgba(187,208,153,1) 12%, rgba(0,154,222,1) 66%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    width: 96%;
+}
+.nav_btn a{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgba(0,154,222,1);
+    background-color:rgb(238, 243, 230);
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 11px 14px;
+    letter-spacing: .5px;
+}
+.nav_btn a:hover{
+    color:rgb(6, 42, 58);
+}
+
+
+/* Responsiveness starts here ****************************************************/
+
+
+@media screen and (max-width:1024px) {
+    .container{
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        align-items: center;
+        width: 95%;
+    }
+    .nav_btn a{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: rgba(0,154,222,1);
+        background-color:rgb(238, 243, 230);
+        border-radius: 25px;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 11px 14px;
+        margin-right: 10px;
+    }
+}
+/* 2nd media quiery *********************************************/
+@media screen and (max-width:768px) {
+    .nav_btn a{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: rgba(0,154,222,1);
+        background-color:rgb(238, 243, 230);
+        border-radius: 25px;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 6px 4px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .nav_btn a{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: rgba(0,154,222,1);
+        background-color:rgb(238, 243, 230);
+        border-radius: 25px;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 10px 8px;
+    }
+   
+}

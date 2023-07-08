@@ -1,0 +1,104 @@
+.banner_sec {
+  height: 100vh;
+  position: relative;
+}
+.banner_textCol {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+  justify-content: center;
+}
+.banner_heading {
+  margin: auto;
+  height: fit-content;
+}
+.banner_heading h1 {
+  margin: 0 auto;
+  max-width: 65.51vw;
+}
+.banner_heading p {
+  color: #515151;
+  padding: 2.406vw 0vw;
+}
+.banner_heading button {
+  color: #0f3782;
+  font-weight: 500;
+}
+.plan_item {
+  padding: 1.4vw 2vw;
+  background-color: #0c1f42;
+  position: relative;
+  display: inline-block;
+  transition: 0.5s;
+  cursor: pointer;
+  border: none;
+  font-size: 0.781vw;
+  overflow: hidden;
+}
+.plan_item span {
+  font-weight: 300;
+}
+
+.plan_item::before {
+  position: absolute;
+  left: -133px;
+  top: 0;
+  bottom: 0;
+  transition: 0.8s;
+  content: "";
+  background: #fff;
+  width: 50%;
+}
+.plan_item:hover::before {
+  left: 120%;
+}
+.plan_item span {
+  z-index: 10;
+  color: #fff;
+  position: relative;
+}
+.btnhover {
+  background: #fff;
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.banner_sec button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.downArrow {
+  margin-top: -1px;
+  display: none;
+}
+.downArrow img {
+  transform: translate(0, 18.177vw);
+  max-width: 15px;
+}
+@media screen and (max-width: 768px) {
+  .banner_sec {
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width:600px){
+  .banner_heading h1 {
+    max-width: 90.51vw;
+    margin-top: 36vw;
+  }
+  .banner_heading p{
+    padding: 4.406vw 0vw 8vw;
+    margin: 0 auto;
+    max-width: 66vw;
+  }
+  .banner_heading button {
+    font-size: 3.9vw;
+  }
+  .downArrow {
+    display: block;
+  }
+}

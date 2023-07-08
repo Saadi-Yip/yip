@@ -1,0 +1,309 @@
+.container{
+    display: flex;
+    max-width: 1390px;
+    padding: 0 10px;
+    margin: 0 auto;
+    border-bottom: 1px solid gray;
+    padding-bottom: 30px;
+}
+.banner{
+    width: 50%;
+    padding: 20px;
+}
+.banner h1{
+    margin-top: 3px;
+    font-size: 26px;
+    font-weight: 900;
+}
+.banner span {
+    color: red;
+    font-size: 30px;
+    font-weight: 900;
+}
+.banner li {
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 500;
+    list-style-type: circle;
+}
+.banner ul {
+    padding: 0px;
+    margin-left: 19px;
+}
+.banner h2 {
+    font-weight: 700;
+    font-size: 26px;
+}
+.banner h4{
+    font-size: 37px;
+   font-weight: 900;
+    display: flex;
+    color: red;
+}
+.banner sub{
+    display: flex;
+    align-items: flex-end;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.banner p{
+    padding: 8px 0;
+    width: 90%;
+    font-size: 15px;
+}
+.banner a{
+    background:rgba(168,9,9,1);
+    color: #fff;
+    border: 0;
+    font-size: 16px;
+    padding: 8px 12px;
+    text-align: center;
+    border-radius: 36px;
+    letter-spacing: .5px;
+    width: fit-content;
+    margin: 20px 0;
+    display: block;
+}
+.bannar_image_sec{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    width: 48.7%;
+}
+#bannar_img {
+    border-radius: 20px;
+    padding: 20px
+}
+
+/* Responsiveness starts here ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 1st media quiery^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+@media screen and (max-width:1200px) {
+    .container{
+        display: flex;
+        max-width: 1390px;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+    .bannar_image_sec{
+        width: 50%;
+        margin-top: 110px;
+        margin-right: 40px;
+    }
+    #bannar_img {
+        border-radius: 20px;
+        width: 98%;
+    }
+    .banner h1{
+        margin-top: 9px;
+        font-size: 19px ;
+        font-weight: 900;
+    }
+    .banner span {
+        color: red;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .banner li {
+        font-size: 15px;
+        padding: 6px;
+        font-weight: 500;
+        list-style-type: circle;
+    }
+    .banner ul {
+        padding: 0px;
+        margin-left: 15px;
+    }
+    .banner h2 {
+        padding: 10px 0 ;
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .banner p{
+        padding: 10px 0px;
+        width: 95%;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .banner h4{
+        display: flex;
+        color: red;
+        font-size: 28px;
+        font-weight: 700;
+     }
+    .banner sub{
+        margin-left: 10px;
+        font-size: 20px; 
+    }
+    .banner a{
+        background:rgb(168,9,9);
+        color: #fff;
+        border: 0;
+        font-size: 11px;
+        padding: 8px 12px;
+        border-radius: 36px;
+        letter-spacing: .5px;
+    }
+    
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^2nd Media quiery start ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+@media screen and (max-width:900px) {
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 1390px;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+    .banner{
+        width: 100%;
+        padding: 10px;
+    }
+    .banner h1{
+        margin-top: 3px;
+        font-size: 18px;
+        font-weight: 900;
+    }
+    .banner span {
+        color: red;
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .banner li {
+        font-size: 14px;
+        padding: 3px;
+        font-weight: 500;
+        list-style-type: circle;
+    }
+    .banner ul {
+        padding: 0px;
+        margin-left: 19px;
+    }
+    .banner h2 {
+        font-weight: 900;
+        font-size: 19px;
+    }
+    .banner h4{
+        font-size: 34px;
+       font-weight: 900;
+        display: flex;
+        color: red;
+    }
+    .banner sub{
+        display: flex;
+        align-items: flex-end;
+        font-size: 22px;
+        margin-left: 10px;
+    }
+    .banner p{
+        padding: 8px 0;
+        width: 90%;
+        font-size: 14px;
+    }
+    .banner a{
+        background:rgba(168,9,9,1);
+        color: #fff;
+        border: 0;
+        font-size: 12px;
+        padding: 8px 12px;
+        text-align: center;
+        border-radius: 36px;
+        display: block;
+
+    }
+    .bannar_image_sec{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        margin-right: 0px;
+        width: 98%;
+        padding: 0 10px;
+    }
+    #bannar_img {
+        border-radius: 20px;
+        padding: 10px;
+    }
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 3rd Media Queiry For redusing the size of  Btn and h1  */
+
+@media screen and (max-width:600px) {
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 1390px;
+        padding: 15px 17px;
+        margin: 30px auto;
+    }
+    .banner_Header{
+        max-width: 1390px;
+        padding: 20px;
+    }
+    .banner_Header_text{
+        display: flex;
+    }
+    .banner_Header_text h1{
+        margin-top: 3px;
+        font-size: 14px;
+        font-weight: 900;
+    }
+    .banner_Header span {
+        color: red;
+        font-size: 18px;
+        font-weight: 900;
+    }
+    .banner_Header li{
+        font-size: 14px;
+        padding: 0px;
+        font-weight: 500;
+        list-style-type: circle;
+    }
+    .banner_Header ul{
+        padding: 0px;
+        margin-left: 10px;
+    }
+    .banner_Header h2{
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .banner_pricing p{
+       font-size: 25px;
+       font-weight: 900;
+    }
+    .banner_pricing{
+        display: flex;
+        color: red;
+    }
+    .banner_pricing_mo{
+        display: flex;
+        align-items: flex-end;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .banner_parah{
+        padding: 3px 0;
+        width: 90%;
+    }
+    .banner_parah p{
+        font-size: 14px;
+    }
+    .banner_btn a{
+        background:rgba(168,9,9,1);
+        color: #fff;
+        border: 0;
+        font-size: 12px;
+        padding: 8px 12px;
+        text-align: center;
+        border-radius: 36px;
+        display: block;
+    }
+    .bannar_image_sec{
+        margin-top: 0px;
+        margin-bottom: 10px;
+        margin-right: 0px;
+        width: 100%;
+    }
+    #bannar_img {
+        border-radius: 20px;
+        padding: 0px;
+    }
+}

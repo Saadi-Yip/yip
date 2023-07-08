@@ -1,0 +1,232 @@
+/* Section main css */
+.container {
+  max-width: 1390px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+.banner {
+  display: flex;
+  margin: 0px auto;
+  padding: 50px 0px;
+  border-top: 1px solid #fa7f04;
+  border-bottom: 1px solid #e87603;
+}
+
+/* Image css */
+
+.banner_img {
+  width: 50%;
+  display: flex;
+}
+.banner_img img {
+  border-radius: 20px;
+}
+
+/* text section css */
+.banner_text {
+  width: 50%;
+  margin-left: 20px;
+  padding: 0px 10px;
+  color: #fff;
+}
+.banner_text span {
+  color: #e87603;
+}
+.banner_text h6 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
+.banner_text p {
+  line-height: 1.9;
+}
+.banner_text ul {
+  padding: 0px 17px;
+}
+.banner_text li {
+  color: #fa7f04;
+  padding: 12px 10px;
+  list-style-type: lower-latin;
+}
+
+/* ******************************************* 1st Media quiry *************************** */
+
+@media screen and (max-width: 1024px) {
+  /* Section main css */
+  .container {
+    max-width: 1390px;
+    margin: 0px auto;
+    padding: 0px 15px;
+  }
+  .banner {
+    display: flex;
+    margin: 0px auto;
+    padding: 30px 0px;
+    border-top: 1px solid #fa7f04;
+  }
+
+  /* Image css */
+
+  .banner_img {
+    width: 50%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .banner_img img {
+    border-radius: 20px;
+    padding: 0px 5px;
+    margin-top: 0px;
+  }
+
+  /* text section css */
+  .banner_text {
+    width: 50%;
+    margin-left: 20px;
+    padding: 0px 0px;
+  }
+  .banner_text span {
+    color: #e87603;
+  }
+  .banner_text h6 {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0px 0px;
+    margin-bottom: 8px;
+  }
+  .banner_text p {
+    font-size: 13px;
+    line-height: 1.3;
+    padding: 0px 0px;
+  }
+  .banner_text ul {
+    padding: 0px 17px;
+    margin: 10px 0px;
+  }
+  .banner_text li {
+    font-size: 13px;
+    padding: 3px 6px;
+    list-style-type: lower-latin;
+  }
+}
+
+/* ******************************************* 2nd Media quiry *************************** */
+
+@media screen and (max-width: 767px) {
+  /* Section main css */
+  .container {
+    max-width: 1390px;
+    margin: 0px auto;
+    padding: 0px 15px;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    padding: 30px 0px;
+    border-top: 1px solid #fa7f04;
+  }
+
+  /* Image css */
+
+  .banner_img {
+    width: 100%;
+    margin: 0px auto;
+    border-radius: 20px;
+    display: flex;
+  }
+  .banner_img img {
+    border-radius: 20px;
+    padding: 6px 10px;
+  }
+
+  /* text section css */
+  .banner_text {
+    border-radius: 20px 0px 20px 0px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 12px 5px;
+  }
+  .banner_text span {
+    color: #e87603;
+  }
+  .banner_text h6 {
+    font-size: 22px;
+    font-weight: 700;
+    padding: 5px;
+    margin-bottom: 0px;
+    line-height: 1.4;
+  }
+  .banner_text p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .banner_text ul {
+    padding: 7px 17px;
+    margin-top: 6px;
+  }
+  .banner_text li {
+    font-size: 14px;
+    padding: 6px 5px;
+    list-style-type: lower-latin;
+  }
+}
+/* ******************************************* 3rd Media quiry *************************** */
+
+@media screen and (max-width: 375px) {
+  /* Section main css */
+  .container {
+    max-width: 1390px;
+    margin: 0px auto;
+    padding: 0px 15px;
+  }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #fa7f04;
+    padding: 20px 0px;
+  }
+
+  /* Image css */
+
+  .banner_img {
+    width: 100%;
+    margin: 7px auto;
+    border-radius: 20px;
+    display: flex;
+  }
+  .banner_img img {
+    border-radius: 20px;
+    padding: 6px 10px;
+  }
+
+  /* text section css */
+  .banner_text {
+    width: 95%;
+    margin: 0 auto;
+    padding: 14px 0;
+  }
+  .banner_text span {
+    color: #e87603;
+  }
+  .banner_text h6 {
+    font-size: 23px;
+    font-weight: 900;
+    padding: 5px 0px;
+    line-height: 1.5;
+  }
+  .banner_text p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .banner_text ul {
+    padding: 0px 17px;
+    margin-top: 6px;
+  }
+  .banner_text li {
+    font-size: 14px;
+    padding: 7px;
+    list-style-type: lower-latin;
+  }
+}

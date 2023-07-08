@@ -1,0 +1,41 @@
+/*************************** sTYLE OF MAIN SECTION */
+.main {
+    margin: 0 auto;
+    max-width: 83vw;
+    padding-top: 1vw;
+  }
+  
+  .main_section {
+    display: flex;
+    margin-top: 3vw;
+    justify-content: center;
+  }
+  .main h2 {
+    font-weight: 400;
+  }
+
+
+  @media (max-width: 600px) {
+    .main_section {
+      display: flex;
+      flex-direction: column;
+    }
+    .main h2 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 5.361vw;
+      line-height: 5.828vw;
+    }
+    .pakage_section {
+      margin-top: 4.662vw;
+    }
+    .list {
+      font-weight: 400;
+      font-size: 4.196vw;
+      line-height: 5.361vw;
+    }
+    .main{
+      padding-top: 6vw;
+    }
+    
+  }

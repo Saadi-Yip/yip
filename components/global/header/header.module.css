@@ -1,0 +1,253 @@
+.top_bar{
+  text-align: center;
+  display: none;
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
+.top_bar p{
+  color: #0F3782;
+  font-size: 3vw;
+}
+.top_bar a{
+  color: #0F3782;
+  font-size: 7vw;
+}
+.main_header {
+  padding-top: 4.4vw;
+  position: absolute; 
+ z-index: 3;
+  left: 0;
+  right: 0;
+  height: 6.625vw;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #cdcecf;
+}
+.main_header nav {
+  justify-content: center;
+}
+.left_side {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right_side {
+  width: 23vw;
+  display: flex;
+  position: relative;
+}
+.right_side .link {
+  margin-right: 2.082vw;
+}
+.right_side a:last-child {
+  margin-right: 0;
+  position: absolute;
+  left: 16vw;
+}
+
+.link {
+  color: var(--primary);
+  font-weight: 300;
+  font-size: 0.933vw;
+  line-height: 0.999vw;
+  letter-spacing: 0.4px;
+}
+.provider {
+  position: relative;
+  cursor: pointer;
+}
+.dropdown_icon {
+  display: inline-flex;
+  margin-right: 0.308vw;
+}
+.dropdown_icon img {
+  width: 1vw;
+}
+.provider ul {
+  width: 9vw;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 1.042vh;
+  z-index: 2;
+  margin: 0;
+  margin-left: 0.833vw;
+  padding: 3.625vh 0;
+  list-style: none;
+  overflow: hidden;
+}
+.provider ul li {
+  width: 100%;
+  padding-bottom: 2vh;
+}
+.menu_wrapper {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #d9d9d9;
+}
+.plan_item {
+  padding: 0.5vw 1vw;
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  transition: 0.5s;
+  cursor: pointer;
+  border: none;
+  font-size: 0.781vw;
+  overflow: hidden;
+  width: 16.7vw;
+}
+.plan_item span {
+  font-weight: 300;
+}
+
+.dialer {
+  display: flex;
+  align-items: center;
+}
+.dialer span {
+  padding-left: 0.4vw;
+}
+.dialer p {
+  color: #0f3782;
+  font-size: 0.673vw;
+  letter-spacing: 0.3px;
+  padding-bottom: 0.156vw;
+}
+.dialer h6 {
+  color: #0f3782;
+  font-size: 1.602vw;
+  font-weight: 400;
+}
+.dialer img {
+  width: 1.754vw;
+  height: 1.763vw;
+}
+.logo{
+  width:7.188vw;
+}
+.logo_col{
+  width: 13%;
+}
+.logo_col a img{
+  width: 7.188vw;
+}
+.nav__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_col{
+  width: 75%;
+}
+@media screen and (max-width:1024px){
+  .main_header {
+    border-bottom: unset;
+    margin-top: 5vw;
+  }
+}
+
+
+@media screen and (max-width:600px){
+  .top_bar{
+    display: block;
+    padding: 20px 14px 12px;
+  }
+  .plan_item{
+    display: none;
+  }
+  .nav__inner{
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .left_side{
+    margin-top: 18px;
+  }
+  .logo_col img{
+    width: 19.4vw;
+  }
+  .nav_btns{
+    z-index: 99;
+    padding: 10px;
+    margin-right: -10px;
+  }
+  .nav_btns span{
+    background-color: #0F3782;
+    height: 2px;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .nav_col{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav_btns span:nth-child(2){
+    width: 14px;
+    margin-left: auto;
+  }
+  .link {
+    font-size: 4.4vw;
+    line-height: unset;
+    display: block;
+    padding-bottom: 16px;
+  }
+  .nav_container{
+    position: relative;
+  }
+  .mobile_list{
+    position: absolute;
+    left: 0px;
+    right: 0;
+    background: #CDCECF;
+    box-shadow: 0px 4px 3px #8080807d;
+    top: 0px;
+    padding: 6vw 8vw;
+    padding-top:20vw;
+    overflow: hidden;
+  }
+  .mainConatiner{
+    width: 86.714vw;
+  }
+  .provider ul{
+    position: relative !important;
+    z-index: 99;
+    width: 90.625vw;
+    padding: 0vw 0 2vw 9vw;
+  }
+  .provider ul a{
+    position: relative !important;
+    z-index: 99;
+  }
+  .menu_wrapper {
+    background-color: transparent;
+  }
+  .left_side li.link {
+    font-size: 4.4vw !important;
+    color: #515151;
+  }
+  .dropdown_icon{
+    margin-right: 4.521vw;
+  }
+  .dropdown_icon img{
+    width: 4.885vw;
+    height: 3.729vw;
+  }
+  .provider span {
+    margin-right: 4.521vw;
+    font-size: 4.4vw;
+  }
+  .logo_col a img{
+    width: 19.4vw;
+  }
+  .main_header {
+    border-bottom: unset;
+    margin-top: 15vw;
+  }
+}
+

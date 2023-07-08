@@ -1,0 +1,30 @@
+.warning {
+  display: inline-flex;
+  align-items: baseline;
+  border: 1px solid rgba(247, 0, 0, 0.3);
+  padding: 8px 16px;
+  padding-right: 52px;
+  background: rgba(247, 0, 0, 0.1);
+}
+.warning div {
+  margin-bottom: 0 !important;
+}
+.warning img {
+  width: 0.625vw;
+  margin-right: 0.208vw;
+}
+.warning h6 {
+  font-size: 0.938vw !important;
+  font-weight: 400;
+  color: #f70000;
+  margin-bottom: 0.208vw;
+}
+.warning p {
+  font-size: 0.833vw !important;
+  line-height: 1.25vw !important;
+  color: rgba(247, 0, 0, 0.9);
+  margin-bottom: 0 !important;
+}
+.image {
+  width: auto;
+}

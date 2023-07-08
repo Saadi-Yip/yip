@@ -1,0 +1,69 @@
+.main{
+  max-width: 83vw;
+  margin: 4vw auto 4vw;
+}
+.main h3{
+  padding: 0.781vw 1.563vw 0.781vw 0;
+  font-weight: 400;
+}
+.main p{
+   line-height: 1.8;
+   font-size: 1.100vw;
+   max-width: 78.667vw;
+   padding-top: 1vw;
+   color: rgba(0, 0, 0, 1);
+}
+.main a{
+  text-decoration: underline;
+  color: rgba(15, 55, 130, 1);
+}
+.main ul li{
+  list-style-type: square;
+  color: rgba(0, 0, 0, 1);
+  line-height: 1.8;
+  font-size: 1.100vw;
+  padding-top: 1vw;
+}
+.main ul li::marker{
+  font-size: 1.1vw;
+  color: rgba(15, 55, 130, 1);
+}
+.main ul li span{
+  color: rgba(15, 55, 130, 1);
+  font-weight: 700;
+}
+.main h4{
+  /* max-width: 78.667vw; */
+    margin: 0 auto;
+    font-weight: 500;
+        padding-top: 1vw;
+}
+/********************************************* 1st Media Qeuiry */
+
+
+@media screen and (max-width:600px) {
+  .main ul li::marker{
+    font-size: 4vw;
+  }
+    .main{
+      max-width: 77.592vw;
+        margin: 0 auto;
+      }
+      .main h3{
+        color: #0F3782;
+        font-size: 5.361vw;
+        padding: 6vw 0vw;
+      }
+      .main p{
+        color: #515151;
+        font-size: 4.196vw;
+       
+      }
+      .main ul li{
+        font-size: 4.196vw;
+        color: #515151;
+      
+        
+      }
+      
+}

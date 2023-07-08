@@ -1,0 +1,124 @@
+.faq h1{
+    text-align: center;
+    font-weight: 700;
+    padding-top: 30px;
+}
+.faq{
+    max-width: 1390px;
+    margin: 0 auto;
+    border-top: 1px solid #e87603;
+    border-bottom: 1px solid #e87603;
+    padding: 0px 0px;
+}
+.Acordition{
+    color: #e87603;
+    max-width: 1390px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   padding: 0 15px;
+ 
+}
+.question h2{
+    text-align: center;
+
+}
+.acordition_block{
+     width: 100%;
+    margin: 50px auto;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    width: 100%;
+    margin: 10px auto;
+    margin-bottom: 5px;
+    box-shadow: rgba(29, 28, 28, 0.35) 0px 5px 15px;
+    background: linear-gradient(90deg, rgba(37, 36, 36, 0.667) 37%, rgba(36, 34, 34, 0.88) 75%);
+}
+.question h2{
+    font-size: 17px;
+}
+.answer p{
+    font-size: 14px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.answer{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.answer .show{
+    height:unset;
+    padding: 21px 43px;
+    line-height: 1.6;
+}
+
+.question p{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+
+/* ************************************************* 1st Media quirey  */
+@media screen and (max-width:425px) {
+    .faq h1{
+        text-align: center;
+        font-weight: 700;
+    }
+    .faq{
+        max-width: 1390px;
+        padding: 10px 0px;
+        margin: 0 auto;
+    }
+    .Acordition{
+        color: #e87603;
+        width: 95%;
+        margin-top: 20px;
+       margin: 0 auto;
+       display: flex;
+       justify-content: center;
+    }
+    .acordition_block{
+         width: 100%;
+        margin: 10px auto;
+    }
+    .question{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .question h2{
+        font-size: 13px;
+    }
+    .answer p{
+        font-size: 12px;
+    }
+    .answer{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 5px 16px;
+    }
+    .answer .show{
+        padding: 10px 10px;
+    }
+    .question p{
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 500;
+        transition: all 0.5s ease;
+    }
+    
+}

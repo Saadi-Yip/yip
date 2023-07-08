@@ -1,0 +1,25 @@
+.latest_blog{
+    margin: 0 auto;
+    max-width: 83vw;
+    padding-bottom: 4vw;
+}
+.latest_blog h2{
+    font-weight: 400;
+    margin-bottom: 3vw;
+}
+.internet_latest_row{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:600px){
+    .internet_latest_row{
+        flex-direction: column;
+    }
+    .latest_blog h2{
+        padding: 4vw 0vw;
+    }
+    .latest_blog{
+        max-width: 76vw;
+    }
+}

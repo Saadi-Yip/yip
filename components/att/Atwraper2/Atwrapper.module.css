@@ -1,0 +1,175 @@
+.wrapper{
+    margin-top: 30px;
+    padding: 70px 0 0 0;
+ 
+}
+.discription{
+    text-align: center;
+    margin-bottom: 48px !important;
+}
+.discription h2{
+    font-size:27px ;
+    font-weight:700 ;
+    color: #212529;
+    margin-bottom: 8px;
+}
+.discription p{
+   font-size: 16px;
+   font-weight:400 ;
+   color: #212121;
+}
+.wrapper_area{
+    display: flex;
+    justify-content: center;
+}
+.main_text{
+    width: 40%;
+    background-color: #0b9eda;
+    margin-left: 20px;
+    color: #fff;
+}
+.main_img{
+    max-width: 50%;
+    
+}
+
+ul.under_list li{
+    position: relative;
+}
+ul.under_list li::after  {
+
+    position: absolute;
+font-size: 1em;
+vertical-align: middle;
+font-weight: 900;
+content: "✓";
+color: #fff;
+left: 0;
+top: 0; 
+}
+.list_items1 h5{
+    font-size: 14px;
+    font-weight: 500;
+    color:#fff ;
+ }
+ .list_items1 p{
+    font-size: 12px;
+    font-weight: 400;
+    color:#fff ;
+}
+.under_list{
+    margin-top: 30px;
+}
+.item_list{
+    padding: 0 0 14px 20px;
+    margin-bottom:12px ;
+}
+.item_list h5{
+    font-size:14px ;
+    font-weight:500 ;
+}
+.item_list p{
+    font-size:11px ;
+    font-weight: 400;
+    margin-top: 2px;
+}
+.main_text{
+    padding: 40px;
+}
+.main_text h2{
+  font-weight: 700;
+  font-size:27px ;
+  margin: 0 0 20px 0;
+}
+.dollar h4{
+    font-size: 60px;
+    color: #0b9eda;
+    font-weight: 900;
+}
+.tax h5{
+    justify-content: end;
+}
+.dollars{
+    display: flex;
+    align-items: center;
+}
+.dollars h4{
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff
+}
+.dollars h5{
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff
+
+}
+.taxes h6{
+    font-size: 14px;
+    font-weight:400 ;
+}
+.main_text p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+}
+.pakage p{
+    display: block;
+    color: #fff;
+    font-size: 11px;
+}
+.main_text h3{
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+}
+.main_text a{
+   color: #000;
+   text-decoration: underline;
+}
+
+@media(max-width: 768px){
+    .wrapper_area{
+        display: flex;
+        flex-direction: column;
+    }
+    .main_text{
+        width: 81%;
+    }
+    .discription{
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main_img{
+        max-width: 100%;
+        margin: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+@media(max-width: 600px){
+   .wrapper_area{
+    width: 100%;
+   }
+   .main_text{
+    margin-left: 0px;
+    padding: 0px;
+    width: 100%;
+    padding: 40px 15px;
+    box-sizing: border-box;
+
+   
+   }
+   .discription h2{
+    font-size: 23px;
+   }
+   .wrapper{
+    padding: 70px 0 0 0;
+ 
+}
+}

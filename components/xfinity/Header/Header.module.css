@@ -1,0 +1,118 @@
+.main_nav{
+    background: rgb(168,9,9);
+    background: linear-gradient(90deg, rgba(168,9,9,1) 68%, rgba(255,127,127,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    width: 95%;
+}
+.container img{
+    padding: 20px;
+    padding-left: 0px; 
+    width: 15vw;
+}
+.nav_btn a{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgb(107, 7, 7);
+    background-color: #f5e0e0;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 11px 14px;
+    letter-spacing: .5px;
+}
+.nav_btn:hover{
+    color:red;
+}
+/* Responsiveness starts here */
+@media screen and (max-width:1024px) {
+    .main_nav{
+        background: rgb(168,9,9);
+        background: linear-gradient(90deg, rgba(168,9,9,1) 68%, rgba(255,127,127,1) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        align-items: center;
+        width: 95%;
+    }
+    .container img{
+        width: 22vw;
+        padding: 10px;
+    }
+    .nav_btn a{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: rgb(107, 7, 7);
+        background-color: #f5e0e0;
+        border-radius: 25px;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 11px 14px;
+        letter-spacing: .5px;
+    }
+}
+/* 2nd media quiery *********************************************/
+@media screen and (max-width:768px) {
+    .container img{
+        width: 25vw;
+        padding: 10px;
+    }
+    .nav_btn{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: rgb(107, 7, 7);
+        background-color: #f5e0e0;
+        border-radius: 25px;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 0px 0px;
+        letter-spacing: .5px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .container img{
+        width: 50vw;
+        padding: 10px;
+    }
+    .nav_btn{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: rgb(107, 7, 7);
+        background-color: #f5e0e0;
+        border-radius: 25px;
+        font-size: 8px;
+        font-weight: 700;
+        padding: 0px 0px;
+    }
+    .main_nav{
+        width: 100%;
+        margin: 0 auto;
+        background: rgb(168,9,9);
+        background: linear-gradient(90deg, rgba(168,9,9,1) 68%, rgba(255,127,127,1) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+}
