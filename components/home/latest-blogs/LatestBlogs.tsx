@@ -7,6 +7,7 @@ import React from "react";
 import CursorAnimation from "../../utils/bg-cursor-animation/CursorAnimation";
 import useDimensions from "../../../hooks/use-dimensions";
 import { Autoplay } from 'swiper'
+
 const LatestBlogs = ({ blogs, slider }: any) => {
   const { width } = useDimensions();
   const slides = width < 600 ? 'auto' : 'auto';
@@ -30,7 +31,7 @@ const LatestBlogs = ({ blogs, slider }: any) => {
           }}
           className="trending_blogs_slider"
         >
-          {blogs.blogs && blogs.blogs?.map((blog: any) => {
+          {blogs.blogs && blogs?.blogs?.slice(0,5).map((blog: any) => {
             return (
               <SwiperSlide key={blog._id} className={`${slider ? styles.latest_blog_col : ''}`}>
                 <LatestBlogBox
