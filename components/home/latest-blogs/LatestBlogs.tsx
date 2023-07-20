@@ -8,7 +8,7 @@ import CursorAnimation from "../../utils/bg-cursor-animation/CursorAnimation";
 import useDimensions from "../../../hooks/use-dimensions";
 import { Autoplay } from 'swiper'
 
-const LatestBlogs = ({ blogs, slider }: any) => {
+const LatestBlogs = ({ slider }: any) => {
   const { width } = useDimensions();
   const slides = width < 600 ? 'auto' : 'auto';
   return (
