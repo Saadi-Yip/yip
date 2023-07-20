@@ -228,8 +228,8 @@ const Home = ({ data }: any) => {
         <IntroductionService />
         <InternetProviders />
         <ProviderFeatureBox />
-        <Trending blogs = {data} />
-        {/* <LatestBlogs blogs={data} slider = {true}/> */}
+        {/* <Trending blogs = {data} /> */}
+        <LatestBlogs blogs={data} slider = {true}/>
         {/* <ServiceProvider /> */}
         <QnA data={dataProvider} />
       </main>
