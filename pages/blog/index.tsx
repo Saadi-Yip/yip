@@ -92,14 +92,7 @@ const Blog = ({ data }: any) => {
 
 export async function getStaticProps() {
   const response = (await getBlogs(1,6)) as [];
-  console.log("......................................", "response")
-  // if (response.length < 1) {
-  //   return {
-  //     props: {
-  //       data: [],
-  //     },
-  //   };
-  // }
+ 
   return {
     props: {
       data: response,

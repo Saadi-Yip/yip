@@ -13,8 +13,10 @@ import IntroductionService from "../components/home/introduction-services/Introd
 import ProviderFeatureBox from "../components/home/provider-features/ProviderFeatureBox";
 import LatestBlogs from "../components/home/latest-blogs/LatestBlogs";
 import Link from "next/link";
+import Trending from "../components/blog/trending/Trending";
 
 const Home = ({ data }: any) => {
+  // const relatedBlogs = data.blogs.slice(0,5);
   const dataProvider = [
     {
       heading: "What is YourInternetProvider?",
@@ -226,7 +228,8 @@ const Home = ({ data }: any) => {
         <IntroductionService />
         <InternetProviders />
         <ProviderFeatureBox />
-        <LatestBlogs blogs={data} />
+        {/* <Trending blogs = {data} /> */}
+        <LatestBlogs blogs={data} slider = {true}/>
         {/* <ServiceProvider /> */}
         <QnA data={dataProvider} />
       </main>
@@ -235,7 +238,7 @@ const Home = ({ data }: any) => {
 };
 
 export async function getStaticProps() {
-  const response = (await getBlogs(1, 5)) as [];
+  const response = (await getBlogs(1, null)) as [];
   if (response.length < 1) {
     return {
       props: {

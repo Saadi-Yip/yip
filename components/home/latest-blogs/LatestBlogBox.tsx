@@ -71,10 +71,11 @@ type props = {
   title: string;
   description: string;
   slug: string;
+  slider? :boolean;
   color?: boolean;
 };
 
-const LatestBlogBox = ({ date, title, description, slug, color }: props) => {
+const LatestBlogBox = ({ date, title, description, slug, color, slider}: props) => {
   const { width } = useDimensions();
   const [isHover, setIsHover] = useState(false);
   const blogTile =
@@ -88,14 +89,14 @@ const LatestBlogBox = ({ date, title, description, slug, color }: props) => {
   return (
     <>
       <motion.div
-        className={`${styles.latest_blog_col} ${color ? "latest" : ""}`}
+        className={`${slider? "": styles.latest_blog_col} ${color ? "latest" : ""}`}
         onHoverStart={() => width > 600 && setIsHover(true)}
         onHoverEnd={() => width > 600 && setIsHover(false)}
         variants={blogVariants(width)}
         initial={"default"}
         animate={isHover ? "move" : "default"}
         transition={{
-          duration: 0.1,
+          duration: 0.3,
         }}
       >
         <span>{dateConverter(date)}</span>
@@ -116,7 +117,7 @@ const LatestBlogBox = ({ date, title, description, slug, color }: props) => {
           variants={cloneVarients}
           animate={isHover ? "move" : "default"}
           transition={{
-            duration: 0.3,
+            duration: 0.2,
           }}
         >
           {blogTile}

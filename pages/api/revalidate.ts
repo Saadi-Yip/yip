@@ -6,7 +6,6 @@ export default async function handler(req:any, res:any) {
     if (secret !== process.env.REGENERATION_TOKEN) {
       return res.status(401).json({ message: 'Invalid token' })
     }
-  
     try {
       // this should be the actual path not a rewritten path
       // e.g. for "/blog/[slug]" this should be "/blog/post-1"

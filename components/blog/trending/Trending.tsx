@@ -1,7 +1,6 @@
 import BlogBox from "./BlogBox";
 import { motion, useInView } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import styles from "./trending.module.css";
 import "swiper/css";
 import React, { useRef } from "react";
@@ -15,8 +14,6 @@ const Trending = ({ blogs }: any) => {
   const isInView = useInView(scrollRef, { once: true });
   const isBlogsInView = useInView(blogsRef, { once: true });
   const {width} = useDimensions();
-
-  console.log("blogs.....",blogs)
   return (
     <section className={styles.wrapper}>
       <CursorAnimation />
@@ -57,7 +54,7 @@ const Trending = ({ blogs }: any) => {
             </div>
           </div>
         </div>
-        {blogs && blogs.blogs && blogs.blogs.length > 0 && (
+        {blogs && blogs.length > 0 && (
           <div className={styles.blogs_container} ref={scrollRef}>
             <div className={styles.drag_arrow}>
               <Img
@@ -84,7 +81,7 @@ const Trending = ({ blogs }: any) => {
                 spaceBetween={30}
                 className="trending_blogs_slider"
               >
-                {blogs.blogs?.map((b: any, i: number) => {
+                {blogs?.map((b: any, i: number) => {
                   return (
                     <SwiperSlide key={b._id}>
                       <BlogBox isInView={isBlogsInView} blog={b} />

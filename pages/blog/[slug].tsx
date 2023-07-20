@@ -79,7 +79,7 @@ export async function getStaticPaths() {
   // Get the paths we want to pre-render based on blogs
 
   const paths = response.blogs?.map((blog: any) => ({
-    params: { slug: blog.slug },
+    params: { slug: blog.slug  },
   }));
 
   return { paths, fallback: true };
