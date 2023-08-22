@@ -16,7 +16,7 @@ const uploadFile = (file, name,cb) => {
         Bucket: bucketName,
         Key: name,
         Body: file,
-        ContentType: 'image/webp'
+        ContentType: 'image/Webp'
     };
     return new Promise((resolve, reject) => {
         s3.upload(params, function (err, data) {
