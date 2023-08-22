@@ -5,7 +5,7 @@ async function getBlogs(
   category = "",
   skip?: number | null
 ) {
-  const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}blog?limit=${limit}&search=${search}&category=${category}&page=${skip}&status=true`;
+    const url = `http://localhost:8000/blogs?page=${page}&limit=${limit}&search=${search}&category=${category}&skip=${skip}&status=true`;
   try {
     const controller = new AbortController();
     const signal = controller.signal;
