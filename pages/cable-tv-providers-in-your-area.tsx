@@ -79,7 +79,7 @@ const CableServices = ({ data }: any) => {
             <CablePackage />
             <Myinternet />
             <Yiptrustbox />
-            <CableLatestBlogs blogs={data} />
+            {/* <CableLatestBlogs blogs={data} /> */}
           </div>
         </div>
       </main>
