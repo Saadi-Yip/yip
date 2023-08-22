@@ -72,26 +72,26 @@ const PhoneService = ({ data }: any) => {
             <PhonePackages />
             <TopProviders />
             <Yiptrustbox />
-            {/* <LatestBlogs blogs={data} /> */}
+            <LatestBlogs blogs={data} />
           </div>
         </div>
       </main>
     </>
   );
 };
-// export async function getStaticProps() {
-//   const response = (await getBlogs(1, 5)) as any;
-//   if (response.length < 1) {
-//     return {
-//       props: {
-//         data: [],
-//       },
-//     };
-//   }
-//   return {
-//     props: {
-//       data: response.blogs,
-//     },
-//   };
-// }
+export async function getStaticProps() {
+  const response = (await getBlogs(1, 5)) as any;
+  if (response.length < 1) {
+    return {
+      props: {
+        data: [],
+      },
+    };
+  }
+  return {
+    props: {
+      data: response.blogs,
+    },
+  };
+}
 export default PhoneService;

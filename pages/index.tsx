@@ -14,7 +14,6 @@ import ProviderFeatureBox from "../components/home/provider-features/ProviderFea
 import LatestBlogs from "../components/home/latest-blogs/LatestBlogs";
 import Link from "next/link";
 import Trending from "../components/blog/trending/Trending";
-import getBlog from "../controllers/getBlog";
 
 const Home = ({ data }: any) => { 
   const dataProvider = [
@@ -249,7 +248,7 @@ const Home = ({ data }: any) => {
         <InternetProviders />
         <ProviderFeatureBox />
         {/* <Trending blogs = {data} /> */}
-        <LatestBlogs blogs={data}  />
+        <LatestBlogs blogs={data} slider={true} />
         {/* <ServiceProvider /> */}
         <QnA data={dataProvider} />
       </main>
@@ -259,7 +258,6 @@ const Home = ({ data }: any) => {
 
 export async function getStaticProps() {
   const response = (await getBlogs(1, null)) as [];
-  console.log(response);
   if (response.length < 1) {
     return {
       props: {
@@ -273,6 +271,4 @@ export async function getStaticProps() {
     },
   };
 }
- 
- 
 export default Home;
