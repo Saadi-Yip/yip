@@ -6,8 +6,7 @@ import "swiper/css/pagination";
 import React from "react";
 import CursorAnimation from "../../utils/bg-cursor-animation/CursorAnimation"; 
 const LatestBlogs = ({ blogs  }: any) => { 
-  console.log(blogs?.blogs?.slice(blogs.blogs.length - 5));
-  console.log(blogs?.blogs)
+  
   return (
     <section className={styles.latest_blog__sec}>
       <CursorAnimation />
@@ -20,7 +19,7 @@ const LatestBlogs = ({ blogs  }: any) => {
       <div className={styles.latest_blog_row}>
         
           {blogs.blogs &&
-            blogs.blogs?.slice(55)?.map((blog: any) => {
+            blogs.blogs?.splice(blogs.blogs.length - 5)?.map((blog: any) => {
               return (
                   <LatestBlogBox
                     key={blog._id}
