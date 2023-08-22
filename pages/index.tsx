@@ -274,7 +274,8 @@ const Home = ({ data }: any) => {
 // }
 export async function getStaticProps() {
   
-  const relatedBlogs = await getBlogs(1, 6, "")
+  const relatedBlogs = await getBlogs(1, 6, "");
+  console.log(relatedBlogs, '................')
   return {
     props: {
       data: relatedBlogs ,
