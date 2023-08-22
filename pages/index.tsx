@@ -272,30 +272,14 @@ const Home = ({ data }: any) => {
 //     },
 //   };
 // }
-export async function getStaticProps({ params }: any) {
-  const { slug } = params;
-  const blog = (await getBlog(slug)) as any[];
-  const relatedBlogs = await getBlogs(1, 6, "", blog[0].category?._id);
-
-  if (blog.length < 1) {
-    return {
-      notFound: true,
-    };
-  }
-
+export async function getStaticProps() {
+  
+  const relatedBlogs = await getBlogs(1, 6, "")
   return {
     props: {
       data: relatedBlogs ,
     },
   };
 }
-export async function getStaticPaths() {
-  const response = (await getBlogs(1, null)) as { blogs: any[] };
-  // Get the paths we want to pre-render based on blogs
-  const paths = response.blogs.map((blog: { slug: string }) => ({
-    params: { slug: blog.slug },
-  }));
-
-  return { paths, fallback: true };
-}
+ 
 export default Home;
