@@ -72,7 +72,7 @@ const PhoneService = ({ data }: any) => {
             <PhonePackages />
             <TopProviders />
             <Yiptrustbox />
-            <LatestBlogs blogs={data} />
+            {/* <LatestBlogs blogs={data} /> */}
           </div>
         </div>
       </main>
