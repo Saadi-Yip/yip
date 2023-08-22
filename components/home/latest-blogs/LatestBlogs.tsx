@@ -21,7 +21,7 @@ const LatestBlogs = ({ blogs, slider }: any) => {
 
       <div className={styles.latest_blog_row}>
         {blogs.blogs &&
-          blogs.blogs?.slice(0, 10).map((blog: any) => {
+          blogs.blogs?.slice(2).map((blog: any) => {
             return (
               <LatestBlogBox
                 key={blog._id}
