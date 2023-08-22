@@ -35,7 +35,7 @@ const LatestBlogs = ({ blogs, slider }: any) => {
           className="trending_blogs_slider"
         >
           {blogs.blogs &&
-            blogs.blogs?.map((blog: any) => {
+            blogs.blogs?.slice(0, 5).map((blog: any) => {
               return (
                 <SwiperSlide
                   key={blog._id}

@@ -248,7 +248,7 @@ const Home = ({ data }: any) => {
         <InternetProviders />
         <ProviderFeatureBox />
         {/* <Trending blogs = {data} /> */}
-        {/* <LatestBlogs blogs={data} slider={true} /> */}
+        <LatestBlogs blogs={data} slider={true} />
         {/* <ServiceProvider /> */}
         <QnA data={dataProvider} />
       </main>
