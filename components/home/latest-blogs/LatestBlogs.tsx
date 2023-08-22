@@ -19,7 +19,7 @@ const LatestBlogs = ({ blogs  }: any) => {
       <div className={styles.latest_blog_row}>
         
           {blogs.blogs &&
-            blogs.blogs?.slice(-5).map((blog: any) => {
+            blogs.blogs?.slice(58).map((blog: any) => {
               return (
                
                   <LatestBlogBox
