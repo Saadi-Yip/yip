@@ -14,6 +14,7 @@ import ProviderFeatureBox from "../components/home/provider-features/ProviderFea
 import LatestBlogs from "../components/home/latest-blogs/LatestBlogs";
 import Link from "next/link";
 import Trending from "../components/blog/trending/Trending";
+import getBlog from "../controllers/getBlog";
 
 const Home = ({ data }: any) => { 
   const dataProvider = [
@@ -256,19 +257,45 @@ const Home = ({ data }: any) => {
   );
 };
 
-export async function getStaticProps() {
-  const response = (await getBlogs(1, null)) as [];
-  if (response.length < 1) {
+// export async function getStaticProps() {
+//   const response = (await getBlogs(1, null)) as [];
+//   if (response.length < 1) {
+//     return {
+//       props: {
+//         data: [],
+//       },
+//     };
+//   }
+//   return {
+//     props: {
+//       data: response,
+//     },
+//   };
+// }
+export async function getStaticProps({ params }: any) {
+  const { slug } = params;
+  const blog = (await getBlog(slug)) as any[];
+  const relatedBlogs = await getBlogs(1, 6, "", blog[0].category?._id);
+
+  if (blog.length < 1) {
     return {
-      props: {
-        data: [],
-      },
+      notFound: true,
     };
   }
+
   return {
     props: {
-      data: response,
+      data: relatedBlogs ,
     },
   };
+}
+export async function getStaticPaths() {
+  const response = (await getBlogs(1, null)) as { blogs: any[] };
+  // Get the paths we want to pre-render based on blogs
+  const paths = response.blogs.map((blog: { slug: string }) => ({
+    params: { slug: blog.slug },
+  }));
+
+  return { paths, fallback: true };
 }
 export default Home;

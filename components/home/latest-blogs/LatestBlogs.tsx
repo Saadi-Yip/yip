@@ -20,19 +20,32 @@ const LatestBlogs = ({ blogs, slider }: any) => {
       </div>
 
       <div className={styles.latest_blog_row}>
-        {blogs.blogs &&
-          blogs.blogs?.slice(2).map((blog: any) => {
-            return (
-              <LatestBlogBox
-                key={blog._id}
-                date={blog.created_at}
-                title={blog.title}
-                description={blog.excerpt}
-                slug={blog.slug}
-                slider={slider}
-              />
-            );
-          })}
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          slidesPerView={slides}
+          spaceBetween={0}
+          loop={true}
+          className="trending_blogs_slider"
+        >
+          {blogs.blogs &&
+            blogs.blogs?.map((blog: any) => {
+              return (
+                <SwiperSlide
+                  key={blog._id}
+                  className={`${slider ? styles.latest_blog_col : ""}`}
+                >
+                  <LatestBlogBox
+                    key={blog._id}
+                    date={blog.created_at}
+                    title={blog.title}
+                    description={blog.excerpt}
+                    slug={blog.slug}
+                    slider={slider}
+                  />
+                </SwiperSlide>
+              );
+            })}
+        </Swiper>
       </div>
     </section>
   );
