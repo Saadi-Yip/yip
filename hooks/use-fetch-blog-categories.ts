@@ -18,7 +18,7 @@ const useBlogCategory = (currentPage: number, productPerPage: number, searchQuer
         ])
             .then((results) => {
                 const [fetchedBlogs, fetchedCategories]: [any, any] = results;
-                setBlogs(fetchedBlogs.blogs);
+                setBlogs(fetchedBlogs);
                 setTotal(fetchedBlogs.total)
 
                 if (fetchedCategories) {
