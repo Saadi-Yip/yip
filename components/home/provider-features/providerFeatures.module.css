@@ -1,0 +1,23 @@
+.InternetFeaturesBox{
+    background-color: #0D0D17;
+    padding: 2vw 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.dark{
+    color: #fff;
+}
+.InternetFeaturesBox_inner{
+    padding: 4vw 1.5vw;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.InternetFeaturesBox_inner a{
+    color:#fff;
+    text-decoration: underline;
+}
+
+@media screen and (max-width:600px){
+    .InternetFeaturesBox_inner{
+        max-width: 90vw;
+    }   
+}

@@ -1,0 +1,226 @@
+.QnA {
+  box-sizing: border-box;
+  background-color: #0d0d17;
+}
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+.QnA h1 {
+  font-size: 2.604vw;
+  font-weight: 400;
+  line-height: 3.854vw;
+  color: #fff;
+  margin-bottom: 4.896vw;
+}
+.main_text {
+  display: flex;
+}
+.main_text h2 {
+  line-height: 2.5vw;
+  color: #cdcecf;
+  margin-bottom: 2.813vw;
+  font-size: 2.083vw;
+}
+.left,
+.right {
+  padding: 5.208vw 0;
+}
+.left {
+  width: 56.3%;
+  border-right: 0.052vw solid hsla(0, 0%, 100%, 0.371);
+  z-index: 2;
+  background-color: #0d0d17;
+}
+.right {
+  padding-left: 3.281vw;
+  z-index: 0;
+}
+.left p {
+  line-height: 1.5;
+}
+.right p,
+.left p.description {
+  line-height: 2.083vw;
+  color: #cdcecf;
+  margin-bottom: 6.771vw;
+  font-size: 1.5vw;
+}
+.left p.description {
+  margin-bottom: 1.771vw;
+  line-height: 2.083vw;
+  color: #cdcecf;
+  padding-right: 2vw;
+}
+.right h4,
+.subscribe span {
+  line-height: 1.198vw;
+  color: #cdcecf;
+  margin-bottom: 1.458vw;
+}
+.right a {
+  color: #cdcecf;
+  text-decoration: underline;
+}
+
+.subscribe span {
+  display: inline-block;
+}
+.subscribe input {
+  border: 1px solid rgba(135, 142, 148, 1);
+  color: rgba(135, 142, 148, 1);
+  background-color: transparent;
+  outline: none;
+  padding: 0.6vw 1vw;
+  width: 11vw;
+  margin-right: 1vw;
+  font-size: 1.1vw;
+}
+.subscriber_contact {
+  display: flex;
+}
+.subscriber_contact button {
+  background-color: transparent;
+  border: 1px solid rgba(135, 142, 148, 1);
+  cursor: pointer;
+  width: 3vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input_bar {
+  width: 19.271vw;
+  height: 2.865vw;
+  border: 0.104vw solid #878e94;
+  display: flex;
+  align-items: center;
+  padding: 0 0.625vw;
+  box-sizing: border-box;
+}
+.input_bar input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.042vw;
+  color: rgba(255, 255, 255, 0.6);
+  flex: 1;
+  padding-right: 0.625vw;
+}
+.input_bar div {
+  width: 1.563vw !important;
+  height: 1.563vw !important;
+  border-radius: 100%;
+  border: 0.026vw solid rgba(205, 206, 207, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.input_bar img {
+  filter: invert(1);
+  rotate: 275deg;
+  width: 0.625vw !important;
+  margin: auto;
+}
+.faq_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .main_text {
+    flex-direction: column;
+    margin-top: 0vw;
+  }
+  .main_text h2 {
+    line-height: 7.5vw;
+  }
+  .left {
+    width: 100%;
+  }
+  .left h2 {
+    padding: 7vw 4vw 0;
+  }
+  .left p.description{
+    padding-left: 4vw;
+    font-size: 3.4vw;
+    line-height: 1.6;
+    /* max-width: 346px; */
+    font-weight: 100;
+  }
+  /* .left li{
+
+  } */
+  .right {
+    width: 100%;
+    padding: 6.208vw 5vw 14vw;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .right h2 {
+    padding-bottom: 5vw;
+  }
+  .right p {
+    font-size: 3.4vw;
+    line-height: 1.7;
+    margin-right: auto;
+    max-width: 87vw;
+  }
+  .subscribe span {
+    margin-bottom: 2.458vw;
+    padding-bottom: 5vw;
+    padding-top: 7vw;
+  }
+  .input_bar {
+    width: 54.271vw;
+    height: 9.865vw;
+    padding: 0 2vw;
+  }
+  .input_bar input {
+    font-size: 3.042vw;
+    padding: 0 1.625vw;
+  }
+  .input_bar div {
+    width: 3.563vw !important;
+    height: 3.563vw !important;
+  }
+  .input_bar div img {
+    width: 1.625vw !important;
+  }
+  .faq_mobile {
+    display: block;
+    background-color: #cdcecf;
+    position: relative;
+  }
+  .faq_mobile::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: -102px;
+    background-color: #cdcecf;
+    height: 101px;
+    clip-path: polygon(0 0, 100% 0%, 100% 1%, 51% 35%, 0% 0%);
+  }
+  .faq_mobile h2 {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 69vw;
+    padding: 9vw 0vw 9vw;
+  }
+  .main_text h2,
+  .subscribe span {
+    font-size: 5.828vw;
+  }
+  .subscriber_contact input {
+    padding: 2vw 2vw;
+    width: 30vw;
+    margin-right: 2vw;
+    font-size: 3vw;
+  }
+  .subscriber_contact button {
+    width: 14vw;
+  }
+}

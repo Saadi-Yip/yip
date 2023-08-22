@@ -1,0 +1,172 @@
+.container{
+    max-width: 1390px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 15px;
+}
+/* Text css */
+.wrapper2_text{
+    padding: 33px 20px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: unset;
+    margin: 0px 0px;
+}
+.wrapper2_text h3{
+    color: #e87603;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.wrapper2_text p{
+    width: 50%;
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 1.9;
+    padding-bottom: 15px;
+}
+.wrapper2_text ul{
+  padding: 0px 20px;
+}
+.wrapper2_text li{
+    color: #e87603;
+    list-style-type: disc;
+    font-size: 18px;
+    padding: 15px 0px;
+}
+.wrapper2_text a{
+    margin-top: 30px;
+    background: #e87603;
+    color: black;
+    font-size: 17px;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 36px;
+    letter-spacing: .5px;
+    display: block;
+    width: fit-content;
+    justify-content: center;
+}
+
+
+/* ****************************************** 1st Media Quiery */
+
+@media screen and (max-width:768px) {
+    .container{
+        max-width: 1390px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 15px;
+    }
+    /* Text css */
+    
+    .wrapper2_text{
+        margin: 10px;
+        padding: 50px 20px;
+        width: 100%;
+        background-size: cover;
+        height: 100vh;
+    }
+    .wrapper2_text h3{
+        color: #e87603;
+        font-size: 25px;
+        font-weight: 400;
+        padding-bottom: 19px;
+    }
+    .wrapper2_text p{
+        width: 50%;
+        color: white;
+        font-size: 15px;
+        font-weight: 100;
+        line-height: 26px;
+        padding-bottom: 25px;
+    }
+    .wrapper2_text ul{
+      padding: 0px 20px;
+    }
+    .wrapper2_text li{
+        color: #e87603;
+        list-style-type: disc;
+        padding: 10px;
+    }
+    .wrapper2_text a{
+        margin-top: 30px;
+        background: #e87603;
+        color: black;
+        font-size: 17px;
+        padding: 8px 10px;
+        text-align: center;
+        border-radius: 36px;
+        letter-spacing: .5px;
+        display: block;
+        width: fit-content;
+        justify-content: center;
+    }
+}
+
+
+
+/* ****************************************** 2nd Media Quiery */
+
+@media screen and (max-width:425px) {
+    .container{
+        max-width: 1390px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 15px;
+    }
+    /* Text css */
+    
+    .wrapper2_text{
+        margin: 5px;
+        padding: 20px 13px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        height: unset;
+    }
+    .wrapper2_text h3{
+        color: #e87603;
+        font-size: 19px;
+        font-weight: 900;
+        padding: 0px 0px;
+        line-height: 1.5;
+    }
+    .wrapper2_text p{
+        width: 100%;
+        color: white;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+    .wrapper2_text ul{
+      padding: 0px 12px;
+    }
+    .wrapper2_text li{
+        color: #e87603;
+        list-style-type: disc;
+        padding: 8px 4px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .wrapper2_text a{
+        margin-top: 30px;
+        background: #e87603;
+        color: black;
+        font-size: 13px;
+        padding: 10px 10px;
+        text-align: center;
+        border-radius: 36px;
+        letter-spacing: .5px;
+        display: block;
+        width: fit-content;
+        align-items: center;
+    }
+}

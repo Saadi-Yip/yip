@@ -1,0 +1,223 @@
+.container{
+    max-width: 1390px;
+    margin: 4% auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid gray;
+    padding-top: 3%;
+}
+/* Text css */
+
+.wrapper2_text{
+    margin: 10px;
+    padding: 10px 0px;
+    width: 50%;
+}
+.wrapper2_text h3{
+    font-size: 25px;
+    font-weight: 400;
+    padding-bottom: 19px ;
+    line-height: 1.5;
+}
+.wrapper2_text span{
+    color: rgba(0,154,222,1);
+    font-size: 30px;
+    font-weight: 500;
+}
+.wrapper2_text p{
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 1.9;
+    padding-bottom: 25px;
+}
+.wrapper2_text p span{
+    color: rgba(0,154,222,1);
+    font-size: 17px;
+}
+
+/* Image css */
+.wrapper2_img{
+    width: 50%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+}
+.wrapper2_img img{
+    padding: 4px;
+    border-radius: 20px;
+}
+
+/* ****************************************** 1st Media Quiery */
+
+@media screen and (max-width:1024px) {
+    .container{
+        max-width: 1320px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border-top: 1px solid gray;
+        padding-top: 50px;
+    }
+    /* Text css */
+    
+    .wrapper2_text{
+        margin: 10px;
+        padding: 10px;
+        width: 50%;
+    }
+    .wrapper2_text h3{
+        font-size: 20px;
+        font-weight: 400;
+        padding-bottom: 19px ;
+    }
+    .wrapper2_text span{
+        color: rgba(0,154,222,1);
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .wrapper2_text p{
+        font-size: 13px;
+        font-weight: 100;
+        line-height: 20px;
+    }
+    .wrapper2_text p span{
+        color: rgba(0,154,222,1);
+        font-size: 13px;
+    }
+    
+    /* Image css */
+    .wrapper2_img{
+        width: 50%;
+        padding: 0px 22px;
+    }
+    .wrapper2_img img{
+        width: 100%;
+        padding: 5px;
+        border-radius: 20px;
+    }
+}
+
+
+
+/* ****************************************** 2nd Media Quiery */
+
+@media screen and (max-width:768px) {
+    .container{
+        max-width: 1390px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        border-top: 1px solid gray;
+        padding-top: 30px;
+        position: relative;
+    }
+    /* Text css */
+    
+    .wrapper2_text{
+        width: 94%;
+        margin: 0px auto;
+    }
+    .wrapper2_text h3{
+        font-size: 20px;
+        font-weight: 400;
+        padding-bottom: 10px;
+        position: absolute;
+        top: 110px;
+        right: 0px;
+        z-index: 99;
+        margin-left: auto;
+        max-width: 331px;
+    }
+    .wrapper2_text span{
+        color: rgba(0,154,222,1);
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .wrapper2_text p{
+        font-size: 17px;
+        font-weight: 100;
+        line-height: 1.6;
+    }
+    .wrapper2_text p span{
+        color: rgba(0,154,222,1);
+        font-size: 17px;
+    }
+    
+    /* Image css */
+    .wrapper2_img{
+        width: 95%;
+        padding: 0px 0px;
+        margin: 0 auto;
+        margin-top: 0px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .wrapper2_img img{
+        width: 100%;
+        padding: 0px;
+        border-radius: 20px;
+    }
+}
+
+
+
+/* ****************************************** 3nd Media Quiery */
+
+@media screen and (max-width:425px) {
+    .container{
+        max-width: 1390px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin-top: 0px;
+        margin-bottom: 0%;
+        border-top: 1px solid gray;
+        padding-top: 30px;
+        position: unset;
+    }
+    /* Text css */
+    
+    .wrapper2_text{
+        width: 90%;
+        margin: 10px auto;
+    }
+    .wrapper2_text h3{
+        font-size: 18px;
+        font-weight: 600;
+        padding-bottom: 19px;
+        position: unset;
+    }
+    .wrapper2_text span{
+        color: rgba(0,154,222,1);
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .wrapper2_text p{
+        font-size: 15px;
+        font-weight: 100;
+        line-height: 1.6;
+    }
+    .wrapper2_text p span{
+        color: rgba(0,154,222,1);
+        font-size: 15px;
+    }
+    
+    /* Image css */
+    .wrapper2_img{
+        width: 100%;
+        padding: 0px 0px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .wrapper2_img img{
+        width: 100%;
+        padding: 5px 0px;
+        border-radius: 20px;
+    }
+}

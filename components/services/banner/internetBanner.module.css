@@ -1,0 +1,85 @@
+.internet_banner_sec{
+    position: relative;
+    padding-bottom: 7vw;
+}
+.banner_text{
+    padding-top: 15vw;
+    text-align: center;
+}
+.banner_text h1{
+    width: 57vw;
+    margin: 0 auto;
+    margin-bottom: 2vw;
+}
+.search_row{
+    display: flex;
+    align-items: center;
+    width: 35vw;
+    margin: 2vw auto 0;
+    border: 1px solid rgba(135, 142, 148, 1);
+    justify-content: space-between;
+    padding: 0.2vw 1vw;
+    background-color: #cdcecf;
+}
+.search_row button{
+    cursor: pointer;
+}
+.banner_text input{
+   border: none;
+   width: 36vw;
+    height: 2.865vw;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: transparent;
+    outline: none;
+}
+.banner_text button{
+    background: transparent;
+    border: none;
+}
+.california {
+    width: 73vw !important;
+}
+@media screen and (max-width:600px){
+    .internet_banner_sec{
+        height: unset;
+        padding-bottom: 15vw;
+    }
+    .banner_text{
+        padding: 54vw 3vw 0;
+    }
+    .banner_text h1{
+        width: 81vw;
+    }
+    .banner_text p{
+        padding: 2vw 0;
+        line-height: 1.5;
+    }
+    .search_row{
+        display: unset;
+        padding: 1vw 3vw;
+        border: none;
+        background-color: unset;
+    }
+    .search_row input{
+        border: 1px solid rgba(135, 142, 148, 1);
+        width: 62vw;
+        height: 11vw;
+        margin: 0vw auto 5vw;
+        padding: 1vw 3vw;
+    }
+    button.find_btn{
+        background-color: rgba(15, 55, 130, 1);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 100;
+        padding: 1.3vw 10vw;
+       
+        margin: 7vw auto 4vw;
+
+            width: fit-content;
+
+    }
+
+}

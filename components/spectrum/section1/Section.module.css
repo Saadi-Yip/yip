@@ -1,0 +1,191 @@
+.section {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 0;
+}
+.container {
+  display: flex;
+  margin-bottom: 30px;
+  width: 90%;
+}
+.area1 {
+  width: 50%;
+}
+.spect_one h2 {
+  display: block;
+  font-size: 54.08px;
+  line-height: 65px;
+  color: #ffffff;
+  font-weight: normal;
+}
+.para_text p {
+  display: block;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  margin-top: 48px;
+}
+.para_line p {
+  display: block;
+  line-height: 1px;
+  margin-bottom: 0;
+  font-weight: normal;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 23px;
+}
+.price h2 {
+  font-size: 96px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 92px;
+}
+.price span {
+  font-size: 33px;
+  font-weight: 800;
+  color: #fff;
+}
+.price {
+  display: flex;
+  align-items: flex-start;
+}
+.membership {
+  display: flex;
+  align-items: self-end;
+}
+.membership h3 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #fff;
+}
+.membership span {
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+}
+.dollar_main2 p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 14px;
+  width: 97px;
+}
+.dollar_main {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.image_area {
+  width: 50%;
+  flex-direction: column;
+  padding-left: 36px;
+  display: flex;
+  justify-content: center;
+}
+
+.area1 {
+  margin-top: 60px;
+  width: 50%;
+}
+
+.device_pic img {
+  max-width: 100%;
+  vertical-align: middle;
+  padding-right: 25px;
+}
+.spect_one_logo img {
+  max-width: 100%;
+  margin-left: 50px;
+}
+
+@media (max-width: 1053px) {
+  .spect_one h2 {
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 55px;
+    margin-left: 0px; 
+    max-width: 100%;
+  }
+  .para_text p {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    margin-top: 30px;
+  }
+  .spect_one_logo img {
+    margin-left: 0px;
+  }
+  
+  .image_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+  }
+  .para_line p {
+    line-height: 18px;
+    font-size: 18px;
+    margin-top: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .image_area {
+  width: 100%;
+  }
+  /* AGAIN */
+  .image_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+  }
+  .spect_one h2 {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 50px;
+  }
+  .para_text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  .para_line p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  .area1 {
+    width: 100%;
+  }
+  .spect_one_logo img {
+    margin-left: 0px;
+  }
+  .section{
+    padding: 40px 0 1px;
+  }
+}
+@media (max-width: 600px){
+  .container {
+    display: flex;
+    padding: 0 25px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .area1 {
+    margin-top: 40px;
+  }
+  .para_text p {
+    line-height: 22px;
+  }
+}
+
+

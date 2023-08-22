@@ -1,0 +1,150 @@
+.all_part{
+    display: flex;
+    justify-content: center;
+}
+.wraper_main{
+    width: 50%;
+    background-color: #212121;
+    color: #fff;
+    margin-top: 30px;
+  
+
+}
+.wraper_text{
+    padding: 40px;
+}
+.wraper_text h2{
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+.wraper_text p{
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 20px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.main_img{
+    max-width: 50%;
+    margin-top: 30px;
+}
+
+
+
+ul.lists li{
+    position: relative;
+}
+ul.lists li::after  {
+
+    position: absolute;
+font-size: 1em;
+vertical-align: middle;
+font-weight: 900;
+content: "✓";
+color: #fff;
+left: 0;
+top: 0; 
+}
+.list_items1 h5{
+    font-size: 14px;
+    font-weight: 500;
+    color:#fff ;
+ }
+ .list_items1 p{
+    font-size: 12px;
+    font-weight: 400;
+    color:#fff ;
+}
+.lists{
+    margin-top: 30px;
+    padding: 0 10px 30px 10px;
+}
+.list_items1{
+    padding: 0 0 0 21px;
+    margin-bottom:12px ;
+}
+.list_items1 h5{
+    font-size:14px ;
+    font-weight:500 ;
+}
+
+.all_part{
+    display: flex;
+}
+
+
+
+.text_area{
+    position: absolute;
+    width: 37%;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width:768px){
+    .all_part{
+        display: flex;
+        flex-direction: column;
+        padding: 0px 70px 90px 70px;
+    }
+    .wraper_main{
+        width: 100%;
+    }
+    
+    
+    .text_area{
+        width: 77%;
+    }
+  
+    .main_img{
+        max-width: 100%;
+        margin: auto;
+        
+    }
+    .main_img img{
+        max-width: 100%;
+    }
+    
+}
+    
+
+@media (max-width: 600px){
+    .all_part{
+     
+        padding: 0px 10px 10px 10px;
+    }
+    .text_area{
+        width: 100%;
+      
+    }
+    .image_part{
+        width: 90%;
+    }
+    .image_part img{
+        width: 100%;
+    }
+    .text_area{
+        width: 85%;
+        padding: 0;
+    }
+    .text_area p{
+        font-size: 12px;
+        line-height: 21px;
+        margin: 0 0 0px;
+        font-weight: 500;
+    }
+    .wraper_text{
+        padding: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        }
+    .wraper_text p{
+        padding: 0 10px 10px 10px;   
+     }
+    .wraper_text h2{
+        padding: 0 10px 10px 10px;   
+    }
+}

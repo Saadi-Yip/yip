@@ -1,0 +1,145 @@
+.container{
+    max-width: 1390px;
+    margin: 0px auto;
+    padding: 0px 15px;
+    padding-bottom: 30px;
+}
+.banner{
+    background-size: cover;
+    background-position: center;
+    height: unset;
+    padding: 15px 10px;
+   
+}
+.banner h2{
+    color: #e87603;
+    margin-top: 10px;
+    font-size: 34px;
+    font-weight: 900;
+    padding: 10px 0px;
+}
+.banner li {
+    color: #fff;
+    font-size: 19px;
+    padding: 15px 10px;
+    font-weight: 100;
+    list-style-type: circle;
+}
+.banner ul {
+    padding: 0px;
+    margin-left: 19px;
+}
+.banner h3 {
+    padding: 15px 0px;
+    font-weight: 400;
+    font-size: 29px;
+    color: #fff;
+}
+.banner h4{
+    font-size: 40px;
+   font-weight: 900;
+   padding: 10px 0px;
+    display: flex;
+    color: #e87603;;
+}
+.banner sub{
+    display: flex;
+    align-items: flex-end;
+    font-size: 26px;
+    margin-left: 7px;
+}
+.banner p{
+    color: #fff;
+    padding: 14px 0;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.banner a{
+    margin-top: 20px;
+    background: #e87603;
+    color: black;
+    font-size: 17px;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 36px;
+    letter-spacing: .5px;
+    display: block;
+    width: fit-content;
+    justify-content: center;
+}
+
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^1st Media quiery start ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+@media screen and (max-width:767px) {
+    .container{
+        max-width: 1390px;
+        padding: 0 15px;
+        margin: 30px auto;
+    }
+    .banner{
+        background-size: cover;
+        background-position: center;
+        height: unset;
+        padding: 20px;
+    }
+    .banner h2{
+        color: #e87603;
+        margin-top: 0px;
+        font-size: 19px;
+        line-height: 1.6;
+        font-weight: 900;
+        padding: 0px;
+    }
+    .banner li {
+        color: #fff;
+        font-size: 14px;
+        padding: 7px 6px;
+        font-weight: 500;
+        list-style-type: circle;
+        line-height: 1.5;
+    }
+    .banner ul {
+        padding: 0px;
+        margin-left: 19px;
+    }
+    .banner h3 {
+        padding: 3px 0px;
+        font-weight: 400;
+        font-size: 20px;
+        color: #fff;
+        font-size: 17px;
+        line-height: 1.5;
+    }
+    .banner h4{
+        font-size: 32px;
+       font-weight: 900;
+       padding: 10px 0px;
+        display: flex;
+        color: #e87603;;
+    }
+    .banner sub{
+        display: flex;
+        align-items: flex-end;
+        font-size: 21px;
+        margin-left: 7px;
+    }
+    .banner p{
+        color: #fff;
+        padding: 8px 0;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+    .banner a{
+        margin-top: 10px;
+        background: #e87603;
+        color: black;
+        font-size: 14px;
+        padding: 6px 8px;
+        text-align: center;
+        border-radius: 36px;
+        display: block;
+        width: fit-content;
+        align-items: center;
+    }
+}

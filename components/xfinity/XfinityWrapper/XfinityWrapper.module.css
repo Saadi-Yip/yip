@@ -1,0 +1,314 @@
+/* Section main css */
+.container{
+    max-width: 1390px;
+    margin: 20px auto;
+    border-top: 1px solid gray;
+    padding: 50px 25px;
+}
+.banner{
+    display: flex;
+}
+
+/* Image css */
+
+.banner_img{
+    border: 3px solid rgba(168,9,9,1);
+    border-radius: 20px;
+    display: flex;
+}
+.banner_img img{
+   max-width: 665px;
+   border-radius: 20px;
+   padding: 6px;
+}
+
+/* text section css */
+
+
+.banner_text{
+    width: 50%;
+    margin-left: 20px;
+    padding: 20px;
+}
+.banner_text h6{
+  font-size: 25px;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+.banner_text span{
+    font-size: 32px;
+    font-weight: 600;
+    padding-left: 1px;
+    color: rgba(168,9,9,1);
+}
+.banner_text_list{
+    display: flex;
+    padding: 15px;
+}
+.banner_text_list img{
+    width: 10%;
+}
+.banner_text_list p{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+.banner_btn a{
+    color: #800000;
+    background-color: #fd7777;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 80;
+    padding: 10px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: fit-content;
+    display: block;
+}
+.banner_btn a{
+    margin-top: 20px;
+}
+.banner_btn:hover{
+    color: black;
+}
+
+
+
+
+
+/* ******************************************* 1st Media quiry *************************** */
+
+
+@media screen and (max-width:1024px) {
+  /* Section main css */
+.container{
+    max-width: 1390px;
+    padding: 30px 15px;
+    margin: 0px 20px;
+}
+.banner{
+    display: flex;
+}
+
+/* Image css */
+
+.banner_img{
+    width: 50%;
+    border: 3px solid rgba(168,9,9,1);
+    border-radius: 20px;
+    display: flex;
+}
+.banner_img img{
+   max-width: 644px;
+   border-radius: 20px;
+   padding: 6px;
+}
+
+/* text section css */
+
+
+.banner_text{
+    width: 50%;
+    margin-left: 20px;
+    padding: 8px;
+}
+.banner_text h6{
+  font-size: 19px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+.banner_text span{
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 1px;
+    color: rgba(168,9,9,1);
+}
+.banner_text_list{
+    display: flex;
+    padding: 10px 0px;
+}
+.banner_text_list img{
+    width: 9%;
+}
+.banner_text_list p{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.banner_btn a{
+    color: #800000;
+    background-color: #fd7777;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 900;
+    padding: 8px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.banner_btn:hover{
+    color: black;
+}
+}
+
+
+
+
+
+/* ******************************************* 2nd Media quiry *************************** */
+
+
+@media screen and (max-width:767px) {
+    /* Section main css */
+  .container{
+      max-width: 1300px;
+      margin: 20px auto;
+  }
+  .banner{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  /* Image css */
+  
+  .banner_img{
+      width: 100%;
+      margin: 0 auto;
+      border: 3px solid rgba(168,9,9,1);
+      border-radius: 20px;
+  }
+  .banner_img img{
+     max-width: 744px;
+     border-radius: 20px;
+     padding: 6px;
+  }
+  
+  /* text section css */
+  
+  
+  .banner_text{
+      width: 97%;
+      margin: 20px auto;
+  }
+  .banner_text h6{
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 30px;
+  }
+  .banner_text span{
+      font-size: 20px;
+      font-weight: 600;
+      padding-left: 1px;
+      color: rgba(168,9,9,1);
+  }
+  .banner_text_list{
+    font-size: 14px;
+      display: flex;
+      padding: 10px 0px;
+  }
+  .banner_text_list img{
+      width: 9%;
+  }
+  .banner_text_list p{
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+  }
+  .banner_btn a{
+      color: #800000;
+      background-color: #fd7777;
+      border: none;
+      outline: none;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 10px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+  }
+  .banner_btn:hover{
+      color: black;
+  }
+  }
+
+  
+
+
+
+/* ******************************************* 3rd Media quiry *************************** */
+
+
+@media screen and (max-width:375px) {
+    /* Section main css */
+  .container{
+      max-width: 1390px;
+      margin: 10px 10px;
+  }
+  .banner{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  /* Image css */
+  
+  .banner_img{
+      width: 100%;
+      margin: 0 auto;
+      border: 3px solid rgba(168,9,9,1);
+      border-radius: 20px;
+  }
+  .banner_img img{
+     max-width: 344px;
+     border-radius: 20px;
+     padding: 6px;
+  }
+  
+  /* text section css */
+  
+  
+  .banner_text{
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 0px;
+  }
+  .banner_text h6{
+    font-size: 15px;
+    font-weight: 900;
+    padding-bottom: 20px;
+  }
+  .banner_text span{
+      font-size: 20px;
+      font-weight: 600;
+      padding-left: 1px;
+      color: rgba(168,9,9,1);
+  }
+  .banner_text_list{
+      display: flex;
+      padding: 10px 0px;
+  }
+  .banner_text_list img{
+      width: 12%;
+  }
+  .banner_text_list p{
+      font-size: 14px;
+      padding-left: 16px;
+  }
+  .banner_btn a{
+      color: #800000;
+      background-color: #fd7777;
+      border: none;
+      outline: none;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 10px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+  }
+  .banner_btn:hover{
+      color: black;
+  }
+  }

@@ -1,0 +1,195 @@
+.left_section {
+  width: 62%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.area_3 {
+  border-top: 1px solid #cccccc;
+    margin: 0 auto;
+    max-width: 1318px;
+    padding: 0 11px;
+}
+.left_section h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  color: #333333;
+}
+.left_section p {
+  line-height: 36px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #00629b;
+}
+.content p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #333333;
+}
+
+.deals {
+  display: flex;
+  /* max-width: 1140px; */
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  /* width: 100%; */
+
+ 
+ 
+}
+.image_part {
+  width: 50%;
+  padding-left: 10px;
+}
+.price_2 h2 {
+  font-size: 96px;
+  font-weight: 700;
+  color: #333333;
+}
+.price_2 span {
+  font-size: 33px;
+  font-weight: 800;
+  color: #333333;
+  margin-top: 15px;
+}
+.price_2 {
+  display: flex;
+  align-items: flex-start;
+}
+.membership_2 {
+  display: flex;
+  align-items: self-end;
+  margin-top: 5px;
+}
+.membership_2 h3 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #333333;
+}
+.membership_2 span {
+  font-size: 22px;
+  font-weight: 400;
+  color: #333333;
+}
+.dollar_main3 p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 14px;
+  width: 97px;
+}
+.dollar_main3 {
+  display: flex;
+  margin-top: 12px;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.dollar_2 {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+.restriction p {
+  text-align: left !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #333333;
+  width: 205px;
+}
+.image_part img {
+  width: 100%;
+}
+@media screen and (max-width:800px){
+  .area_3 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .left_section {
+    width: 60%;
+
+  }
+  .left_section h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .left_section {
+    width: 100%;
+  }
+  .deals {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .image_part  {
+    width: 100%;
+  }
+  .image_part img {
+    max-width: 100%;
+    
+  }
+  .left_section h2 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43px;
+  }
+  .content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .image_part {
+    padding-bottom: 20px;
+    margin-top: 10px;
+  }
+  .left_section h2 {
+    margin-bottom: 15px;
+    color: #333333;
+    max-width: 383px;
+  }
+  .left_section p {
+    text-align: start;
+  }
+  .price_2 h2 {
+    font-size: 70px;
+    font-weight: 700;
+  }
+  .membership_2 h3 {
+    font-size: 27px;
+    font-weight: 700;
+  }
+
+ 
+}
+@media (max-width:600px){
+  .deals{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .area_3{
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 32px;
+  }
+  .left_section {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .image_part {
+    padding-left: 0px;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "banner": {
+    "primary_heading": "Helping you to find quality internet providers",
+    "secondary_heading": "Lets Find you the Right Plan",
+    "text": "See plans. speeds, price & rating of your local providers in one go!"
+  },
+  "plans": {
+    "primary_heading": "We are the best place to find and compare local internet providers, and we have the most comprehensive dataset of internet plans, pricing, and availability.!",
+    "items": [
+      {
+        "title": "Internet",
+        "description": "We at Yourinternetprovider offer lightning-fast internet speeds of up to 400mbps with DSL, fiber-optic, or satellite. Affordable rates and tailored features available."
+      },
+      {
+        "title": "Cable",
+        "description": "Find cable plans to match your preferences with Yourinternetprovider. Immerse yourself in top-tier picture quality, customizable viewing options, and exceptional customer service."
+      },
+      {
+        "title": "Landline",
+        "description": "With yourinternetprovider, socialize or attend bussiness through our reliable and affordable landline plans from top USA providers with crystal-clear sound, multiple features."
+      },
+      {
+        "title": "Phones",
+        "description": "Youinternetprovider offers on-the-go affordable and flexible phone plans from top USA providers. Enjoy unlimited talk, text, and data to stay connected."
+      }
+    ]
+  }
+}

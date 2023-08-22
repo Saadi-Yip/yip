@@ -1,0 +1,117 @@
+.faq h1{
+    text-align: center;
+    font-weight: 700;
+    border-top: 1px solid gray;
+    padding-top: 3%;
+}
+.faq{
+    max-width: 1390px;
+    margin: 0 auto;
+    padding: 0 10px;
+    padding-bottom: 5%;
+}
+.Acordition{
+    max-width: 1380px;
+    padding: 0px 10px;
+    margin: 0 auto;
+    display: flex;
+}
+.question h2{
+    text-align: center;
+
+}
+.acordition_block{
+     max-width: 1390px;
+     background-color: #fcfbfd;
+     margin: 50px auto;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    background-color: #fffcfc;
+    box-shadow: rgb(0 0 0 / 13%) 0px 5px 15px;
+    cursor: pointer;
+}
+.question h2{
+    font-size: 17px;
+}
+.answer p{
+    font-size: 14px;
+    height: 0;
+    overflow: hidden;
+    /* transition: all 0.5s ease-in-out; */
+}
+.answer{
+    display: flex;
+    align-items: center;
+    background-color: #fffcfc;
+}
+.answer .show{
+   height: 100%;
+   padding-top: 15px;
+   padding-bottom: 20px;
+   padding-right: 40px;
+   padding-left: 40px;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.question p{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+
+/* ************************************************* 1st Media quirey  */
+@media screen and (max-width:425px) {
+    .faq h1{
+        text-align: center;
+        font-weight: 700;
+    }
+    .faq{
+        max-width: 1390px;
+    }
+    .Acordition{
+        max-width: 1390px;
+        padding: 0 10px;
+        margin-top: 30px;
+       margin: 10px auto;
+       display: flex;
+       justify-content: center;
+    }
+    .acordition_block{
+         max-width: 1390px;
+         padding: 0 10px;
+         background-color: #fdfdfd;
+         margin: 50px auto;
+    }
+    .question h2{
+        font-size: 12px;
+    }
+    .answer p{
+        font-size: 13px;
+    }
+    .answer{
+        display: flex;
+        align-items: center;
+        padding: 5px 16px;
+    }
+    .answer .show{
+        height: unset;
+        padding: 10px;
+    }
+    .question p{
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 500;
+    
+    }
+    
+}

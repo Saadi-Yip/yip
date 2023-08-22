@@ -1,0 +1,109 @@
+.main_nav{
+   background-color: rgb(75, 72, 72);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    width: 95%;
+}
+.nav_btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgba(0,154,222,1);
+    background-color:rgb(238, 243, 230);
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 11px 14px;
+    letter-spacing: .5px;
+    align-items: center;
+    display: flex; 
+    justify-content: center;
+}
+.nav_btn a{
+    color: rgba(0,154,222,1);
+}
+.nav_btn:hover{
+    color: white;
+}
+/* Responsiveness starts here */
+@media screen and (max-width:1024px) {
+    .main_nav{
+        background-color: rgb(75, 72, 72);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         margin: 0 auto;
+         margin-top: 4%;
+     }
+     .container{
+         display: flex;
+         justify-content: space-between;
+         color: white;
+         align-items: center;
+         width: 95%;
+     }
+     .nav_btn{
+         border: none;
+         outline: none;
+         cursor: pointer;
+         color: rgba(0,154,222,1);
+         background-color:rgb(238, 243, 230);
+         border-radius: 25px;
+         font-size: 14px;
+         font-weight: 700;
+         padding: 7px 7px;
+     }
+     .nav_btn a{
+         color: rgba(0,154,222,1);
+     }
+     .nav_btn:hover{
+         color: white;
+     }
+}
+/* 2nd media quiery *********************************************/
+@media screen and (max-width:425px) {
+    .main_nav{
+        background-color: rgb(75, 72, 72);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         margin: 0 auto;
+         margin-top: 7%;
+     }
+     .container{
+         display: flex;
+         justify-content: space-between;
+         color: white;
+         align-items: center;
+         width: 95%;
+     }
+     .nav_btn{
+         border: none;
+         outline: none;
+         cursor: pointer;
+         color: rgba(0,154,222,1);
+         background-color:rgb(238, 243, 230);
+         border-radius: 25px;
+         font-size: 12px;
+         font-weight: 700;
+         padding: 10px 10px;
+     }
+     .nav_btn a{
+         color: rgba(0,154,222,1);
+     }
+     .nav_btn:hover{
+         color: white;
+     }
+}

@@ -1,0 +1,143 @@
+.banner_text{
+    max-width: 671px;
+}
+
+.section_main{
+    background-size:100% 100%;
+     background-repeat:no-repeat;
+}
+.small_text{
+    display: block;
+    color: #7f7f7f
+}
+.banner_text{
+   padding-top: 80px;
+   padding-bottom: 80px;
+}
+.banner_text{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.banner_text h1{
+    font-size: 27.2px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #212121;
+}
+.banner_text p{
+    font-size: 16px;
+    line-height: 22px;
+    margin: 10px 0 20px;
+    font-weight: 600;
+    color: #212121;
+}
+.banner_text li{
+    padding: 0 0 10px 20px;
+}
+
+.dollar h4{
+    font-size: 60px;
+    color: #0b9eda;
+    font-weight: 900;
+}
+.tax h5{
+    justify-content: end;
+}
+.dollar{
+    display: flex;
+    align-items: center;
+}
+.dollar h5{
+    font-size: 18px;
+    color: #212121
+}
+.dollar h6{
+    font-size: 13px;
+    color: #212121
+
+}
+.internet_term small{
+color: #212121;
+font-size: 80%;
+font-weight: 400;
+}
+.tag a {
+    background-color:  black;
+    margin: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    color: white;            
+    border-radius: 10px;
+    width: 117px;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    }
+    .text_fibernet{
+        margin: 10px 0 20px;
+    }
+    .internet_term{
+        margin: 10px 0 30px;
+    }
+    .internet_term a{
+        text-decoration: underline;
+        color: #00b0d0;
+    }
+    .banner_text img{
+         width: 10px;
+    }
+    ul.list li{
+        position: relative;
+    }
+    ul.list li::after  {
+
+        position: absolute;
+    font-size: 1em;
+    vertical-align: middle;
+    font-weight: 900;
+    content: "✓";
+    color: #00b0d0;
+    left: 0;
+    top: 0; 
+}
+.list_item h3{
+   font-size: 14px;
+   font-weight: 500;
+   color:#212121 ;
+}
+.list_item p{
+    font-size: 12px;
+    font-weight: 400;
+    color:#7f7f7f ;
+}
+@media(max-width:1100px){
+    .section_main{
+        background-size:cover;
+         background-repeat:no-repeat;
+    }
+    
+}
+@media (max-width: 768px){
+    .banner_text{
+        max-width: 740px;
+       
+    }
+    .section_main{
+        background-size:cover;
+         background-repeat:no-repeat;
+    }
+  }
+  @media (max-width:600px){
+   .banner_text{
+    padding-top: 40px;
+    padding-bottom: 40px;
+   }
+   .section_main{
+    background-size:cover;
+     background-repeat:no-repeat;
+}
+  }
+
+
+
+  

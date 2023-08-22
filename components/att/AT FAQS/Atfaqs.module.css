@@ -1,0 +1,152 @@
+.faq h1 {
+  text-align: center;
+  font-weight: 700;
+}
+.faq {
+  width: 100%;
+  padding: 70px 0 70px 0;
+
+
+}
+.Acordition {
+  width: 95%;
+  margin-top: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: #fcfbfd;
+
+}
+
+.acordition_block {
+  width: 100%;
+  margin: 50px auto;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  padding: 10px 16px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  background-color: #fffcfc;
+  box-shadow: rgb(0 0 0 / 18%) 0px 5px 15px;
+}
+.question h2 {
+  font-size: 17px;
+}
+.answer p {
+  font-size: 15px;
+}
+.answer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px 16px;
+  background-color: #fffcfc;
+}
+.question p {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+.answer {
+  width: 50%;
+  margin: auto;
+  /* max-height: 300px; */
+  overflow: hidden;
+    }
+.answer p{
+    height: 0;
+    overflow: hidden;
+    /* transition: all 0.5s ease-in-out; */
+}
+.answer .show {
+  height: auto;
+}
+
+@media screen and (max-width: 425px) {
+  .faq h1 {
+    text-align: center;
+    font-weight: 700;
+  }
+  .faq {
+    width: 100%;
+  }
+  .Acordition {
+    width: 50%;
+    margin-top: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .acordition_block {
+    width: 50%;
+    background-color: #fdfdfd;
+    margin: 50px auto;
+  }
+  .question {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .question h2 {
+    font-size: 10px;
+  }
+
+  .answer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .question p {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+.question {
+  width: 50%;
+}
+
+
+@media (max-width: 600px) {
+  .Acordition {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .question {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .answer {
+    width: 100%;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .acordition_block {
+    width: 95%;
+  }
+  .question h2 {
+    font-size: 12px;
+  }
+  .faq {
+    margin: 0;
+    padding: 0;
+  }
+  .acordition_block {
+    margin: 30px auto;
+  }
+  .answer p {
+    font-size: 13px;
+  }
+}

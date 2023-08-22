@@ -1,0 +1,32 @@
+.btn {
+  width: 4.713vw;
+  height: 4.896vw;
+  background-color: #0f3782;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.4s;
+  position: absolute;
+  top: -3vw;
+  right: 10%;
+  z-index: 10;
+}
+.btn:hover {
+  transform: scale(0.9);
+}
+.btn img {
+  width: 22%;
+}
+
+@media screen and (max-width:600px){
+  .btn{
+    width: 9.713vw;
+    height: 9.896vw;
+  }
+  .btn img {
+    width: 29%;
+  }
+}

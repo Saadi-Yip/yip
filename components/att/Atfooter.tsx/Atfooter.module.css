@@ -1,0 +1,32 @@
+.footer_logo img{
+    width: 140px;
+}
+
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+.footer{
+    background-color: rgb(227, 233, 240);
+}
+@media(max-width:600px){
+    .main{
+        padding: 10px;
+        box-shadow: none;
+    }
+    .image_1 img{
+        width: 60%;
+    }
+    .footer_logo img{
+        max-width: 100px;
+    }
+    .footer{
+        height: unset;
+    }
+}
