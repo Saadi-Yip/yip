@@ -256,19 +256,19 @@ const Home = ({ data }: any) => {
   );
 };
 
-export async function getStaticProps() {
-  const response = (await getBlogs(1, null)) as [];
-  if (response.length < 1) {
-    return {
-      props: {
-        data: [],
-      },
-    };
-  }
-  return {
-    props: {
-      data: response,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const response = (await getBlogs(1, null)) as [];
+//   if (response.length < 1) {
+//     return {
+//       props: {
+//         data: [],
+//       },
+//     };
+//   }
+//   return {
+//     props: {
+//       data: response,
+//     },
+//   };
+// }
 export default Home;

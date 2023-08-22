@@ -25,7 +25,7 @@ const AllBlogs = () => {
   const [category, setCategory] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchVal, setSearchVal] = useState("");
-  const productPerPage = 6;
+  const productPerPage = 2;
   const { message, blogs,total, categories, loading } = useBlogCategory(
     currentPage,
     productPerPage,
