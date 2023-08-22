@@ -257,30 +257,21 @@ const Home = ({ data }: any) => {
   );
 };
 
-// export async function getStaticProps() {
-//   const response = (await getBlogs(1, null)) as [];
-//   if (response.length < 1) {
-//     return {
-//       props: {
-//         data: [],
-//       },
-//     };
-//   }
-//   return {
-//     props: {
-//       data: response,
-//     },
-//   };
-// }
 export async function getStaticProps() {
-  
-  const relatedBlogs = await getBlogs(1, 6, "");
-  console.log(relatedBlogs, '................')
+  const response = (await getBlogs(1, 6)) as [];
+  if (response.length < 1) {
+    return {
+      props: {
+        data: [],
+      },
+    };
+  }
   return {
     props: {
-      data: relatedBlogs ,
+      data: response,
     },
   };
 }
+ 
  
 export default Home;
