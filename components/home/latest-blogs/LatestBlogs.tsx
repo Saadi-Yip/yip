@@ -4,12 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import React from "react";
-import CursorAnimation from "../../utils/bg-cursor-animation/CursorAnimation";
-import useDimensions from "../../../hooks/use-dimensions";
-import { Autoplay, Pagination } from "swiper";
-const LatestBlogs = ({ blogs, slider }: any) => {
-  const { width } = useDimensions();
-  const slides = width < 600 ? "auto" : "auto";
+import CursorAnimation from "../../utils/bg-cursor-animation/CursorAnimation"; 
+const LatestBlogs = ({ blogs  }: any) => { 
+  
   return (
     <section className={styles.latest_blog__sec}>
       <CursorAnimation />
@@ -20,39 +17,23 @@ const LatestBlogs = ({ blogs, slider }: any) => {
       </div>
 
       <div className={styles.latest_blog_row}>
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          slidesPerView={slides}
-          spaceBetween={0}
-          loop={true}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: true,
-          }}
-          className="trending_blogs_slider"
-        >
+        
           {blogs.blogs &&
-            blogs.blogs?.map((blog: any) => {
+            blogs.blogs?.slice(-5).map((blog: any) => {
               return (
-                <SwiperSlide
-                  key={blog._id}
-                  className={`${slider ? styles.latest_blog_col : ""}`}
-                >
+               
                   <LatestBlogBox
                     key={blog._id}
                     date={blog.created_at}
                     title={blog.title}
                     description={blog.excerpt}
                     slug={blog.slug}
-                    slider={slider}
+                    
                   />
-                </SwiperSlide>
+                 
               );
             })}
-        </Swiper>
+        
       </div>
     </section>
   );
