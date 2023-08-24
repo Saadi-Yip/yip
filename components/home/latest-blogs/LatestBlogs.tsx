@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import React from "react"; 
 import { Autoplay, Pagination } from "swiper";
 const LatestBlogs = ({ blogs, slider }: any) => { 
-  console.log(blogs);
+   
   return (
     <section className={styles.latest_blog__sec}>
      

@@ -90,8 +90,8 @@ const Blog = ({ data }: any) => {
   );
 };
 
-export async function getStaticProps() {
-  const response = (await getBlogs(1,6)) as [];
+export async function getServerSideProps() {
+  const response = (await getBlogs(1,10)) as [];
  
   return {
     props: {
