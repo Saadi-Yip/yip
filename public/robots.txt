@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-host: https://yip-saadshabbir1435-gmailcom.vercel.app/
+Host: https://yip-saadshabbir1435-gmailcom.vercel.app/
 
 # Sitemaps
-sitemap: https://yip-saadshabbir1435-gmailcom.vercel.app/sitemap.xml
+Sitemap: https://yip-saadshabbir1435-gmailcom.vercel.app/sitemap.xml
