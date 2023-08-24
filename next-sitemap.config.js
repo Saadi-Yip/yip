@@ -1,6 +1,6 @@
 module.exports = {
     siteUrl:process.env.WEBSITE_URL || "",
-    generateRobotsTxt:false,
+    generateRobotsTxt:true,
     generateIndexSitemap:false,
     exclude:["/state/*"],
     robotsTxtOptions:{
