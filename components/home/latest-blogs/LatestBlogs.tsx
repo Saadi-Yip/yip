@@ -3,15 +3,12 @@ import styles from "./latestBlogs.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import React from "react";
-import CursorAnimation from "../../utils/bg-cursor-animation/CursorAnimation";
-import useDimensions from "../../../hooks/use-dimensions";
+import React from "react"; 
 import { Autoplay, Pagination } from "swiper";
-const LatestBlogs = ({ blogs, slider }: any) => {
-  const { width } = useDimensions();
+const LatestBlogs = ({ blogs, slider }: any) => { 
   console.log(blogs);
   return (
-    <section className={styles.latest_blog__sec} style = {{display: 'none'}}>
+    <section className={styles.latest_blog__sec}>
      
       <div className={styles.latestblog_text}>
         <h2 className="heading__primary color__dark">

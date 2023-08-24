@@ -16,7 +16,7 @@ import Link from "next/link";
 import Trending from "../components/blog/trending/Trending";
 
 const Home = ({ data }: any) => {
-  console.log(data);
+  
   const dataProvider = [
     {
       heading: "What is YourInternetProvider?",
@@ -284,8 +284,8 @@ const Home = ({ data }: any) => {
   );
 };
 
-export async function getStaticProps() {
-  const response = (await getBlogs(1, null)) as [];
+export async function getServerSideProps() {
+  const response = (await getBlogs(1, 5)) as [];
   if (response.length < 1) {
     return {
       props: {
