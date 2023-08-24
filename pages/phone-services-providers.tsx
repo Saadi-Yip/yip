@@ -80,7 +80,7 @@ const PhoneService = ({ data }: any) => {
   );
 };
 export async function getStaticProps() {
-  const response = (await getBlogs(1, 7)) as any;
+  const response = (await getBlogs(1, 4)) as any;
   if (response.length < 1) {
     return {
       props: {
