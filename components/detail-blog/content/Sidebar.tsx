@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Sidebar = ({ blog, relatedBlogs }: any) => {
   const [isHover, setIsHover] = useState(false);
-  const updatedBlogs =relatedBlogs && relatedBlogs ?  relatedBlogs?.filter((b: any) => b._id !== blog?._id) : [];
+  const updatedBlogs =relatedBlogs && relatedBlogs.blogs ?  relatedBlogs.blogs?.filter((b: any) => b._id !== blog?._id) : [];
   const blogs =
     updatedBlogs?.length > 2 ? updatedBlogs.slice(0, 2) : updatedBlogs;
 

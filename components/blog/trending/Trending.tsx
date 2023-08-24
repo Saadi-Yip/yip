@@ -56,7 +56,7 @@ const Trending = ({ blogs }: any) => {
             </div>
           </div>
         </div>
-        {blogs && blogs && blogs.length > 0 && (
+        {blogs && blogs.blogs && blogs.blogs.length > 0 && (
           <div className={styles.blogs_container} ref={scrollRef}>
             <div className={styles.drag_arrow}>
               <Img
@@ -83,7 +83,7 @@ const Trending = ({ blogs }: any) => {
                 spaceBetween={30}
                 className="trending_blogs_slider"
               >
-                {blogs?.map((b: any, i: number) => {
+                {blogs.blogs?.map((b: any, i: number) => {
                   return (
                     <SwiperSlide key={b._id}>
                       <BlogBox isInView={isBlogsInView} blog={b} />

@@ -15,7 +15,7 @@ import LatestBlogs from "../components/home/latest-blogs/LatestBlogs";
 import Link from "next/link";
 import Trending from "../components/blog/trending/Trending";
 
-const Home = ({ data }: any) => { 
+const Home = ({ data }: any) => {
   const dataProvider = [
     {
       heading: "What is YourInternetProvider?",
@@ -229,18 +229,37 @@ const Home = ({ data }: any) => {
         <link href="https://www.yourinternetprovider.com/" rel="canonical" />
         <link rel="icon" href="/favicon.ico" />
         {/* Google Tag Manager  */}
-         <script>
-            {`
+        <script>
+          {`
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id=%27+i+dl;f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','GTM-W7XG4GZQ');
             `}
-          </script>
+        </script>
         {/* <!-- End Google Tag Manager --> */}
       </Head>
+      <Script id="google-tag-manager" strategy="afterInteractive">
+        {`
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W7XG4GZQ');
+      `}
+      </Script>
       <main>
+        {/* Google Tag Manager (noscript)  */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-W7XG4GZQ"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        {/* <!-- End Google Tag Manager (noscript) --> */}
         <Banner content={content.banner} />
         <Providers content={content.plans} />
         <YipDifferent />
@@ -252,13 +271,20 @@ const Home = ({ data }: any) => {
         {/* <ServiceProvider /> */}
         <QnA data={dataProvider} />
       </main>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-W7XG4GZQ"
+          height="0"
+          width="0"
+          style={{display:'none',visibility:'hidden'}}
+        ></iframe>
+      </noscript>
     </>
   );
 };
 
 export async function getStaticProps() {
-
-  const response = (await getBlogs(1, 5)) as [];
+  const response = (await getBlogs(1, null)) as [];
   if (response.length < 1) {
     return {
       props: {
