@@ -1,6 +1,6 @@
 # *
 User-agent: *
-Allow: /
+Disallow: /
 
 # Host
 Host: https://yip-saadshabbir1435-gmailcom.vercel.app/
