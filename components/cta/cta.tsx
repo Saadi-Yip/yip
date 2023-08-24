@@ -52,7 +52,7 @@ const CTA = ({ show, setShow }: any) => {
             <button className={style.btn2} onClick={()=>setShow(!show)}>No Thanks</button>
           </form>
           <img
-            src="https://img.freepik.com/free-vector/internet-day-concept-illustration_114360-5303.jpg?w=2000"
+            src="/popup.png"
             alt="image"
           /> 
         </div>
