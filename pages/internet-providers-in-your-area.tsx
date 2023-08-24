@@ -73,7 +73,7 @@ const InternetService = ({ data }: any) => {
             <Mypakages />
             <Myinternet />
             <Yiptrustbox />
-            <InternetLatestBlogs blogs={data} />
+            {/* <InternetLatestBlogs blogs={data} /> */}
           </div>
         </div>
       </main>
