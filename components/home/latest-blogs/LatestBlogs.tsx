@@ -9,7 +9,7 @@ import useDimensions from "../../../hooks/use-dimensions";
 import { Autoplay, Pagination } from "swiper";
 const LatestBlogs = ({ blogs, slider }: any) => {
   const { width } = useDimensions();
-   
+  console.log(blogs);
   return (
     <section className={styles.latest_blog__sec}>
       <CursorAnimation />
@@ -19,7 +19,7 @@ const LatestBlogs = ({ blogs, slider }: any) => {
         </h2>
       </div>
 
-      <div className={styles.latest_blog_row}>
+      <div className={styles.latest_blog_row } style = {{display: 'none'}}>
         <Swiper
           modules={[Autoplay, Pagination]}
           slidesPerView= 'auto'
@@ -34,7 +34,7 @@ const LatestBlogs = ({ blogs, slider }: any) => {
                   key={blog._id}
                   className={`${slider ? styles.latest_blog_col : ""}`}
                 >
-                  <LatestBlogBox
+                  <LatestBlogBox 
                     key={blog._id}
                     date={blog.created_at}
                     title={blog.title}

@@ -16,6 +16,7 @@ import Link from "next/link";
 import Trending from "../components/blog/trending/Trending";
 
 const Home = ({ data }: any) => {
+  console.log(data);
   const dataProvider = [
     {
       heading: "What is YourInternetProvider?",
