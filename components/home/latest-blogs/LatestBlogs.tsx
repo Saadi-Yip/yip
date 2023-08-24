@@ -11,15 +11,15 @@ const LatestBlogs = ({ blogs, slider }: any) => {
   const { width } = useDimensions();
   console.log(blogs);
   return (
-    <section className={styles.latest_blog__sec}>
-      <CursorAnimation />
+    <section className={styles.latest_blog__sec} style = {{display: 'none'}}>
+     
       <div className={styles.latestblog_text}>
         <h2 className="heading__primary color__dark">
           Read the Latest from Our Blogs
         </h2>
       </div>
 
-      <div className={styles.latest_blog_row } style = {{display: 'none'}}>
+      <div className={styles.latest_blog_row } >
         <Swiper
           modules={[Autoplay, Pagination]}
           slidesPerView= 'auto'
