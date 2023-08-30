@@ -79,7 +79,7 @@ const CableServices = ({ data }: any) => {
             <CablePackage />
             <Myinternet />
             <Yiptrustbox />
-            {/* <CableLatestBlogs blogs={data} /> */}
+            <CableLatestBlogs blogs={data} />
           </div>
         </div>
       </main>
@@ -87,7 +87,7 @@ const CableServices = ({ data }: any) => {
   );
 };
 export async function getStaticProps() {
-  const response = (await getBlogs(1, 4)) as any;
+  const response = (await getBlogs(1, 5)) as any;
   if (response.length < 1) {
     return {
       props: {

@@ -66,7 +66,7 @@ export const Footer = () => {
                         mobile: [5.042,5.042],
                       }} 
                     />
-                    <p>(855) 862-7178</p>
+                    <p id = "footer-call-to-action">(855) 862-7178</p>
                   </a>
                 </Link>
                 <Link href="mailto:sales@leilanitech.com" legacyBehavior>

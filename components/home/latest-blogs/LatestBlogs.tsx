@@ -3,20 +3,23 @@ import styles from "./latestBlogs.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import React from "react"; 
+import React from "react";
+import CursorAnimation from "../../utils/bg-cursor-animation/CursorAnimation";
+import useDimensions from "../../../hooks/use-dimensions";
 import { Autoplay, Pagination } from "swiper";
-const LatestBlogs = ({ blogs, slider }: any) => { 
+const LatestBlogs = ({ blogs, slider }: any) => {
+  const { width } = useDimensions();
    
   return (
     <section className={styles.latest_blog__sec}>
-     
+      <CursorAnimation />
       <div className={styles.latestblog_text}>
         <h2 className="heading__primary color__dark">
           Read the Latest from Our Blogs
         </h2>
       </div>
 
-      <div className={styles.latest_blog_row } >
+      <div className={styles.latest_blog_row}>
         <Swiper
           modules={[Autoplay, Pagination]}
           slidesPerView= 'auto'
@@ -31,7 +34,7 @@ const LatestBlogs = ({ blogs, slider }: any) => {
                   key={blog._id}
                   className={`${slider ? styles.latest_blog_col : ""}`}
                 >
-                  <LatestBlogBox 
+                  <LatestBlogBox
                     key={blog._id}
                     date={blog.created_at}
                     title={blog.title}

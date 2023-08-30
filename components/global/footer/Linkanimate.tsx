@@ -40,7 +40,7 @@ const Linkanimate = ({ text, url }: t_LinkAnimate) => {
           <Link href={url} legacyBehavior>
             <a className={styles.link}>
               <Img 
-               src='/double_arrow.png'
+               src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/double_arrow.svg`} 
                alt="Internet Service Providers"
                 sizes={{
                   default: [1,1],
@@ -60,7 +60,7 @@ const Linkanimate = ({ text, url }: t_LinkAnimate) => {
               onHoverEnd={() => setIsHover(false)}
             >
               <motion.img
-                src='/double_arrow.png' 
+                src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/double_arrow.svg`} 
                 alt="footer link"
                 variants={iconVariants}
                 initial="default"

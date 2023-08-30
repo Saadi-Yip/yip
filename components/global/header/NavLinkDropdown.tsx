@@ -95,7 +95,7 @@ const NavLinkDropdown = ({
               }}
             >
               <Img 
-                src= '/double_arrow.png'
+                src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/double_arrow.svg`}
                 alt="Internet Service Provider"
                 sizes={{
                   default: [1,1],
@@ -147,7 +147,7 @@ const NavLinkDropdown = ({
               }}
             >
               <Img 
-                src='/double_arrow.png'
+                src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/double_arrow.svg`}
                 alt="Internet Service Provider"
                 sizes={{
                   default: [1,1],

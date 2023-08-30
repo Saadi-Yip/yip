@@ -156,7 +156,7 @@ const Header = () => {
           {/* top bar */}
           <div className={styles.top_bar}>
             <p>CALL FROM 9:00 AM TO 8:00 PM (ETD) </p>
-            <Link href="tel:855-862-7178" legacyBehavior>
+            <Link href="tel:855-862-7178" legacyBehavior id="head-mobile-call-to-action">
               <a>(855) 862-7178</a>
             </Link>
           </div>
@@ -309,7 +309,7 @@ const Header = () => {
                                 <div className={styles.dialer}>
                                   <span>
                                     <p>CALL FROM 9:00 AM TO 8:00 PM (ETD) </p>
-                                    <h6>(855) 862-7178</h6>
+                                    <h6 id = "head-call-to-action">(855) 862-7178</h6>
                                   </span>
                                 </div>
                               </button>

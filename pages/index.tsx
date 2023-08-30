@@ -16,7 +16,6 @@ import Link from "next/link";
 import Trending from "../components/blog/trending/Trending";
 
 const Home = ({ data }: any) => {
-  
   const dataProvider = [
     {
       heading: "What is YourInternetProvider?",
@@ -229,7 +228,7 @@ const Home = ({ data }: any) => {
         />
         <link href="https://www.yourinternetprovider.com/" rel="canonical" />
         <link rel="icon" href="/favicon.ico" />
-        {/* Google Tag Manager  */}
+         
         <script>
           {`
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -268,7 +267,7 @@ const Home = ({ data }: any) => {
         <InternetProviders />
         <ProviderFeatureBox />
         {/* <Trending blogs = {data} /> */}
-        {/* <LatestBlogs blogs={data} slider={true} /> */}
+        <LatestBlogs blogs={data} slider={true} />
         {/* <ServiceProvider /> */}
         <QnA data={dataProvider} />
       </main>
@@ -285,7 +284,7 @@ const Home = ({ data }: any) => {
 };
 
 export async function getStaticProps() {
-  const response = (await getBlogs(1, 2)) as [];
+  const response = (await getBlogs(1, null)) as [];
   if (response.length < 1) {
     return {
       props: {

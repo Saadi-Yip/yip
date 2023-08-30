@@ -73,7 +73,7 @@ const InternetService = ({ data }: any) => {
             <Mypakages />
             <Myinternet />
             <Yiptrustbox />
-            {/* <InternetLatestBlogs blogs={data} /> */}
+            <InternetLatestBlogs blogs={data} />
           </div>
         </div>
       </main>
@@ -81,7 +81,7 @@ const InternetService = ({ data }: any) => {
   );
 };
 export async function getStaticProps() {
-  const response = (await getBlogs(1, 4)) as any;
+  const response = (await getBlogs(1, 5)) as any;
   if (response.length < 1) {
     return {
       props: {

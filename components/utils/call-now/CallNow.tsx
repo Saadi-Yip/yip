@@ -28,6 +28,7 @@ const CallNow = () => {
           <a
             href="tel:855-862-7178"
             className={styles.callNow}
+            id = "mobile-call-to-action"
           >
             <Img
               src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/call.svg`}
