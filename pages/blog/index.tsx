@@ -120,7 +120,7 @@ function Blog({ page, totalPages, blogData }: BlogProps) {
   return (
     <div>
       {/* Display blog content */}
-      {blogData.blogs?.map((post) => (
+      {blogData?.blogs?.map((post:any) => (
         <div key={post.id}>
           <h2>{post.title}</h2>
           {/* <p>{post.content}</p> */}
@@ -136,7 +136,7 @@ function Blog({ page, totalPages, blogData }: BlogProps) {
       {/* Head */}
       <Head>
         {prevPage && <link rel="prev" href={`/blog?page=${prevPage}&limit=6`} />}
-        {nextPage && <link rel="next" href={`/blog?page=${nextPage}&limit=6`} />}
+        <link rel="next" href={`/blog?page=${nextPage}&limit=6`} />
       </Head>
     </div>
   );
