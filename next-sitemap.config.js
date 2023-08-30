@@ -13,7 +13,7 @@ module.exports = {
     },
     // Include paginated URLs in the sitemap
     additionalSitemaps: [
-      `${process.env.WEBSITE_URL}/blog/sitemap.xml`,
+      `${process.env.WEBSITE_URL}/sitemap-pages.xml`,
     ],
   };
   
