@@ -4,16 +4,12 @@ module.exports = {
     generateIndexSitemap: false,
     exclude: ["/state/*"],
     robotsTxtOptions: {
-      policies: [
-        {
-          userAgent: "*",
-          allow: "/",
-        },
-      ],
+        policies: [
+            {
+                userAgent: "*",
+                allow: "/",
+            },
+        ],
     },
-    // Include paginated URLs in the sitemap
-    additionalSitemaps: [
-      `${process.env.WEBSITE_URL}/sitemap-pages.xml`,
-    ],
-  };
-  
+    
+};

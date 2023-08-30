@@ -1,8 +1,17 @@
 import React from "react";
 import style from "./pagination.module.css";
 import Head from "next/head"; // Import the Head component from Next.js
+import { useRouter } from "next/router";
 const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
+  
   const pageNumbers = [];
+  const router = useRouter();
+  const isLastPage = currentPage === totalPages;
+  const isFirstPage = currentPage === 1;
+
+  const prevPageUrl = currentPage > 1 ? `/blogs/page/${currentPage - 1}` : null;
+  const nextPageUrl = !isLastPage ? `/blogs/page/${currentPage + 1}` : null;
+
 
   // Calculate the range of page numbers to display
   let startPage = currentPage > 3 ? currentPage - 2 : 1;
@@ -19,17 +28,11 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
   }
 
   return (
-    <>
+    <div>
       <Head>
-        {/* Pagination meta tags */}
-        {currentPage > 1 && (
-          <link rel="prev" href={`/blogs/page/${currentPage - 1}`} />
-        )}
-        {currentPage < totalPages && (
-          <link rel="next" href={`/blogs/page/${currentPage + 1}`} />
-        )}
-        {/* Canonical tag */}
-        <link rel="canonical" href={`/blogs/page/${currentPage}`} />
+        {prevPageUrl && <link rel="prev" href={prevPageUrl} />}
+        {nextPageUrl && <link rel="next" href={nextPageUrl} />}
+        <link rel="canonical" href={router.asPath} />
       </Head>
       <ul className={style.pagination_bg}>
         {currentPage - 1 >= 1 && (
@@ -66,7 +69,7 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
           <button onClick={() => setCurrentPage(currentPage + 1)}>{">"}</button>
         )}
       </ul>
-    </>
+    </div>
   );
 };
 

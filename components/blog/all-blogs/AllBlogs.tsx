@@ -1,7 +1,7 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
-import { useRouter } from "next/router";
+
 import { motion } from "framer-motion";
 
 import Blog from "./Blog";
@@ -14,19 +14,19 @@ import Img from "../../utils/image/Img";
 import Pagination from "../../blog/pagination/Pagination";
 
 const breakpoint = {
-  mobile: 600,
-};
+  mobile:600
+}
 
 const AllBlogs = () => {
-  const router = useRouter();
-  const { width } = useDimensions();
+
+  const {width} = useDimensions();
   const [isHover, setIsHover] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [category, setCategory] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchVal, setSearchVal] = useState("");
   const productPerPage = 6;
-  const { message, blogs, total, categories, loading } = useBlogCategory(
+  const { message, blogs,total, categories, loading } = useBlogCategory(
     currentPage,
     productPerPage,
     searchQuery,
@@ -34,12 +34,13 @@ const AllBlogs = () => {
   );
 
   const totalPages = Math.ceil(total / productPerPage);
-
+  
   // handlers
   const handleSearchInputOnChange = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     setSearchVal(e.target.value);
+    
   };
   const handleClickOnSearchBtn = () => {
     setSearchQuery(searchVal);
@@ -83,24 +84,25 @@ const AllBlogs = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className={styles.outlineArrowBox}>
-                  <Img
-                    src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/search.svg`}
-                    alt="Internet service provider"
-                    sizes={{
-                      default: [2, 2],
-                      mobile: [19.4, 16],
-                    }}
-                  />
+                
+                    <Img 
+                      src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/search.svg`}
+                      alt="Internet service provider"
+                      sizes={{
+                        default: [2,2],
+                        mobile: [19.4,16],
+                      }}
+                    />
                 </div>
                 <div className={styles.darkArrowBox}>
-                  <Img
-                    src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/search.svg`}
-                    alt="Internet service provider"
-                    sizes={{
-                      default: [2, 2],
-                      mobile: [19.4, 16],
-                    }}
-                  />
+                  <Img 
+                      src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/search.svg`}
+                      alt="Internet service provider"
+                      sizes={{
+                        default: [2,2],
+                        mobile: [19.4,16],
+                      }}
+                    />
                 </div>
               </motion.div>
             </motion.div>
@@ -146,50 +148,41 @@ const AllBlogs = () => {
 
         {message && !loading && <h1 className={styles.message}>{message}</h1>}
         <>
-          <div className={styles.blogs}>
-            {blogs &&
-              blogs.map((b: any) => (
-                <Blog
-                  key={b._id}
-                  id={b._id}
-                  heading={b.title}
-                  createdAt={b.created_at}
-                  category={b.category}
-                  readTime={b.read_time}
-                  image={b.image}
-                  excerpt={b.excerpt}
-                  slug={b.slug}
-                />
-              ))}
-          </div>
-          {loading && (
-            <div
-              style={{
-                marginTop: "4vw",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-              className="loader"
-            >
-              <Img
-                src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/loader.svg`}
-                alt="loader"
-                sizes={{
-                  default: [16.5, 6],
-                  mobile: [19.4, 16],
-                }}
-              />
+            <div className={styles.blogs}>
+              {blogs &&
+                blogs.map((b: any) => (
+                  <Blog
+                    key={b._id}
+                    id={b._id}
+                    heading={b.title}
+                    createdAt={b.created_at}
+                    category={b.category}
+                    readTime={b.read_time}
+                    image={b.image}
+                    excerpt={b.excerpt}
+                    slug={b.slug}
+                  />
+                ))}
             </div>
-          )}
-          <Pagination
-            totalPages={totalPages}
-            currentPage={currentPage}
-            setCurrentPage={(page:any) => {
-              router.push(`/blogs/page/${page}`);
-            }}
-          />
-        </>
+            {loading && (
+          <div style={{ marginTop: "4vw", display: "flex", justifyContent: "center", alignItems: "center"}} className="loader">
+            <Img 
+             src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/loader.svg`} 
+             alt="loader"
+              sizes={{
+                default: [16.5,6],
+                mobile: [19.4,16],
+              }}
+             />
+          </div>
+        )}
+            <Pagination totalPages={totalPages}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
+           
+          </>
+       
       </div>
     </section>
   );
