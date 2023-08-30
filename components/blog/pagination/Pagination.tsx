@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./pagination.module.css";
-
+import Head from "next/head"; // Import the Head component from Next.js
 const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
   const pageNumbers = [];
 
@@ -19,41 +19,54 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
   }
 
   return (
-    <ul className={style.pagination_bg}>
-      {currentPage - 1 >= 1 && (
-        <button onClick={() => setCurrentPage(currentPage - 1)}>{"<"}</button>
-      )}
-      {startPage > 1 && <li onClick={() => setCurrentPage(1)}>1</li>}
+    <>
+      <Head>
+        {/* Pagination meta tags */}
+        {currentPage > 1 && (
+          <link rel="prev" href={`/blogs/page/${currentPage - 1}`} />
+        )}
+        {currentPage < totalPages && (
+          <link rel="next" href={`/blogs/page/${currentPage + 1}`} />
+        )}
+        {/* Canonical tag */}
+        <link rel="canonical" href={`/blogs/page/${currentPage}`} />
+      </Head>
+      <ul className={style.pagination_bg}>
+        {currentPage - 1 >= 1 && (
+          <button onClick={() => setCurrentPage(currentPage - 1)}>{"<"}</button>
+        )}
+        {startPage > 1 && <li onClick={() => setCurrentPage(1)}>1</li>}
 
-      {startPage > 2 && (
-        <li>
-          <span>...</span>
-        </li>
-      )}
+        {startPage > 2 && (
+          <li>
+            <span>...</span>
+          </li>
+        )}
 
-      {pageNumbers.map((number) => (
-        <li
-          key={number}
-          className={`${number === currentPage ? " Paginationactive" : ""}`}
-          onClick={() => setCurrentPage(number)}
-        >
-          {number}
-        </li>
-      ))}
+        {pageNumbers.map((number) => (
+          <li
+            key={number}
+            className={`${number === currentPage ? " Paginationactive" : ""}`}
+            onClick={() => setCurrentPage(number)}
+          >
+            {number}
+          </li>
+        ))}
 
-      {endPage < totalPages - 1 && (
-        <li>
-          <span>...</span>
-        </li>
-      )}
+        {endPage < totalPages - 1 && (
+          <li>
+            <span>...</span>
+          </li>
+        )}
 
-      {endPage < totalPages && (
-        <li onClick={() => setCurrentPage(totalPages)}>{totalPages}</li>
-      )}
-      {currentPage + 1 <= totalPages && (
-        <button onClick={() => setCurrentPage(currentPage + 1)}>{">"}</button>
-      )}
-    </ul>
+        {endPage < totalPages && (
+          <li onClick={() => setCurrentPage(totalPages)}>{totalPages}</li>
+        )}
+        {currentPage + 1 <= totalPages && (
+          <button onClick={() => setCurrentPage(currentPage + 1)}>{">"}</button>
+        )}
+      </ul>
+    </>
   );
 };
 

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://your-website-url.com
+Host: https://www.yourinternetprovider.com/
 
 # Sitemaps
-Sitemap: https://your-website-url.com/sitemap.xml
+Sitemap: https://www.yourinternetprovider.com/sitemap.xml

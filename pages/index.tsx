@@ -284,7 +284,7 @@ const Home = ({ data }: any) => {
 };
 
 export async function getStaticProps() {
-  const response = (await getBlogs(1, null)) as [];
+  const response = (await getBlogs(1, 2)) as [];
   if (response.length < 1) {
     return {
       props: {
