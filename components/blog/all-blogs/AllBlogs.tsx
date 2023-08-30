@@ -17,7 +17,7 @@ const breakpoint = {
   mobile:600
 }
 
-const AllBlogs = () => {
+const AllBlogs = ({blogs}:any) => {
 
   const {width} = useDimensions();
   const [isHover, setIsHover] = useState(false);
@@ -26,7 +26,7 @@ const AllBlogs = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchVal, setSearchVal] = useState("");
   const productPerPage = 6;
-  const { message, blogs,total, categories, loading } = useBlogCategory(
+  const { message, blog,total, categories, loading } = useBlogCategory(
     currentPage,
     productPerPage,
     searchQuery,
@@ -150,7 +150,7 @@ const AllBlogs = () => {
         <>
             <div className={styles.blogs}>
               {blogs &&
-                blogs.map((b: any) => (
+                blogs.blogs.map((b: any) => (
                   <Blog
                     key={b._id}
                     id={b._id}
@@ -180,7 +180,7 @@ const AllBlogs = () => {
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
             />
-           
+             
           </>
        
       </div>
