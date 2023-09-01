@@ -92,18 +92,32 @@ const Blog = ({ data }: any) => {
 };
  
 
-
-export async function getServerSideProps({ query }:any) {
-  const { page = 1 } = query;
-  const apiUrl = `https://backend-yip.cyclic.app/blog?limit=6&page=${page}`;
-  const response = await fetch(apiUrl);
-  const data = await response.json();
-
+export async function getStaticProps() {
+  const response = (await getBlogs(1, 5)) as any;
+  if (response.length < 1) {
+    return {
+      props: {
+        data: [],
+      },
+    };
+  }
   return {
     props: {
-      data:data,
+      data: response,
     },
   };
 }
+// export async function getServerSideProps({ query }:any) {
+//   const { page = 1 } = query;
+//   const apiUrl = `https://backend-yip.cyclic.app/blog?limit=6&page=${page}`;
+//   const response = await fetch(apiUrl);
+//   const data = await response.json();
+
+//   return {
+//     props: {
+//       data:data,
+//     },
+//   };
+// }
 
 export default Blog;
