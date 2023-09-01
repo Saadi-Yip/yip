@@ -267,7 +267,6 @@ const Home = ({ data }: any) => {
         <InternetProviders />
         <ProviderFeatureBox />
         {/* <Trending blogs = {data} /> */}
-        <LatestBlogs blogs={data} />
         {/* <ServiceProvider /> */}
         <QnA data={dataProvider} />
       </main>
@@ -283,19 +282,4 @@ const Home = ({ data }: any) => {
   );
 };
 
-export async function getStaticProps() {
-  const response = (await getBlogs(1, 8)) as [];
-  if (response.length < 1) {
-    return {
-      props: {
-        data: [],
-      },
-    };
-  }
-  return {
-    props: {
-      data: response,
-    },
-  };
-}
 export default Home;
