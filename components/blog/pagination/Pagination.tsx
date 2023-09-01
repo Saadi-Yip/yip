@@ -22,7 +22,7 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
   const router = useRouter(); // Access the router object
 
   const handlePageChange = (pageNumber:any) => {
-    console.log(pageNumber); 
+      
     setCurrentPage(pageNumber);
     router.push(`/blog?page=${pageNumber}`);
   };
