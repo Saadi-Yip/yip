@@ -17,7 +17,7 @@ const Header = () => {
         </div>
         <div>
           <h3>CALL FROM 10:00 AM TO 7:00 PM</h3>
-          <a href="tel:(855) 862-7178">(855) 862-7178</a>
+          <a href="tel:(888) 262-0945">(888) 262-0945</a>
         </div>
       </div>
     </header>

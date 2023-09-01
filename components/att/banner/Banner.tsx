@@ -77,7 +77,7 @@ const Banner = () => {
           </small>
         </div>
         <div className={style.tag}>
-          <a href="tel:+855-644-1024">855-644-1024</a>
+          <a href="tel:+1888-262-0945">855-644-1024</a>
         </div>
       </div>
     </div>

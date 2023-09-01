@@ -56,7 +56,7 @@ export const Footer = () => {
             <div className={styles.footer_linkAddress}>
               <h4>Address</h4>
               <div className={styles.footerSocialinner}>
-                <Link href="tel:+18558627178" legacyBehavior>
+                <Link href="tel:+18882620945" legacyBehavior>
                   <a>
                     <Img 
                       src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/call.svg`} 
@@ -66,10 +66,10 @@ export const Footer = () => {
                         mobile: [5.042,5.042],
                       }} 
                     />
-                    <p id = "footer-call-to-action">(855) 862-7178</p>
+                    <p id = "footer-call-to-action">+1 (888) 262-0945</p>
                   </a>
                 </Link>
-                <Link href="mailto:sales@leilanitech.com" legacyBehavior>
+                <Link href="mailto:sales@leilaniinc.com" legacyBehavior>
                   <a>
                     <Img 
                       src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/message.svg`} 
@@ -79,7 +79,7 @@ export const Footer = () => {
                         mobile: [5.042,5.042],
                       }} 
                     />
-                    <p>sales@leilanitech.com</p>
+                    <p>sales@leilaniinc.com</p>
                   </a>
                 </Link>
                 <a
@@ -95,8 +95,8 @@ export const Footer = () => {
                     }} 
                   />
                   <p>
-                    ​740 W Little York Rd Suite B,
-                    <br /> Houston, TX 77091, USA
+                    3505 Sage Rd Unit 1801,
+                    <br /> Houston, TX 77056, USA
                   </p>
                 </a>
                 <div className={styles.footer__textarea}>

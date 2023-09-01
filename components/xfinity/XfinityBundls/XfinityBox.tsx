@@ -21,7 +21,7 @@ const XfinityBox = () => {
           bottomText="The quoted price is liable to modification and excludes the fees for regional sports and broadcast TV.Taxes and equipment not included. Paperless billing  automatic payments required. "
           foot="$55.00 "
           spn="/mo"
-          btn="(855) 952-5706"
+          btn="+1 (888) 262-0945"
         />
         <XfinityBundls
           text="  +Depending on the location, popular TV options may not be available or may have different pricing, speeds, channels, and bundle options. "
@@ -33,7 +33,7 @@ const XfinityBox = () => {
           bottomText="No term contract. The quoted price is liable to modification and excludes the fees for regional sports and broadcast TV.Taxes and equipment not included.Paperless billing and automatic payments required. "
           foot="$105.00 "
           spn="/mo"
-          btn="(855) 952-5706"
+          btn="+1 (888) 262-0945"
         />
         <XfinityBundls
           text=" + Ultimate TV + Voice"
@@ -45,7 +45,7 @@ const XfinityBox = () => {
           bottomText="No term contract. The quoted price is liable to modification and excludes the fees for regional sports and broadcast TV.Taxes and equipment not included. Paperless billingand automatic payments required. "
           foot="$150.00 "
           spn="/mo"
-          btn="(855) 952-5706"
+          btn="+1 (888) 262-0945"
         />
       </div>
     </>

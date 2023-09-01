@@ -1,17 +1,11 @@
 import React from "react";
 import style from "./pagination.module.css";
-import Head from "next/head";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router'; // Import useRouter from Next.js
 
-const Pagination = ({ currentPage, totalPages, setCurrentPage }:any) => {
-  const pageNumbers:any = [];
-  const router = useRouter();
-  const isLastPage = currentPage === totalPages;
-  const isFirstPage = currentPage === 1;
+const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
+  const pageNumbers = [];
 
-  const prevPageUrl = currentPage > 1 ? `/blogs/page/${currentPage - 1}` : null;
-  const nextPageUrl = !isLastPage ? `/blogs/page/${currentPage + 1}` : null;
-
+  // Calculate the range of page numbers to display
   let startPage = currentPage > 3 ? currentPage - 2 : 1;
   let endPage = currentPage + 2;
 
@@ -20,55 +14,67 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }:any) => {
     startPage = endPage - 4 > 1 ? endPage - 4 : 1;
   }
 
-  const handlePrevPageClick = () => {
-    if (!isFirstPage) {
-      setCurrentPage(currentPage - 1);
-    }
+  // Generate the array of page numbers
+  for (let i = startPage; i <= endPage; i++) {
+    pageNumbers.push(i);
+  }
+
+  const router = useRouter(); // Access the router object
+
+  const handlePageChange = (pageNumber:any) => {
+    console.log(pageNumber); 
+    setCurrentPage(pageNumber);
+    router.push(`/blog?page=${pageNumber}`);
   };
 
-  const handleNextPageClick = () => {
-    if (!isLastPage) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
 
   return (
-    <div>
-      <Head>
-        {prevPageUrl && <link rel="prev" href={prevPageUrl} />}
-        {nextPageUrl && <link rel="next" href={nextPageUrl} />}
-        <link rel="canonical" href={router.asPath} />
-      </Head>
-      <ul className={style.pagination_bg}>
-        <button onClick={handlePrevPageClick} disabled={isFirstPage}>
-          {"<"}
-        </button>
+    <ul className={style.pagination_bg}>
+      {/* Previous page button */}
+      {currentPage - 1 >= 1 && (
+        <button onClick={() => handlePageChange(currentPage - 1)}>{"<"}</button>
+      )}
 
-        {startPage > 1 && <li onClick={() => setCurrentPage(1)}>1</li>}
+      {/* First page */}
+      {startPage > 1 && <li onClick={() => handlePageChange(1)}>1</li>}
 
-        {startPage > 2 && <li><span>...</span></li>}
+      {/* Ellipsis for pages */}
+      {startPage > 2 && (
+        <li>
+          <span>...</span>
+        </li>
+      )}
 
-        {pageNumbers.map((number:any) => (
-          <li
-            key={number}
-            className={`${number === currentPage ? style.Paginationactive : ""}`}
-            onClick={() => setCurrentPage(number)}
-          >
-            {number}
-          </li>
-        ))}
+      {/* Page numbers */}
+      {pageNumbers.map((number) => (
+        <li
+          key={number}
+          className={`${number === currentPage ? " Paginationactive" : ""}`}
+          onClick={() => handlePageChange(number)}
+        >
+          {number}
+        </li>
+      ))}
 
-        {endPage < totalPages - 1 && <li><span>...</span></li>}
+      {/* Ellipsis for pages */}
+      {endPage < totalPages - 1 && (
+        <li>
+          <span>...</span>
+        </li>
+      )}
 
-        {endPage < totalPages && (
-          <li onClick={() => setCurrentPage(totalPages)}>{totalPages}</li>
-        )}
-        <button onClick={handleNextPageClick} disabled={isLastPage}>
-          {">"}
-        </button>
-      </ul>
-    </div>
+      {/* Last page */}
+      {endPage < totalPages && (
+        <li onClick={() => handlePageChange(totalPages)}>{totalPages}</li>
+      )}
+
+      {/* Next page button */}
+      {currentPage + 1 <= totalPages && (
+        <button onClick={() => handlePageChange(currentPage + 1)}>{">"}</button>
+      )}
+    </ul>
   );
 };
+
 
 export default Pagination;

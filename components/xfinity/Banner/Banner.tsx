@@ -15,7 +15,7 @@ function Banner() {
         <h2>Xfinity starting from</h2>
             <h4>$29.99 <sub>/mo</sub></h4> 
             <p>For the first 24 months with a 1-Year Agreement. Taxes and equipment not included. Paperless billing andautomatic payments required. </p>
-        <a href="tel:+18559525706"> (855) 952-5706</a>
+        <a href="tel:+18559525706"> </a>
       </div>
       <div className={style.bannar_image_sec}>
         <span id ={style.bannar_img}>

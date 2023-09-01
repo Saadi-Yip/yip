@@ -13,7 +13,7 @@ function OptimumFooter() {
               mobile : [40,20]
             }} 
           />
-         <div className={style.nav_btn}><a href="tel:+18559274803"> (855) 927-4803</a></div>
+         <div className={style.nav_btn}><a href="tel:+18882620945"> +1 (888) 262-0945</a></div>
     </div>
 </nav>
   )

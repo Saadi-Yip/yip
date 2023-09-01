@@ -12,7 +12,7 @@ function Header() {
                         mobile: [39,15],
                     }}
                 />
-                <div className={style.nav_btn}><a href="tel:+18559525706">(855) 952-5706</a></div>
+                <div className={style.nav_btn}><a href="tel:+18559525706">(888) 262-0945</a></div>
             </div>
         </nav>
     )

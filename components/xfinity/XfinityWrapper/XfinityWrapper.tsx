@@ -40,7 +40,7 @@ function XfinityWrapper() {
                  />
                   <p>DVR you can set and watch anytime, anywhere</p>
           </div>
-          <div className={style.banner_btn}><a href="tel:+18559525706">(855) 952-5706</a></div>
+          <div className={style.banner_btn}><a href="tel:+18559525706">(888) 262-0945</a></div>
         </div>
       </div>                                                                                                        
     </div>

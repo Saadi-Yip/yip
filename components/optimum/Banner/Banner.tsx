@@ -14,7 +14,7 @@ function Banner() {
         <h3>Optimum Triple Play price starting at</h3>
             <h4>$130 <sub>/month.*</sub></h4> 
             <p>For 12 months. Plus taxes, fees and other charges. Includes Auto Pay and Paperless Billing.</p>
-        <a href="tel:+18559274803"> (855) 927-4803</a>
+        <a href="tel:+18882620945"> +1 (888) 262-0945</a>
       </div>
       </div>
   )

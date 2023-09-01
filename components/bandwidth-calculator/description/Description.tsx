@@ -35,7 +35,7 @@ const Description = () => {
     {
       icon: `${process.env.NEXT_PUBLIC_IMAGES_URL}svg/order.svg`,
       heading: "Order",
-      text: "Ordering services is easy! You can simply call us at (855) 862-7178, and our highly trained customer service representatives will guide you through the process. We understand that navigating the world of telecom can be overwhelming, so we're here to help you find the perfect internet service provider to meet your unique needs.",
+      text: "Ordering services is easy! You can simply call us at +1 (888) 262-0945, and our highly trained customer service representatives will guide you through the process. We understand that navigating the world of telecom can be overwhelming, so we're here to help you find the perfect internet service provider to meet your unique needs.",
     },
   ];
   if(null){

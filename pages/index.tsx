@@ -55,7 +55,7 @@ const Home = ({ data }: any) => {
       text: (
         <p>
           Ordering services is easy! You can simply call us at{" "}
-          <a href="tel:+18558627178">(855) 862-7178</a>, and our highly trained
+          <a href="tel:+18882620945"> +1 (888) 262-0945</a>, and our highly trained
           customer service representatives will guide you through the process.
           We understand that navigating the world of telecom can be
           overwhelming, so we're here to help you find the perfect internet
@@ -136,7 +136,7 @@ const Home = ({ data }: any) => {
             "logo": "https://next.thepic.store/frontend/logo.svg",
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "(855) 862-7178",
+              "telephone": "+1 (888) 262-0945",
               "contactType": "customer service",
               "contactOption": "HearingImpairedSupported",
               "areaServed": "US",
@@ -267,7 +267,7 @@ const Home = ({ data }: any) => {
         <InternetProviders />
         <ProviderFeatureBox />
         {/* <Trending blogs = {data} /> */}
-        <LatestBlogs blogs={data} slider={true} />
+        <LatestBlogs blogs={data} />
         {/* <ServiceProvider /> */}
         <QnA data={dataProvider} />
       </main>
@@ -284,7 +284,7 @@ const Home = ({ data }: any) => {
 };
 
 export async function getStaticProps() {
-  const response = (await getBlogs(1, 2)) as [];
+  const response = (await getBlogs(1, 5)) as [];
   if (response.length < 1) {
     return {
       props: {

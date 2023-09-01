@@ -9,7 +9,7 @@ export const data = [
     id: 2,
     question: "How to pay my Optimum bill?",
     answer:
-      "Reach out to Cox customer service for assistance regarding billing by dialing (855) 927-4803. ",
+      "Reach out to Cox customer service for assistance regarding billing by dialing +1 (888) 262-0945. ",
   },
   {
     id: 3,

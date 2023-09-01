@@ -19,7 +19,7 @@ function OptimumBox() {
      list1="No Data Caps"
      list2="No Annual Contracts"
      p="For 12 months. Plus taxes, fees and other charges. Includes Auto Pay and Paperless Billing"
-     btn="(855) 927-4803"
+     btn="+1 (888) 262-0945"
     />
   <CoxBundls
      text="Optimum Double Play"
@@ -30,7 +30,7 @@ function OptimumBox() {
      list1="Voice-Activated Remote provided"
      list2="Whole Home Wi-Fi"
      p="For 12 months. Plus taxes, fees and other charges. Includes Auto Pay and Paperless Billing"
-     btn="(855) 927-4803"
+     btn="+1 (888) 262-0945"
     />
   <CoxBundls
      text="Optimum Triple Play"
@@ -41,7 +41,7 @@ function OptimumBox() {
      list1="4K Ultra HD content"
      list2="Unlimited nationwide calling"
      p="For 12 months. Plus taxes, fees and other charges. Includes Auto Pay and Paperless Billing"
-     btn="(855) 927-4803"
+     btn="+1 (888) 262-0945"
     />
   </div>
   )

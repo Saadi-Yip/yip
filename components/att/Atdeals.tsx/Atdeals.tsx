@@ -61,7 +61,7 @@ const Atdeals = ({heading,speed,claimspeed,uploadfast,comparisonInternet,multipl
           </small>
         </div>
         <div className={style.tag1}>
-          <a href="tel:+855-644-1024">{order}</a>
+          <a href="tel:+1888-262-0945">{order}</a>
         </div>
       </div>
     </div>

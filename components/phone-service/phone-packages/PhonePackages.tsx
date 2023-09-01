@@ -12,7 +12,7 @@ const PhonePackages = () => {
           entertainment: "Unlimited nationwide calling",
           fastconnection: "Up to 100 Mbps internet speeds",
           advancehome: "12 months with a 1-year contract",
-          phone_num: "(855) 862-7178",
+          phone_num: "+1 (888) 262-0945",
         },
         {
           heading: "Internet + Phone",
@@ -23,7 +23,7 @@ const PhonePackages = () => {
           entertainment: "Unlimited nationwide calling",
           fastconnection: "Up to 400 Mbps internet speeds",
           advancehome: "12 months with a 1-year contract",
-          phone_num: "(855) 862-7178",
+          phone_num: "+1 (888) 262-0945",
         },
         {
           heading: "Internet + Phone",
@@ -34,7 +34,7 @@ const PhonePackages = () => {
           entertainment: "Unlimited nationwide calling",
           fastconnection: "Up to 1000 Mbps internet speeds",
           advancehome: "12 months with a 1-year contract",
-          phone_num: "(855) 862-7178",
+          phone_num: "+1 (888) 262-0945",
         },
       ];
       return (

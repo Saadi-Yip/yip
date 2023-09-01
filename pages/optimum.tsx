@@ -27,7 +27,7 @@ export default function Optimum() {
     "name": "How to pay my Optimum bill?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Reach out to Cox customer service for assistance regarding billing by dialing (855) 927-4803."
+      "text": "Reach out to Cox customer service for assistance regarding billing by dialing (888) 262-0945."
     }
   },{
     "@type": "Question",

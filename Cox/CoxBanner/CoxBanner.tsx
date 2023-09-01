@@ -15,7 +15,7 @@ function CoxBanner() {
         <h2>Cox Internet Essential</h2>
             <h4>$49.99 <sub>/month</sub></h4> 
             <p>Everyday Low Price. No Term Contract.</p>
-        <a href="tel:+8558627178"> (855) 862-7178</a>
+        <a href="tel:+8558627178"> (888) 262-0945</a>
       </div>
       <div className={style.bannar_image_sec}>
         <span><Img 

@@ -74,7 +74,7 @@ function Section2() {
                     mobile: [4,4],
                   }}
                 />
-                (855) 837-6852
+                (888) 262-094r
               </Link>
              
             </div>

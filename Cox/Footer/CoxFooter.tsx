@@ -13,7 +13,7 @@ function CoxFooter() {
           mobile: [25,19],
       }}
         />
-         <div className={style.nav_btn}><a href="tel:+8558627178"> (855) 862-7178</a></div>
+         <div className={style.nav_btn}><a href="tel:+8558627178"> (888) 262-0945</a></div>
     </div>
 </nav>
   )

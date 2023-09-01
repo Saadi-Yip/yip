@@ -20,35 +20,35 @@ export default function Xfinity() {
     "name": "Is Cox customer service 24 hours?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes, Cox Customer Service works 24/7 to assist their customers. Simply dial (855) 862-7178 to get hold of a representative."
+      "text": "Yes, Cox Customer Service works 24/7 to assist their customers. Simply dial (888) 262-0945 to get hold of a representative."
     }
   },{
     "@type": "Question",
     "name": "How to pay Cox bill?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Reach out to Cox customer service for assistance regarding billing by dialing (855) 862-7178."
+      "text": "Reach out to Cox customer service for assistance regarding billing by dialing (888) 262-0945."
     }
   },{
     "@type": "Question",
     "name": "How can I get discount on Cox Internet?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Learn about any discount or promotions being on Cox service by contacting us at (855) 862-7178."
+      "text": "Learn about any discount or promotions being on Cox service by contacting us at (888) 262-0945."
     }
   },{
     "@type": "Question",
     "name": "How to set up Cox account?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "As a Cox customer, you can call here (855) 862-7178 to register your Cox account on the official website."
+      "text": "As a Cox customer, you can call here (888) 262-0945 to register your Cox account on the official website."
     }
   },{
     "@type": "Question",
     "name": "How do you check if Cox is down in my area?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "You can find out about any outages by dialing Cox customer service number (855) 862-7178 ."
+      "text": "You can find out about any outages by dialing Cox customer service number (888) 262-0945 ."
     }
   }]
 }`}

@@ -11,7 +11,7 @@ const CablePackage = () => {
           entertainment: "up to 300 Mbps internet speed",
           fastconnection: "65 channels of cable TV",
           advancehome: "12 months with a 1-year contract",
-          phone_num: "(855) 862-7178",
+          phone_num: "+1 (888) 262-0945",
         },
         {
           heading: "Internet + Cable",
@@ -22,7 +22,7 @@ const CablePackage = () => {
           entertainment: "up to 200 Mbps internet speed",
           fastconnection: "138 channels of cable TV",
           advancehome: "12 months with a 1-year contract",
-          phone_num: "(855) 862-7178",
+          phone_num: "+1 (888) 262-0945",
         },
         {
           heading: "Internet + Cable",
@@ -33,7 +33,7 @@ const CablePackage = () => {
           entertainment: "100 Mbps internet speed",
           fastconnection: "38 channels of live TV",
           advancehome: "12 months with a 1-year contract.",
-          phone_num: "(855) 862-7178",
+          phone_num: "+1 (888) 262-0945",
         },
       ];
   return (

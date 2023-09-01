@@ -13,7 +13,7 @@ const Mypakages = () => {
       fastconnection: "Enjoy fast and secure internet connectivity",
       advancehome: "65 channels of cable TV",
       combinecable: "12 months with a 1-year contract",
-      phone_num: "(855) 862-7178",
+      phone_num: "+1 (888) 262-0945",
     },
     {
       heading: "Internet + Cable",
@@ -25,7 +25,7 @@ const Mypakages = () => {
       fastconnection: "Enjoy fast and secure internet connectivity",
       advancehome: "65 channels of cable TV",
       combinecable: "12 months with a 1-year contract",
-      phone_num: "(855) 862-7178",
+      phone_num: "+1 (888) 262-0945",
     },
     {
       heading: "Internet + Cable",
@@ -37,7 +37,7 @@ const Mypakages = () => {
       fastconnection: "Enjoy fast and secure internet connectivity",
       advancehome: "65 channels of cable TV",
       combinecable: "12 months with a 1-year contract",
-      phone_num: "(855) 862-7178",
+      phone_num: "+1 (888) 262-0945",
     },
   ];
   return (

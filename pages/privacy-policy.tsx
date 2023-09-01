@@ -121,7 +121,7 @@ const PrivacyPolicy = () => {
             <p>
             {policy.policies.contact_us}
             </p>
-            <a href="mailto:sales@leilanitech.com">{policy.policies.email}</a>
+            <a href="mailto:sales@leilaniinc.com">{policy.policies.email}</a>
             <address>{policy.policies.address}</address>
             <p>
              {policy.policies.response}

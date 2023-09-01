@@ -3,11 +3,11 @@ import AllBlogs from "../../components/blog/all-blogs/AllBlogs";
 import Banner from "../../components/blog/banner/Banner";
 import Trending from "../../components/blog/trending/Trending";
 
-import QnA from "../../components/global/QnA/QnA";
-import getBlogs from "../../controllers/getBlogs";
+import QnA from "../../components/global/QnA/QnA"; 
 import Link from "next/link";
 
 const Blog = ({ data }: any) => {
+  console.log(data)
   const faqData = [
     {
       heading: "What is YourInternetProvider?",
@@ -47,7 +47,7 @@ const Blog = ({ data }: any) => {
       text: (
         <p>
           Ordering services is easy! You can simply call us at{" "}
-          <a href="tel:+18558627178">(855) 862-7178</a>, and our highly trained
+          <a href="tel:+18882620945"> +1 (888) 262-0945</a>, and our highly trained
           customer service representatives will guide you through the process.
           We understand that navigating the world of telecom can be
           overwhelming, so we're here to help you find the perfect internet
@@ -83,20 +83,22 @@ const Blog = ({ data }: any) => {
       </Head>
       <main>
         <Banner />
-        {/* <Trending blogs={data} /> */}
-        <AllBlogs blogss = {data}/>
+        <AllBlogs blogs = {data}/>
         <QnA data={faqData} />
       </main>
     </>
   );
 };
 
-export async function getStaticProps() {
-  const response = (await getBlogs(1,null)) as [];
- 
+export async function getServerSideProps({ query }:any) {
+  const { page = 1 } = query;
+  const apiUrl = `https://backend-yip.cyclic.app/blog?limit=6&page=${page}`;
+  const response = await fetch(apiUrl);
+  const data = await response.json();
+
   return {
     props: {
-      data: response,
+      data:data,
     },
   };
 }

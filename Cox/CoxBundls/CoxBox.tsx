@@ -20,7 +20,7 @@ function CoxBox() {
      list2="24/7 Technical Support"
      list3="FREE Cloud Drive"
      list4="Panoramic Wifi for zero dead spots"
-     btn="(855) 862-7178"
+     btn="+1 (888) 262-0945"
     />
   <CoxBundls
      text="Cox Internet Essential"

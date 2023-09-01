@@ -1,35 +1,33 @@
-import CursorAnimation from "../../utils/bg-cursor-animation/CursorAnimation";
 import { motion } from "framer-motion";
-// style
 import styles from "./banner.module.css";
-import Img from "../../utils/image/Img";
-import CTA from "../../cta/cta";
-import { useState } from "react";
+import CursorAnimation from "../../utils/bg-cursor-animation/CursorAnimation";
+import Image from 'next/image';  // Import Image from Next.js
 
 const Banner = ({ content }: any) => {
-  const [show, setShow] = useState(true);
   const scrollToProviders = () => {
     const element = document.getElementById("down");
     if (element) {
       window.scrollTo(0, element.offsetTop + 50);
     }
   };
+
   return (
     <section className={styles.banner_sec}>
       <CursorAnimation />
-      <img
+      <Image
         src={`${process.env.NEXT_PUBLIC_IMAGES_URL}_main.png`}
-        style={{ display: "none" }}
+        layout="none"  // Choose layout option based on your use case
+        width={1}
+        height={1}
         alt="yourinternetprovider, Your internet provider"
       />
       <div className={styles.banner_textCol}>
         <div className={styles.banner_heading + " text-center"}>
-          <h1 className= {`${!show?'heading__main':styles.hidden}`} >{content.primary_heading}</h1>
-          {!show && <p className="para__primary">{content.text}</p>}
-          {!show && <button onClick={scrollToProviders} className="para__primary">
+          <h1 className="heading__main">{content.primary_heading}</h1>
+          <p className="para__primary">{content.text}</p>
+          <button onClick={scrollToProviders} className="para__primary">
             {content.secondary_heading}
-          </button>}
-          {show&&<CTA show = {show} setShow = {setShow}/>}
+          </button>
           <motion.div
             className={styles.downArrow}
             animate={{ y: 20 }}
@@ -41,13 +39,11 @@ const Banner = ({ content }: any) => {
             }}
           >
             <button onClick={scrollToProviders}>
-              <Img 
-                src={`${process.env.NEXT_PUBLIC_IMAGES_URL}downArrow2.WebP`} 
+              <Image
+                src={`${process.env.NEXT_PUBLIC_IMAGES_URL}downArrow2.WebP`}
                 alt="Internet service provider"
-                sizes={{
-                  default: [0,0],
-                  mobile: [4,8],
-                }}
+                width={0}
+                height={0}
               />
             </button>
           </motion.div>
@@ -56,4 +52,5 @@ const Banner = ({ content }: any) => {
     </section>
   );
 };
+
 export default Banner;

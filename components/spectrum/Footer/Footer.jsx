@@ -7,7 +7,7 @@ function Footer() {
     <div className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.text_portion}>
-          <p>740 W LITTLE YORK RD SUITE B HOUSTON, TX 77091, <br/>USA</p>
+          <p></p>
         </div>
         <div className={styles.image_portion}>
           <img src={`${process.env.NEXT_PUBLIC_IMAGES_URL}logo.svg`} alt="Internet service provider" />
