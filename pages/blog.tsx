@@ -1,11 +1,7 @@
-import Head from "next/head";
-import AllBlogs from "../../components/blog/all-blogs/AllBlogs";
-import Banner from "../../components/blog/banner/Banner";
-import Trending from "../../components/blog/trending/Trending";
- 
-import QnA from "../../components/global/QnA/QnA"; 
-import Link from "next/link";
-import getBlogs from "../../controllers/getBlogs";
+import Head from "next/head"; 
+import Link from "next/link"; 
+import AllBlogs from "../components/blog/all-blogs/AllBlogs";
+import getBlogs from "../controllers/getBlogs";
 
 const Blog = ({ data }: any) => {
   console.log(data)
@@ -95,7 +91,7 @@ const Blog = ({ data }: any) => {
  
 
 export async function getStaticProps() {
-  const response = (await getBlogs(1, 5)) as any;
+  const response = (await getBlogs(1, 15)) as any;
   if (response.length < 1) {
     return {
       props: {
