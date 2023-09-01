@@ -82,10 +82,12 @@ const Blog = ({ data }: any) => {
         <meta name="google-site-verification" content="k47DZLbHpRIgn1Th9lbawTO52jPvz_M9J-t-B4-mZx0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Banner />
+      <main> 
+        {data?.blogs?.map((res:any,index:any) => {
+          <h3>{res.title}</h3>
+        })}
         <AllBlogs blogs = {data}/>
-        <QnA data={faqData} />
+         
       </main>
     </>
   );
