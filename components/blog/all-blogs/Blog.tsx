@@ -11,7 +11,7 @@ type Props = {
   image: string;
   id: string;
   excerpt?: string;
-  slug?: string;
+  slug?:string;
 };
 
 const Blog = ({
@@ -22,22 +22,23 @@ const Blog = ({
   image,
   id,
   excerpt,
-  slug,
+  slug
 }: Props) => {
+  
   const updatedHeading =
     heading.length > 45 ? heading.slice(0, 45) + "..." : heading;
   const updatedExcerpt =
     excerpt && excerpt.length > 145 ? excerpt?.slice(0, 145) + "..." : excerpt;
   return (
-    <Link href={`blog/${slug}`}>
+    <Link href={`blog/${slug}`} legacyBehavior>
       <div className={styles.blog}>
         <div className={styles.image}>
           <Img
-            src={image}
-            alt="Internet service provider"
+            src={image} 
+            alt="Internet service provider" 
             sizes={{
-              default: [14, 13],
-              mobile: [27, 33],
+              default: [14,13],
+              mobile: [27,33],
             }}
           />
         </div>

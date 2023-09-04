@@ -150,13 +150,6 @@ const AllBlogs = ({ blogs }: any) => {
             {blogs &&
               blogs.blogs.map((b: any) => {
                 return (
-                  // <LatestBlogBox
-                  //   key={b._id}
-                  //   date={b.created_at}
-                  //   title={b.title}
-                  //   description={b.excerpt}
-                  //   slug={b.slug}
-                  // />
                   <Blog
                     key={b._id}
                     id={b._id}
