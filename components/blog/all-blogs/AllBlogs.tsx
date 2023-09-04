@@ -5,7 +5,7 @@ import Blog from "./Blog";
 import Pagination from "../pagination/Pagination";
 import Img from "../../utils/image/Img";
 import useBlogCategory from "../../../hooks/use-fetch-blog-categories";
-const AllBlogs = ({ blogs }: any) => {
+const AllBlogs = ({ blogs,loading }: any) => {
   const { width } = useDimensions();
   const [isHover, setIsHover] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -13,14 +13,9 @@ const AllBlogs = ({ blogs }: any) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchVal, setSearchVal] = useState("");
   const productPerPage = 6;
-  const { message, data, total, categories, loading } = useBlogCategory(
-    currentPage,
-    productPerPage,
-    searchQuery,
-    category
-  );
+ 
 
-  const totalPages = Math.ceil(total / productPerPage);
+  const totalPages =12;
 
   // handlers
   const handleSearchInputOnChange = (
@@ -43,8 +38,8 @@ const AllBlogs = ({ blogs }: any) => {
         </div>
 
         <div className={styles.blogs}>
-          {blogs &&
-            blogs?.blogs?.map((b: any) => {
+          {blogs.blogs  &&
+            blogs.blogs.map((b: any) => {
               return (
                 <Blog
                   key={b._id}
