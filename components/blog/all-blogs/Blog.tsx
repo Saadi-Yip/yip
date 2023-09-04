@@ -29,8 +29,7 @@ const Blog = ({
   const updatedExcerpt =
     excerpt && excerpt.length > 145 ? excerpt?.slice(0, 145) + "..." : excerpt;
   return (
-    
-      <Link href={`blog/${slug}`}>
+      <Link href={`blog/${slug}`} legacyBehavior>
         <div className={styles.blog}>
           <div className={styles.image}>
             <Img
