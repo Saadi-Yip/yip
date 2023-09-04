@@ -33,7 +33,9 @@ const AllBlogs = ({ blogs }: any) => {
     searchQuery,
     category
   );
-
+  const startIndex = (currentPage - 1) * productPerPage;
+  const endIndex = startIndex + productPerPage;
+  const displayedBlogs = blogs.blogs.slice(startIndex, endIndex);
   const totalPages = Math.ceil(total / productPerPage);
 
   // handlers
@@ -46,7 +48,10 @@ const AllBlogs = ({ blogs }: any) => {
     setSearchQuery(searchVal);
     setCurrentPage(1);
   };
-
+  
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+  };
   return (
     <section className={styles.all_blogs} style={{ position: "relative" }}>
       <div className={styles.wrapper}>
@@ -149,21 +154,19 @@ const AllBlogs = ({ blogs }: any) => {
         <>
           <div className={styles.blogs}>
             {blogs &&
-              blogs.blogs.map((b: any) => {
+              displayedBlogs.map((b: any) => {
                 return (
-                  
-                    <Blog 
-                      key = {b._id}
-                      id={b._id}
-                      heading={b.title}
-                      createdAt={b.created_at}
-                      category={b.category}
-                      readTime={b.read_time}
-                      image={b.image}
-                      excerpt={b.excerpt}
-                      slug={b.slug}
-                    />
-                  
+                  <Blog
+                    key={b._id}
+                    id={b._id}
+                    heading={b.title}
+                    createdAt={b.created_at}
+                    category={b.category}
+                    readTime={b.read_time}
+                    image={b.image}
+                    excerpt={b.excerpt}
+                    slug={b.slug}
+                  />
                 );
               })}
           </div>
@@ -188,9 +191,9 @@ const AllBlogs = ({ blogs }: any) => {
             </div>
           )}
           <Pagination
-            totalPages={totalPages}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
+           totalPages={totalPages}
+           currentPage={currentPage}
+           setCurrentPage={setCurrentPage}
           />
         </>
       </div>
