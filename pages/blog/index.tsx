@@ -6,6 +6,8 @@ import Trending from "../../components/blog/trending/Trending";
 import QnA from "../../components/global/QnA/QnA";
 import getBlogs from "../../controllers/getBlogs";
 import Link from "next/link";
+import LatestBlogBox from "../../components/home/latest-blogs/LatestBlogBox";
+import LatestBlogs from "../../components/home/latest-blogs/LatestBlogs";
 
 const Blog = ({ data }: any) => {
   const faqData = [
@@ -84,7 +86,7 @@ const Blog = ({ data }: any) => {
       <main>
         <Banner />
         <Trending blogs={data} />
-        
+        <LatestBlogs blogs={data}/>
         <QnA data={faqData} />
       </main>
     </>
