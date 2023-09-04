@@ -5,6 +5,7 @@ import Blog from "./Blog";
 import Pagination from "../pagination/Pagination";
 import Img from "../../utils/image/Img";
 import useBlogCategory from "../../../hooks/use-fetch-blog-categories";
+import LatestBlogBox from "../../home/latest-blogs/LatestBlogBox";
 const AllBlogs = ({ blogs,loading }: any) => {
   const { width } = useDimensions();
   const [isHover, setIsHover] = useState(false);
@@ -41,17 +42,13 @@ const AllBlogs = ({ blogs,loading }: any) => {
           {blogs.blogs  &&
             blogs.blogs.map((b: any) => {
               return (
-                <Blog
-                  key={b._id}
-                  id={b._id}
-                  heading={b.title}
-                  createdAt={b.created_at}
-                  category={b.category}
-                  readTime={b.read_time}
-                  image={b.image}
-                  excerpt={b.excerpt}
-                  slug={b.slug}
-                />
+                <LatestBlogBox
+                key={b._id}
+                date={b.created_at}
+                title={b.title}
+                description={b.excerpt}
+                slug={b.slug} 
+              />
               );
             })}
         </div>
