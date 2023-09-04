@@ -6,23 +6,30 @@ import Pagination from "../pagination/Pagination";
 import Img from "../../utils/image/Img";
 import useBlogCategory from "../../../hooks/use-fetch-blog-categories";
 import LatestBlogBox from "../../home/latest-blogs/LatestBlogBox";
-const AllBlogs = ({ blogs,loading }: any) => {
-  const { width } = useDimensions();
+const AllBlogs = ( ) => {
+ 
+  const {width} = useDimensions();
   const [isHover, setIsHover] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [category, setCategory] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchVal, setSearchVal] = useState("");
   const productPerPage = 6;
- 
+  const { message, blogs,total, categories, loading } = useBlogCategory(
+    currentPage,
+    productPerPage,
+    searchQuery,
+    category
+  );
 
-  const totalPages =12;
-
+  const totalPages = Math.ceil(total / productPerPage);
+  
   // handlers
   const handleSearchInputOnChange = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     setSearchVal(e.target.value);
+    
   };
   const handleClickOnSearchBtn = () => {
     setSearchQuery(searchVal);
@@ -39,8 +46,8 @@ const AllBlogs = ({ blogs,loading }: any) => {
         </div>
 
         <div className={styles.blogs}>
-          {blogs.blogs  &&
-            blogs.blogs.map((b: any) => {
+          {blogs  &&
+            blogs.map((b: any) => {
               return (
                 <LatestBlogBox
                 key={b._id}

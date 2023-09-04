@@ -86,7 +86,7 @@ const Blog = ({ data }: any) => {
       <main>
         <Banner />
         <Trending blogs={data} />
-         <AllBlogs blogs = {data} />
+         <AllBlogs  />
         <QnA data={faqData} />
       </main>
     </>
