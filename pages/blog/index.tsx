@@ -86,7 +86,7 @@ const Blog = ({ data }: any) => {
       <main>
         <Banner />
         <Trending blogs={data} />
-        <LatestBlogs blogs={data}/>
+        <LatestBlogs blogs={data} slider = {true}/>
         <QnA data={faqData} />
       </main>
     </>
@@ -94,7 +94,7 @@ const Blog = ({ data }: any) => {
 };
 
 export async function getStaticProps() {
-  const response = (await getBlogs(1,16)) as [];
+  const response = (await getBlogs(1, null)) as [];
  
   return {
     props: {
