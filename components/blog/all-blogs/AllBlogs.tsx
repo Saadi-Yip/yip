@@ -13,6 +13,7 @@ import "swiper/css";
 import Img from "../../utils/image/Img";
 import Pagination from "../../blog/pagination/Pagination";
 import LatestBlogBox from "../../home/latest-blogs/LatestBlogBox";
+import Link from "next/link";
 
 const breakpoint = {
   mobile: 600,
@@ -150,17 +151,19 @@ const AllBlogs = ({ blogs }: any) => {
             {blogs &&
               blogs.blogs.map((b: any) => {
                 return (
-                  <Blog
-                    key={b._id}
-                    id={b._id}
-                    heading={b.title}
-                    createdAt={b.created_at}
-                    category={b.category}
-                    readTime={b.read_time}
-                    image={b.image}
-                    excerpt={b.excerpt}
-                    slug={b.slug}
-                  />
+                  
+                    <Blog 
+                      key = {b._id}
+                      id={b._id}
+                      heading={b.title}
+                      createdAt={b.created_at}
+                      category={b.category}
+                      readTime={b.read_time}
+                      image={b.image}
+                      excerpt={b.excerpt}
+                      slug={b.slug}
+                    />
+                  
                 );
               })}
           </div>
