@@ -2,7 +2,7 @@
 import React from "react";
 import style from "./pagination.module.css";
 import { useRouter } from 'next/router'; // Import useRouter from Next.js
-
+import Head from 'next/head'
 const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
   const pageNumbers = [];
 
@@ -28,6 +28,18 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
     router.push(`/blog?page=${pageNumber}`);
   };
 
+<Head>
+  {/* ... other meta tags */}
+  {currentPage === 1 && (
+    <link rel="canonical" href="/blog" />
+  )}
+  {currentPage > 1 && (
+    <link rel="prev" href={`/blog?page=${currentPage - 1}`} />
+  )}
+  {currentPage < totalPages && (
+    <link rel="next" href={`/blog?page=${currentPage + 1}`} />
+  )}
+</Head>
 
   return (
     <ul className={style.pagination_bg}>
