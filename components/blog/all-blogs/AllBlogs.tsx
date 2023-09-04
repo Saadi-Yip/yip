@@ -5,15 +5,15 @@ import Blog from "./Blog";
 import Pagination from "../pagination/Pagination";
 import Img from "../../utils/image/Img";
 import useBlogCategory from "../../../hooks/use-fetch-blog-categories";
-const AllBlogs = ({data}:any) => {
-  const {width} = useDimensions();
+const AllBlogs = ({ blogs }: any) => {
+  const { width } = useDimensions();
   const [isHover, setIsHover] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [category, setCategory] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchVal, setSearchVal] = useState("");
   const productPerPage = 6;
-  const { message, blogs,total, categories, loading } = useBlogCategory(
+  const { message, data, total, categories, loading } = useBlogCategory(
     currentPage,
     productPerPage,
     searchQuery,
@@ -21,19 +21,17 @@ const AllBlogs = ({data}:any) => {
   );
 
   const totalPages = Math.ceil(total / productPerPage);
-  
+
   // handlers
   const handleSearchInputOnChange = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     setSearchVal(e.target.value);
-    
   };
   const handleClickOnSearchBtn = () => {
     setSearchQuery(searchVal);
     setCurrentPage(1);
   };
-
 
   return (
     <section className={styles.all_blogs} style={{ position: "relative" }}>
@@ -46,7 +44,7 @@ const AllBlogs = ({data}:any) => {
 
         <div className={styles.blogs}>
           {blogs &&
-            blogs?.map((b: any) => {
+            blogs?.blogs?.map((b: any) => {
               return (
                 <Blog
                   key={b._id}
@@ -63,28 +61,30 @@ const AllBlogs = ({data}:any) => {
             })}
         </div>
         {loading && (
-        <div
-          style={{
-            marginTop: "4vw",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          className="loader"
-        >
-          <Img
-            src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/loader.svg`}
-            alt="loader"
-            sizes={{
-              default: [16.5, 6],
-              mobile: [19.4, 16],
+          <div
+            style={{
+              marginTop: "4vw",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-          />
-        </div> )}
-        <Pagination totalPages={totalPages}
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
+            className="loader"
+          >
+            <Img
+              src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/loader.svg`}
+              alt="loader"
+              sizes={{
+                default: [16.5, 6],
+                mobile: [19.4, 16],
+              }}
             />
+          </div>
+        )}
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
       </div>
     </section>
   );
