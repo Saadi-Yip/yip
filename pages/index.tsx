@@ -182,10 +182,7 @@ const Home = ({ data }: any) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* Add Google site verification meta tag */}
-        <meta
-          name="google-site-verification"
-          content="k47DZLbHpRIgn1Th9lbawTO52jPvz_M9J-t-B4-mZx0"
-        />
+        <meta name="google-site-verification" content="yVTQpEcuooHM0kjO6baST2QgWi4EbTn0O3CrkYVvD7Y" />
 
         {/* Add a favicon */}
         <link rel="icon" href="/favicon.ico" />

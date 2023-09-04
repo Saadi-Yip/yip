@@ -112,11 +112,13 @@ const Blog = ({ data }: any) => {
           property="twitter:image"
           content="https://www.yourinternetprovider.com/cable.png"
         />
+        <meta name="google-site-verification" content="yVTQpEcuooHM0kjO6baST2QgWi4EbTn0O3CrkYVvD7Y" />
       </Head>
       <main>
-        {data?.blogs?.map((res: any, index: any) => {
-          <h3>{res.title}</h3>;
-        })}
+        {data?.blogs?.map((res: any, index: any) => (
+          // Use parentheses () instead of curly braces {} to return the JSX
+          <h3 key={index}>{res.title}</h3> // Added 'key' prop for unique keys
+        ))}
         <AllBlogs blogs={data} />
       </main>
     </>
