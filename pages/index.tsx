@@ -227,10 +227,7 @@ const Home = ({ data }: any) => {
         ></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Google tag (gtag.js)  */}
-        <meta
-          name="google-site-verification"
-          content="Z_QaMPQN2Fj6qakI0oyGR6uHowiRc9hx__DOIA8-v3g"
-        />
+        <meta name="google-site-verification" content="yVTQpEcuooHM0kjO6baST2QgWi4EbTn0O3CrkYVvD7Y" />
         <link
           rel="alternate"
           href="https://www.yourinternetprovider.com/"
