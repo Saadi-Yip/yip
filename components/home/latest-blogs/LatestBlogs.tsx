@@ -40,7 +40,7 @@ const LatestBlogs = ({ blogs, slider }: any) => {
                     title={blog.title}
                     description={blog.excerpt}
                     slug={blog.slug}
-                     
+                    slider={slider}
                   />
                 </SwiperSlide>
               );
