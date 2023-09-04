@@ -17,7 +17,7 @@ const breakpoint = {
   mobile:600
 }
 
-const AllBlogs = ({blogs}:any) => {
+const AllBlogs = () => {
 
   const {width} = useDimensions();
   const [isHover, setIsHover] = useState(false);
@@ -26,7 +26,7 @@ const AllBlogs = ({blogs}:any) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchVal, setSearchVal] = useState("");
   const productPerPage = 6;
-  const { message, total, categories, loading } = useBlogCategory(
+  const { message, blogs,total, categories, loading } = useBlogCategory(
     currentPage,
     productPerPage,
     searchQuery,
@@ -150,7 +150,7 @@ const AllBlogs = ({blogs}:any) => {
         <>
             <div className={styles.blogs}>
               {blogs &&
-                blogs.blogs.map((b: any) => (
+                blogs.map((b: any) => (
                   <Blog
                     key={b._id}
                     id={b._id}
@@ -180,7 +180,48 @@ const AllBlogs = ({blogs}:any) => {
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
             />
-
+            {/* {!loading && (
+              <div className={styles.pagination}>
+                <button
+                  onClick={() =>
+                    setCurrentPage((prev: number) => {
+                      if (prev !== 1) {
+                        return prev - 1;
+                      }
+                      return prev;
+                    })
+                  }
+                >
+                  <Img 
+                    src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/arrow_up_b.svg`} 
+                    alt="scroll up" 
+                    sizes={{
+                      default: [2.5,2.5],
+                      mobile: [3,6],
+                    }} 
+                  />
+                </button>
+                <button
+                  onClick={() =>
+                    setCurrentPage((prev: number) => {
+                      if (!(blogs.length < productPerPage)) {
+                        return prev + 1;
+                      }
+                      return prev;
+                    })
+                  }
+                >
+                  <Img 
+                    src={`${process.env.NEXT_PUBLIC_IMAGES_URL}svg/arrow_up_b.svg`} 
+                    alt="scroll up" 
+                    sizes={{
+                      default: [2.5,2.5],
+                      mobile: [3,6],
+                    }}
+                  />
+                </button>
+              </div>
+            )} */}
           </>
        
       </div>

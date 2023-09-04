@@ -55,9 +55,9 @@ const Home = ({ data }: any) => {
       text: (
         <p>
           Ordering services is easy! You can simply call us at{" "}
-          <a href="tel:+18882620945"> +1 (888) 262-0945</a>, and our highly
-          trained customer service representatives will guide you through the
-          process. We understand that navigating the world of telecom can be
+          <a href="tel:+18882620945"> +1 (888) 262-0945</a>, and our highly trained
+          customer service representatives will guide you through the process.
+          We understand that navigating the world of telecom can be
           overwhelming, so we're here to help you find the perfect internet
           service provider to meet your unique needs.
         </p>
@@ -176,16 +176,6 @@ const Home = ({ data }: any) => {
           name="keywords"
           content="internet service providers, internet service providers in my area, cable service providers, wireless internet service providers, business internet service providers"
         />
-        <meta name="robots" content="index, follow" />
-
-        {/* Add viewport meta tag for responsiveness */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Add Google site verification meta tag */}
-        <meta name="google-site-verification" content="yVTQpEcuooHM0kjO6baST2QgWi4EbTn0O3CrkYVvD7Y" />
-
-        {/* Add a favicon */}
-        <link rel="icon" href="/favicon.ico" />
         <meta name="robots" content="index,follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
@@ -227,11 +217,18 @@ const Home = ({ data }: any) => {
         ></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Google tag (gtag.js)  */}
-        <meta name="google-site-verification" content="yVTQpEcuooHM0kjO6baST2QgWi4EbTn0O3CrkYVvD7Y" />
-        
+        <meta
+          name="google-site-verification"
+          content="Z_QaMPQN2Fj6qakI0oyGR6uHowiRc9hx__DOIA8-v3g"
+        />
+        <link
+          rel="alternate"
+          href="https://www.yourinternetprovider.com/"
+          hrefLang="en-us"
+        />
         <link href="https://www.yourinternetprovider.com/" rel="canonical" />
         <link rel="icon" href="/favicon.ico" />
-
+         
         <script>
           {`
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -270,6 +267,7 @@ const Home = ({ data }: any) => {
         <InternetProviders />
         <ProviderFeatureBox />
         {/* <Trending blogs = {data} /> */}
+        <LatestBlogs blogs={data} slider={true} />
         {/* <ServiceProvider /> */}
         <QnA data={dataProvider} />
       </main>
@@ -278,11 +276,26 @@ const Home = ({ data }: any) => {
           src="https://www.googletagmanager.com/ns.html?id=GTM-W7XG4GZQ"
           height="0"
           width="0"
-          style={{ display: "none", visibility: "hidden" }}
+          style={{display:'none',visibility:'hidden'}}
         ></iframe>
       </noscript>
     </>
   );
 };
 
+export async function getStaticProps() {
+  const response = (await getBlogs(1, 2)) as [];
+  if (response.length < 1) {
+    return {
+      props: {
+        data: [],
+      },
+    };
+  }
+  return {
+    props: {
+      data: response,
+    },
+  };
+}
 export default Home;

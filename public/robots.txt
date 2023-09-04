@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://yip-five.vercel.app/
+Host: https://www.yourinternetprovider.com/
 
 # Sitemaps
-Sitemap: https://yip-five.vercel.app/sitemap.xml
+Sitemap: https://www.yourinternetprovider.com/sitemap.xml

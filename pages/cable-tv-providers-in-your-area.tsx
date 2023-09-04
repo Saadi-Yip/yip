@@ -86,20 +86,20 @@ const CableServices = ({ data }: any) => {
     </>
   );
 };
-// export async function getStaticProps() {
-//   const response = (await getBlogs(1, 5)) as any;
-//   if (response.length < 1) {
-//     return {
-//       props: {
-//         data: [],
-//       },
-//     };
-//   }
-//   return {
-//     props: {
-//       data: response.blogs,
-//     },
-//   };
-// }
+export async function getStaticProps() {
+  const response = (await getBlogs(1, 5)) as any;
+  if (response.length < 1) {
+    return {
+      props: {
+        data: [],
+      },
+    };
+  }
+  return {
+    props: {
+      data: response.blogs,
+    },
+  };
+}
 
 export default CableServices;

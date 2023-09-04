@@ -14,7 +14,7 @@ type Props = {
   slug?:string;
 };
 
-const Blogs = ({
+const Blog = ({
   heading,
   createdAt,
   category,
@@ -59,4 +59,4 @@ const Blogs = ({
   );
 };
 
-export default Blogs;
+export default Blog;
