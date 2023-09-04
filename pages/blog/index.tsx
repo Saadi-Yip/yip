@@ -85,7 +85,7 @@ const Blog = ({ data }: any) => {
       </Head>
       <main>
         <Banner />
-        <Trending blogs={data} />
+        {/* <Trending blogs={data} /> */}
          <AllBlogs  blogs = {data}/>
         <QnA data={faqData} />
       </main>
@@ -93,16 +93,26 @@ const Blog = ({ data }: any) => {
   );
 };
 
-export async function getServerSideProps({ query }:any) {
-  const { page = 1 } = query;
-  const apiUrl = `https://backend-yip.cyclic.app/blog?limit=null&page=${page}`;
-  const response = await fetch(apiUrl);
-  const data = await response.json();
+// export async function getServerSideProps({ query }:any) {
+//   const { page = 1 } = query;
+//   const apiUrl = `https://backend-yip.cyclic.app/blog?limit=null&page=${page}`;
+//   const response = await fetch(apiUrl);
+//   const data = await response.json();
 
+//   return {
+//     props: {
+//       data:data,
+//     },
+//   };
+// }
+export const getStaticProps = async () => {
+  const res = await fetch("https://backend-yip.cyclic.app/blog");
+  const data = await res.json();
+ 
   return {
-    props: {
-      data:data,
-    },
+    props: { data },
   };
-}
+ };
+
+
 export default Blog;

@@ -1,60 +1,37 @@
 import React from "react";
-import style from "./pagination.module.css";
+import styles from "./pagination.module.css";
 
-const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
-  const pageNumbers = [];
-
-  // Calculate the range of page numbers to display
-  let startPage = currentPage > 3 ? currentPage - 2 : 1;
-  let endPage = currentPage + 2;
-
-  if (endPage > totalPages) {
-    endPage = totalPages;
-    startPage = endPage - 4 > 1 ? endPage - 4 : 1;
-  }
-
-  // Generate the array of page numbers
-  for (let i = startPage; i <= endPage; i++) {
-    pageNumbers.push(i);
-  }
-
+const Pagination = ({ items, pageSize, currentPage, onPageChange }:any) => {
+  const pagesCount = Math.ceil(items / pageSize); // 100/10
+ 
+  if (pagesCount === 1) return null;
+  const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
+  
+ 
   return (
-    <ul className={style.pagination_bg}>
-      {currentPage - 1 >= 1 && (
-        <button onClick={() => setCurrentPage(currentPage - 1)}>{"<"}</button>
-      )}
-      {startPage > 1 && <li onClick={() => setCurrentPage(1)}>1</li>}
-
-      {startPage > 2 && (
-        <li>
-          <span>...</span>
-        </li>
-      )}
-
-      {pageNumbers.map((number) => (
-        <li
-          key={number}
-          className={`${number === currentPage ? " Paginationactive" : ""}`}
-          onClick={() => setCurrentPage(number)}
-        >
-          {number}
-        </li>
-      ))}
-
-      {endPage < totalPages - 1 && (
-        <li>
-          <span>...</span>
-        </li>
-      )}
-
-      {endPage < totalPages && (
-        <li onClick={() => setCurrentPage(totalPages)}>{totalPages}</li>
-      )}
-      {currentPage + 1 <= totalPages && (
-        <button onClick={() => setCurrentPage(currentPage + 1)}>{">"}</button>
-      )}
-    </ul>
+    <div>
+     <ul className={styles.pagination}>
+       {pages.map((page) => (
+         <li
+           key={page}
+           className={
+             page === currentPage ? styles.pageItemActive : styles.pageItem
+           }
+         >
+           <a className={styles.pageLink} onClick={() => onPageChange(page)}>
+             {page}
+           </a>
+         </li>
+       ))}
+     </ul>
+   </div>
   );
-};
+ };
+ 
+ export default Pagination;
 
-export default Pagination;
+
+ export const paginate = (items:any, pageNumber:any, pageSize:any) => {
+  const startIndex = (pageNumber - 1) * pageSize;
+  return items.slice(startIndex, startIndex + pageSize);
+ };

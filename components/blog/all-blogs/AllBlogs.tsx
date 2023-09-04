@@ -11,7 +11,7 @@ import useDimensions from "../../../hooks/use-dimensions";
 import styles from "./all-blogs.module.css";
 import "swiper/css";
 import Img from "../../utils/image/Img";
-import Pagination from "../../blog/pagination/Pagination";
+import Pagination, { paginate } from "../../blog/pagination/Pagination";
 import LatestBlogBox from "../../home/latest-blogs/LatestBlogBox";
 import Link from "next/link";
 
@@ -35,8 +35,7 @@ const AllBlogs = ({ blogs }: any) => {
   );
   const startIndex = (currentPage - 1) * productPerPage;
   const endIndex = startIndex + productPerPage;
-  const displayedBlogs = blogs.blogs.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(total / productPerPage);
+  const displayedBlogs = blogs.blogs.slice(startIndex, endIndex); 
 
   // handlers
   const handleSearchInputOnChange = (
@@ -48,10 +47,13 @@ const AllBlogs = ({ blogs }: any) => {
     setSearchQuery(searchVal);
     setCurrentPage(1);
   };
-  
-  const handlePageChange = (newPage: number) => {
-    setCurrentPage(newPage);
+
+ 
+  const onPageChange = (page:any) => {
+    setCurrentPage(page);
   };
+
+  const paginatedPosts = paginate(blogs.blogs, currentPage, productPerPage);
   return (
     <section className={styles.all_blogs} style={{ position: "relative" }}>
       <div className={styles.wrapper}>
@@ -190,10 +192,12 @@ const AllBlogs = ({ blogs }: any) => {
               />
             </div>
           )}
+         
           <Pagination
-           totalPages={totalPages}
-           currentPage={currentPage}
-           setCurrentPage={setCurrentPage}
+            items={total} // 100
+            currentPage={currentPage} // 1
+            pageSize={productPerPage} // 10
+            onPageChange={onPageChange}
           />
         </>
       </div>
