@@ -18,7 +18,7 @@ const breakpoint = {
   mobile: 600,
 };
 
-const AllBlogs = ({blogs}:any) => {
+const AllBlogs = ({ blogs }: any) => {
   const { width } = useDimensions();
   const [isHover, setIsHover] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -150,11 +150,22 @@ const AllBlogs = ({blogs}:any) => {
             {blogs &&
               blogs.blogs.map((b: any) => {
                 return (
-                  <LatestBlogBox
+                  // <LatestBlogBox
+                  //   key={b._id}
+                  //   date={b.created_at}
+                  //   title={b.title}
+                  //   description={b.excerpt}
+                  //   slug={b.slug}
+                  // />
+                  <Blog
                     key={b._id}
-                    date={b.created_at}
-                    title={b.title}
-                    description={b.excerpt}
+                    id={b._id}
+                    heading={b.title}
+                    createdAt={b.created_at}
+                    category={b.category}
+                    readTime={b.read_time}
+                    image={b.image}
+                    excerpt={b.excerpt}
                     slug={b.slug}
                   />
                 );
@@ -185,7 +196,6 @@ const AllBlogs = ({blogs}:any) => {
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
           />
-          
         </>
       </div>
     </section>
