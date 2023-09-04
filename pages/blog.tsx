@@ -1,10 +1,10 @@
-import Head from "next/head"; 
-import Link from "next/link"; 
+import Head from "next/head";
+import Link from "next/link";
 import AllBlogs from "../components/blog/all-blogs/AllBlogs";
 import getBlogs from "../controllers/getBlogs";
 
 const Blog = ({ data }: any) => {
-  console.log(data)
+  console.log(data);
   const faqData = [
     {
       heading: "What is YourInternetProvider?",
@@ -44,9 +44,9 @@ const Blog = ({ data }: any) => {
       text: (
         <p>
           Ordering services is easy! You can simply call us at{" "}
-          <a href="tel:+18882620945"> +1 (888) 262-0945</a>, and our highly trained
-          customer service representatives will guide you through the process.
-          We understand that navigating the world of telecom can be
+          <a href="tel:+18882620945"> +1 (888) 262-0945</a>, and our highly
+          trained customer service representatives will guide you through the
+          process. We understand that navigating the world of telecom can be
           overwhelming, so we're here to help you find the perfect internet
           service provider to meet your unique needs.
         </p>
@@ -57,38 +57,71 @@ const Blog = ({ data }: any) => {
       text: "To get started, all you need to provide is your address and contact information. We'll take care of the rest! Our advanced technology scans thousands of service providers to find the best offers available in your area. By providing your information, you can be confident that you'll get the best service at the best price.",
     },
   ];
-  
+
   return (
     <>
       <Head>
         <title>
-          Bringing you the latest and greatest from the internet world.
+          Cable Tv Internet service providers in your area by Zip code{" "}
         </title>
         <meta
-          name="title"
-          content="Bringing you the latest and greatest from the internet world."
+          name="description"
+          content="Looking for Cable Tv Internet service providers in your area? Use our zip code lookup tool to find and compare the best broadband Cable Tv plans and prices."
         />
         <meta
-          name="description"
-          content="Check out articles, tips and guides for everything related to the Internet."
+          name="keywords"
+          content="cable Tv service provider, Cable Services Providers in Your Area, cheapest cable tv providers in my area, cable providers in my area, cable providers in my area by zip code"
         />
-        <meta name="robots" content="index,follow" />
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="google-site-verification" content="k47DZLbHpRIgn1Th9lbawTO52jPvz_M9J-t-B4-mZx0" />
+        <meta name="robots" content="index,follow" />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph / Facebook  */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.yourinternetprovider.com/blog"
+        />
+        <meta
+          property="og:title"
+          content="Cable Tv Internet service providers in your area by Zip code"
+        />
+        <meta
+          property="og:description"
+          content="Looking for Cable Tv Internet service providers in your area? Use our zip code lookup tool to find and compare the best broadband Cable Tv plans and prices."
+        />
+        <meta
+          property="og:image"
+          content="https://www.yourinternetprovider.com/cable.png"
+        />
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://www.yourinternetprovider.com/blog"
+        />
+        <meta
+          property="twitter:title"
+          content="Cable Tv Internet service providers in your area by Zip code"
+        />
+        <meta
+          property="twitter:description"
+          content="Looking for Cable Tv Internet service providers in your area? Use our zip code lookup tool to find and compare the best broadband Cable Tv plans and prices."
+        />
+        <meta
+          property="twitter:image"
+          content="https://www.yourinternetprovider.com/cable.png"
+        />
       </Head>
-      <main> 
-        {data?.blogs?.map((res:any,index:any) => {
-          <h3>{res.title}</h3>
+      <main>
+        {data?.blogs?.map((res: any, index: any) => {
+          <h3>{res.title}</h3>;
         })}
-        <AllBlogs blogs = {data}/>
-         
+        <AllBlogs blogs={data} />
       </main>
     </>
   );
 };
- 
 
 export async function getStaticProps() {
   const response = (await getBlogs(1, 15)) as any;

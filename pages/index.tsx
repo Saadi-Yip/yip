@@ -55,9 +55,9 @@ const Home = ({ data }: any) => {
       text: (
         <p>
           Ordering services is easy! You can simply call us at{" "}
-          <a href="tel:+18882620945"> +1 (888) 262-0945</a>, and our highly trained
-          customer service representatives will guide you through the process.
-          We understand that navigating the world of telecom can be
+          <a href="tel:+18882620945"> +1 (888) 262-0945</a>, and our highly
+          trained customer service representatives will guide you through the
+          process. We understand that navigating the world of telecom can be
           overwhelming, so we're here to help you find the perfect internet
           service provider to meet your unique needs.
         </p>
@@ -176,6 +176,19 @@ const Home = ({ data }: any) => {
           name="keywords"
           content="internet service providers, internet service providers in my area, cable service providers, wireless internet service providers, business internet service providers"
         />
+        <meta name="robots" content="index, follow" />
+
+        {/* Add viewport meta tag for responsiveness */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Add Google site verification meta tag */}
+        <meta
+          name="google-site-verification"
+          content="k47DZLbHpRIgn1Th9lbawTO52jPvz_M9J-t-B4-mZx0"
+        />
+
+        {/* Add a favicon */}
+        <link rel="icon" href="/favicon.ico" />
         <meta name="robots" content="index,follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
@@ -228,7 +241,7 @@ const Home = ({ data }: any) => {
         />
         <link href="https://www.yourinternetprovider.com/" rel="canonical" />
         <link rel="icon" href="/favicon.ico" />
-         
+
         <script>
           {`
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -275,7 +288,7 @@ const Home = ({ data }: any) => {
           src="https://www.googletagmanager.com/ns.html?id=GTM-W7XG4GZQ"
           height="0"
           width="0"
-          style={{display:'none',visibility:'hidden'}}
+          style={{ display: "none", visibility: "hidden" }}
         ></iframe>
       </noscript>
     </>
