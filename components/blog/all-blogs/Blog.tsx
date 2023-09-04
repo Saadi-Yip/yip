@@ -29,7 +29,7 @@ const Blog = ({
   const updatedExcerpt =
     excerpt && excerpt.length > 145 ? excerpt?.slice(0, 145) + "..." : excerpt;
   return (
-      <Link href={`blog/${slug}`}>
+     
         <div className={styles.blog}>
           <div className={styles.image}>
             <Img
@@ -54,7 +54,7 @@ const Blog = ({
             </div>
           </div>
         </div>
-      </Link>
+       
    
   );
 };
