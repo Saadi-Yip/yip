@@ -95,7 +95,7 @@ const Blog = ({ data }: any) => {
 
 export async function getServerSideProps({ query }:any) {
   const { page = 1 } = query;
-  const apiUrl = `https://backend-yip.cyclic.app/blog?limit=8&page=${page}`;
+  const apiUrl = `https://backend-yip.cyclic.app/blog?limit=4&page=${page}`;
   const response = await fetch(apiUrl);
   const data = await response.json();
 
