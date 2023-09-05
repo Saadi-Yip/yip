@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Link from "next/link"; // Import Link from Next.js
 import style from "./pagination.module.css";
 import Head from "next/head";
 
@@ -42,7 +43,9 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
       <ul className={style.pagination_bg}>
         {currentPage > 1 && (
           <li onClick={() => handlePageClick(currentPage - 1)}>
-            <a>{"<"}</a>
+            <Link href={`/blog?page=${currentPage - 1}`}>
+              {"<"}
+            </Link>
           </li>
         )}
         {startPage > 1 && (
@@ -80,10 +83,13 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
         )}
         {currentPage < totalPages && (
           <li onClick={() => handlePageClick(currentPage + 1)}>
-            <a>{">"}</a>
+            <Link href={`/blog?page=${currentPage + 1}`}>
+              {">"}
+            </Link>
           </li>
         )}
       </ul>
+     
     </>
   );
 };
