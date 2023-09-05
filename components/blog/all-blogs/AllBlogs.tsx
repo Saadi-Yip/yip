@@ -33,7 +33,7 @@ const AllBlogs = ({ blogs }: any) => {
     category
   );
 
-  const totalPages = Math.ceil(total / productPerPage);
+  const totalPages = 12;
   // handlers
   const handleSearchInputOnChange = (
     e: React.ChangeEvent<HTMLInputElement>
