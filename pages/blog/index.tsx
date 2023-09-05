@@ -89,6 +89,7 @@ const Blog = ({ data }: any) => {
          <AllBlogs  blogs = {data}/>
         <QnA data={faqData} />
       </main>
+      
     </>
   );
 };
