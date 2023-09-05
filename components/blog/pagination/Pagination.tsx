@@ -1,10 +1,10 @@
 import React from "react";
 import { useRouter } from "next/router";
 import style from "./pagination.module.css";
-import Head from "next/head"; // Import Head from next/head
+import Head from "next/head";
 
 const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
-  const pageNumbers:any = [];
+  const pageNumbers: any = [];
   const router = useRouter();
 
   const handlePageClick = (pageNumber: any) => {
@@ -29,9 +29,8 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
 
   return (
     <>
-      {/* Add rel="prev" and rel="next" tags in the <Head> component */}
       <Head>
-      <link rel="canonical" href={`/blog`} />
+        <link rel="canonical" href={`/blog`} />
         {currentPage > 1 && (
           <link rel="prev" href={`/blog?page=${currentPage - 1}`} />
         )}
@@ -41,10 +40,16 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
       </Head>
 
       <ul className={style.pagination_bg}>
-        {currentPage - 1 >= 1 && (
-          <button onClick={() => handlePageClick(currentPage - 1)}>{"<"}</button>
+        {currentPage > 1 && (
+          <li onClick={() => handlePageClick(currentPage - 1)}>
+            <a>{"<"}</a>
+          </li>
         )}
-        {startPage > 1 && <li onClick={() => handlePageClick(1)}>1</li>}
+        {startPage > 1 && (
+          <li onClick={() => handlePageClick(1)}>
+            <a>1</a>
+          </li>
+        )}
 
         {startPage > 2 && (
           <li>
@@ -52,13 +57,13 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
           </li>
         )}
 
-        {pageNumbers.map((number:any) => (
+        {pageNumbers.map((number: any) => (
           <li
             key={number}
-            className={`${number === currentPage ? " Paginationactive" : ""}`}
+            className={`${number === currentPage ? "Paginationactive" : ""}`}
             onClick={() => handlePageClick(number)}
           >
-            {number}
+            <a>{number}</a>
           </li>
         ))}
 
@@ -69,10 +74,14 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
         )}
 
         {endPage < totalPages && (
-          <li onClick={() => handlePageClick(totalPages)}>{totalPages}</li>
+          <li onClick={() => handlePageClick(totalPages)}>
+            <a>{totalPages}</a>
+          </li>
         )}
-        {currentPage + 1 <= totalPages && (
-          <button onClick={() => handlePageClick(currentPage + 1)}>{">"}</button>
+        {currentPage < totalPages && (
+          <li onClick={() => handlePageClick(currentPage + 1)}>
+            <a>{">"}</a>
+          </li>
         )}
       </ul>
     </>
