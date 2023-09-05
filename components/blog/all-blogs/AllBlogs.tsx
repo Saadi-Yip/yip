@@ -11,15 +11,14 @@ import useDimensions from "../../../hooks/use-dimensions";
 import styles from "./all-blogs.module.css";
 import "swiper/css";
 import Img from "../../utils/image/Img";
-import Pagination, { paginate } from "../../blog/pagination/Pagination";
-import LatestBlogBox from "../../home/latest-blogs/LatestBlogBox";
-import Link from "next/link";
+import Pagination from "../../blog/pagination/Pagination"; 
 
 const breakpoint = {
   mobile: 600,
 };
 
 const AllBlogs = ({ blogs }: any) => {
+  console.log(blogs);
   const { width } = useDimensions();
   const [isHover, setIsHover] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,11 +31,10 @@ const AllBlogs = ({ blogs }: any) => {
     productPerPage,
     searchQuery,
     category
-  );
-  const startIndex = (currentPage - 1) * productPerPage;
-  const endIndex = startIndex + productPerPage;
-  const displayedBlogs = blogs.blogs.slice(startIndex, endIndex); 
-
+  ); 
+  
+  
+  const totalPages = Math.ceil(total / productPerPage);
   // handlers
   const handleSearchInputOnChange = (
     e: React.ChangeEvent<HTMLInputElement>
@@ -48,12 +46,10 @@ const AllBlogs = ({ blogs }: any) => {
     setCurrentPage(1);
   };
 
- 
-  const onPageChange = (page:any) => {
+  const onPageChange = (page: any) => {
     setCurrentPage(page);
   };
 
-  const paginatedPosts = paginate(blogs.blogs, currentPage, productPerPage);
   return (
     <section className={styles.all_blogs} style={{ position: "relative" }}>
       <div className={styles.wrapper}>
@@ -156,7 +152,7 @@ const AllBlogs = ({ blogs }: any) => {
         <>
           <div className={styles.blogs}>
             {blogs &&
-              displayedBlogs.map((b: any) => {
+              blogs.blogs.map((b: any) => {
                 return (
                   <Blog
                     key={b._id}
@@ -192,12 +188,11 @@ const AllBlogs = ({ blogs }: any) => {
               />
             </div>
           )}
-         
+
           <Pagination
-            items={total} // 100
-            currentPage={currentPage} // 1
-            pageSize={productPerPage} // 10
-            onPageChange={onPageChange}
+            totalPages={totalPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
           />
         </>
       </div>
