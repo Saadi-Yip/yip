@@ -53,7 +53,7 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
         )}
         {startPage > 1 && (
           <li onClick={() => handlePageClick(1)}>
-            <Link href={`/blog?page=${currentPage - 1}`}>
+            <Link href={`/blog?page=${currentPage}`}>
               1
             </Link>
           </li>
