@@ -13,7 +13,7 @@ import "swiper/css";
 import Img from "../../utils/image/Img";
 import Pagination from "../../blog/pagination/Pagination";
 import Head from "next/head";
-import  Link  from 'next/link';
+import Link from "next/link";
 
 const breakpoint = {
   mobile: 600,
@@ -204,7 +204,18 @@ const AllBlogs = ({ blogs }: any) => {
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
             />
-            
+            <div className="pagination">
+              {currentPage > 1 && (
+                <Link href={`/blog?page=${currentPage - 1}`}>
+                  Previous
+                </Link>
+              )}
+              {currentPage < totalPages && (
+                <Link href={`/blog?page=${currentPage + 1}`}>
+                  Next
+                </Link>
+              )}
+            </div>
           </>
         </div>
       </section>
