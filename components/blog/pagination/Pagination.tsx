@@ -48,14 +48,14 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
       <ul className={style.pagination_bg}>
         {currentPage > 1 && (
           <li onClick={() => handlePageClick(currentPage - 1)}>
-            <Link href={`/blog?page=${currentPage - 1}`}>
-              {"<"}
-            </Link>
+            <Link href={`/blog?page=${currentPage - 1}`}>{"<"}</Link>
           </li>
         )}
         {startPage > 1 && (
           <li onClick={() => handlePageClick(1)}>
-            <a>1</a>
+            <Link href={`/blog?page=${currentPage - 1}`}>
+              1
+            </Link>
           </li>
         )}
 
@@ -71,7 +71,7 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
             className={`${number === currentPage ? "Paginationactive" : ""}`}
             onClick={() => handlePageClick(number)}
           >
-            <a>{number}</a>
+            <Link href={`/blog?page=${number}`}>{number}</Link>
           </li>
         ))}
 
@@ -88,15 +88,12 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
         )}
         {currentPage < totalPages && (
           <li onClick={() => handlePageClick(currentPage + 1)}>
-            <Link href={`/blog?page=${currentPage + 1}`}>
-               {">"}
-            </Link>
+            <Link href={`/blog?page=${currentPage + 1}`}>{">"}</Link>
           </li>
         )}
       </ul>
     </>
   );
 };
-
 
 export default Pagination;
