@@ -19,15 +19,12 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
     setCurrentPage(pageNumber);
   };
 
-  let startPage = currentPage > 3 ? currentPage - 2 : 1;
-  let endPage = currentPage + 2;
+  let startPage =  1;
+  let endPage = totalPages;
 
-  if (endPage > totalPages) {
-    endPage = totalPages;
-    startPage = endPage - 4 > 1 ? endPage - 4 : 1;
-  }
+  
 
-  const pageNumbers = []; // Create an array to hold the page numbers
+  const pageNumbers = []; 
 
   for (let i = startPage; i <= endPage; i++) {
     pageNumbers.push(i); // Add page numbers within the range to the array
@@ -59,11 +56,7 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
           </li>
         )}
 
-        {startPage > 2 && (
-          <li>
-            <span>...</span>
-          </li>
-        )}
+       
 
         {pageNumbers.map((number: any) => (
           <li
@@ -75,11 +68,7 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
           </li>
         ))}
 
-        {endPage < totalPages - 1 && (
-          <li>
-            <span>...</span>
-          </li>
-        )}
+       
 
         {endPage < totalPages && (
           <li onClick={() => handlePageClick(totalPages)}>
