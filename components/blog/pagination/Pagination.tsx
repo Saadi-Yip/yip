@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router"; // Import useRouter from next/router
 import style from "./pagination.module.css";
 
@@ -20,6 +20,15 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
     // Update the current page state
     setCurrentPage(pageNumber);
   };
+
+  // Check and set page=1 when the component mounts
+  useEffect(() => {
+    const { page } = router.query;
+    if (!page) {
+      // Set page=1 if it doesn't exist in the URL
+      handlePageClick(1);
+    }
+  }, []); // Empty dependency array ensures this runs once on mount
 
   // Calculate the range of page numbers to display
   let startPage = currentPage > 3 ? currentPage - 2 : 1;
