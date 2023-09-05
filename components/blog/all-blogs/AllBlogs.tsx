@@ -53,7 +53,7 @@ const AllBlogs = ({ blogs }: any) => {
   return (
     <>
       <Head>
-        <link rel="canonical" href={`/blog`} />
+        <link rel="canonical" href={`/blog?page=${currentPage}`} />
         {currentPage > 1 && (
           <link rel="prev" href={`/blog?page=${currentPage - 1}`} />
         )}
