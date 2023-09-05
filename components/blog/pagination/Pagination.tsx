@@ -1,11 +1,10 @@
 import React from "react";
 import { useRouter } from "next/router";
-import Link from "next/link"; // Import Link from Next.js
+import Link from "next/link";
 import style from "./pagination.module.css";
 import Head from "next/head";
 
 const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
-  const pageNumbers: any = [];
   const router = useRouter();
 
   const handlePageClick = (pageNumber: any) => {
@@ -28,10 +27,16 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
     startPage = endPage - 4 > 1 ? endPage - 4 : 1;
   }
 
+  const pageNumbers = []; // Create an array to hold the page numbers
+
+  for (let i = startPage; i <= endPage; i++) {
+    pageNumbers.push(i); // Add page numbers within the range to the array
+  }
+
   return (
     <>
       <Head>
-        <link rel="canonical" href={`/blog`} />
+        <link rel="canonical" href={`/blog?page=${currentPage}`} />
         {currentPage > 1 && (
           <link rel="prev" href={`/blog?page=${currentPage - 1}`} />
         )}
@@ -84,14 +89,14 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
         {currentPage < totalPages && (
           <li onClick={() => handlePageClick(currentPage + 1)}>
             <Link href={`/blog?page=${currentPage + 1}`}>
-              {">"}
+               {">"}
             </Link>
           </li>
         )}
       </ul>
-     
     </>
   );
 };
+
 
 export default Pagination;

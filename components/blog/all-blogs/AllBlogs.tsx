@@ -204,18 +204,7 @@ const AllBlogs = ({ blogs }: any) => {
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
             />
-            {/* <div className="pagination">
-              {currentPage > 1 && (
-                <Link href={`/blog?page=${currentPage - 1}`}>
-                  <a>Previous Page</a>
-                </Link>
-              )}
-              {currentPage < totalPages && (
-                <Link href={`/blog?page=${currentPage + 1}`}>
-                  <a>Next Page</a>
-                </Link>
-              )}
-            </div> */}
+           
           </>
         </div>
       </section>
