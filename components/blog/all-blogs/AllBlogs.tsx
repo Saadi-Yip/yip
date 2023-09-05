@@ -207,12 +207,12 @@ const AllBlogs = ({ blogs }: any) => {
             <div className="pagination">
               {currentPage > 1 && (
                 <Link href={`/blog?page=${currentPage - 1}`}>
-                  Previous
+                  <a>Previous Page</a>
                 </Link>
               )}
               {currentPage < totalPages && (
                 <Link href={`/blog?page=${currentPage + 1}`}>
-                  Next
+                  <a>Next Page</a>
                 </Link>
               )}
             </div>
