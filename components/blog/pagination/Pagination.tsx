@@ -83,7 +83,7 @@ const Pagination = ({ currentPage, totalPages, setCurrentPage }: any) => {
 
         {endPage < totalPages && (
           <li onClick={() => handlePageClick(totalPages)}>
-            <a>{totalPages}</a>
+           <Link href={`/blog?page=${totalPages}`}>{totalPages}</Link>
           </li>
         )}
         {currentPage < totalPages && (
